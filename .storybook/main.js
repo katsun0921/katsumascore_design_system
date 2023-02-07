@@ -17,7 +17,10 @@ module.exports = {
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
     })
-
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '../src'),
+    };
     return config
   },
 }
