@@ -3,7 +3,7 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 module.exports = {
 	mode: 'development',
-	entry: './src/style/index.scss',
+	entry: './src/scss/index.scss',
 	module: {
 		rules: [
 			{
