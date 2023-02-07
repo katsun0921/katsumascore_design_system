@@ -1,0 +1,108 @@
+@use '../global/variable/';
+
+body {
+  background: $colorWhite;
+}
+
+a {
+  color: $colorLink;
+  &:hover {
+    color: $colorLinkHover;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: none;
+}
+
+.pp_gallery {
+  display: none !important;
+}
+
+body a img,
+body a {
+  outline: none !important;
+  text-decoration: none;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 25px;
+}
+ul,
+ol {
+  margin-left: 8px;
+  padding-left: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+video,
+audio {
+  max-width: 100%;
+}
+
+hr {
+  background: $colorHr;
+  height: 2px;
+  border: none;
+  margin: 35px 0px 40px 0px;
+}
+blockquote {
+  border-left: 4px solid $colorGrayLight;
+  margin-left: 0px;
+  padding-left: 30px;
+  line-height: 1.8;
+}
+
+blockquote a:hover,
+blockquote a {
+  color: $colorGrayDark;
+}
+
+table {
+  width: 100%;
+  background: $colorWhite;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 0 2em;
+  max-width: 100%;
+  border-left: 1px solid $colorTable;
+  border-top: 1px solid $colorTable;
+}
+
+th,
+td {
+  color: $colorTh;
+  border: 1px solid $colorTable;
+}
+table th {
+  background: $colorTable;
+}
+table caption,
+table th,
+table td {
+  font-weight: normal;
+  text-align: left;
+}
+table th {
+  border-width: 0 1px 1px 0;
+  font-weight: 700;
+}
+table td {
+  border-width: 0 1px 1px 0;
+}
+table tr th,
+table tr td {
+  padding: 8px 12px;
+}

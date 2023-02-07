@@ -1,0 +1,32 @@
+.alignnone,
+.alignleft,
+.alignright,
+.aligncenter {
+  max-width: 100% !important;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 15px 25px;
+}
+.alignleft {
+  float: left;
+  margin: 0px 25px 15px 0px;
+}
+.aligncenter {
+  text-align: center;
+  margin: 0px auto 20px auto;
+  display: block;
+}
+blockquote.alignleft,
+blockquote.alignright {
+  width: 32%;
+  float: left;
+  border-left: none;
+  border-top: 4px solid #666666;
+  padding: 15px 15px 0px 15px;
+  margin-bottom: 0px;
+}
+blockquote.alignright {
+  float: right;
+}

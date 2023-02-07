@@ -1,0 +1,46 @@
+@use '../global/variable/';
+
+body,
+body input,
+body textarea,
+select {
+  line-height: 1.8;
+  font-size: $fontSizeBasic;
+  font-weight: normal;
+  color: $colorFontBasic;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  padding: 0px;
+  color: $colorFontHeading;
+  margin: 0px 0px 15px 0px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: $fontSizeHeading1;
+  line-height: 1.2;
+}
+h2 {
+  font-size: $fontSizeHeading2;
+}
+h3 {
+  font-size: $fontSizeHeading3;
+}
+h4 {
+  font-size: $fontSizeHeading4;
+}
+h5 {
+  font-size: $fontSizeHeading5;
+}
+h6 {
+  font-size: $fontSizeHeading6;
+}
