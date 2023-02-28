@@ -1,13 +1,14 @@
-@use '../global/variable/';
+@use '../global/variable/color' as color;
+@use '../global/variable/fontSize' as fontSize;
 
 body {
-  background: $colorWhite;
+  background: color.$colorWhite;
 }
 
 a {
-  color: $colorLink;
+  color: color.$colorLink;
   &:hover {
-    color: $colorLinkHover;
+    color: color.$colorLinkHover;
   }
 }
 
@@ -53,13 +54,13 @@ audio {
 }
 
 hr {
-  background: $colorHr;
+  background: color.$colorHr;
   height: 2px;
   border: none;
   margin: 35px 0px 40px 0px;
 }
 blockquote {
-  border-left: 4px solid $colorGrayLight;
+  border-left: 4px solid color.$colorGrayLight;
   margin-left: 0px;
   padding-left: 30px;
   line-height: 1.8;
@@ -67,27 +68,27 @@ blockquote {
 
 blockquote a:hover,
 blockquote a {
-  color: $colorGrayDark;
+  color: color.$colorGrayDark;
 }
 
 table {
   width: 100%;
-  background: $colorWhite;
+  background: color.$colorWhite;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0 0 2em;
   max-width: 100%;
-  border-left: 1px solid $colorTable;
-  border-top: 1px solid $colorTable;
+  border-left: 1px solid color.$colorTable;
+  border-top: 1px solid color.$colorTable;
 }
 
 th,
 td {
-  color: $colorTh;
-  border: 1px solid $colorTable;
+  color: color.$colorTh;
+  border: 1px solid color.$colorTable;
 }
 table th {
-  background: $colorTable;
+  background: color.$colorTable;
 }
 table caption,
 table th,

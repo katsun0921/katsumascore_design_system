@@ -1,13 +1,14 @@
-@use '../global/variable/';
+@use '../global/variable/color' as color;
+@use '../global/variable/fontSize' as fontSize;
 
 body,
 body input,
 body textarea,
 select {
   line-height: 1.8;
-  font-size: $fontSizeBasic;
+  font-size: fontSize.$fontSizeBasic;
   font-weight: normal;
-  color: $colorFontBasic;
+  color: color.$colorFontBasic;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -20,27 +21,27 @@ h6 {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   padding: 0px;
-  color: $colorFontHeading;
+  color: color.$colorFontHeading;
   margin: 0px 0px 15px 0px;
   line-height: 1.4;
 }
 
 h1 {
-  font-size: $fontSizeHeading1;
+  font-size: fontSize.$fontSizeHeading1;
   line-height: 1.2;
 }
 h2 {
-  font-size: $fontSizeHeading2;
+  font-size: fontSize.$fontSizeHeading2;
 }
 h3 {
-  font-size: $fontSizeHeading3;
+  font-size: fontSize.$fontSizeHeading3;
 }
 h4 {
-  font-size: $fontSizeHeading4;
+  font-size: fontSize.$fontSizeHeading4;
 }
 h5 {
-  font-size: $fontSizeHeading5;
+  font-size: fontSize.$fontSizeHeading5;
 }
 h6 {
-  font-size: $fontSizeHeading6;
+  font-size: fontSize.$fontSizeHeading6;
 }

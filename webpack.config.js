@@ -1,3 +1,5 @@
+const path = require('path');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
@@ -22,4 +24,9 @@ module.exports = {
 		}),
 		new FixStyleOnlyEntriesPlugin(),
 	],
+  resolve: {
+    alias: {
+      '@scss': path.resolve(__dirname, './src/scss')
+    }
+  }
 };
