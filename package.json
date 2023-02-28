@@ -12,6 +12,7 @@
     "prepare": "husky install",
     "format": "prettier --write ./src",
     "fix": "npm run format",
+    "dev": "webpack --mode development",
     "build": "rm -rf dist && webpack --mode production"
   },
   "dependencies": {
