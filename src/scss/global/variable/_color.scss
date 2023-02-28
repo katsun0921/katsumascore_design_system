@@ -1,14 +1,31 @@
-// Basic Color
-$colorWhite: #fff;
-$colorWhiteLight: #eaeaea;
-$colorGrayLight: #aaa;
-$colorGrayDark: #666;
-$colorFontBasic: #666;
-$colorFontHeading: #3d3d3e;
+// primary
+
+// tailwindcss https://tailwindcss.com/docs/customizing-colors
+// slate
+$white: #fff;
+$slate50: #f8fafc;
+$black: #000;
+
+// gray
+$gray100: #f3f4f6;
+$gray500: #6b7280;
+$gray700: #374151;
+
+// blue
+$blue600: #2563eb;
+$blue800: #1e40af;
+
+// stone
+$stone200: #e7e5e4;
 
 // Element Color
-$colorLink: #4145ee;
-$colorLinkHover: #292ca7;
-$colorHr: #e7e8eb;
-$colorTable: #eaeaea;
-$colorTh: #606060;
+// link
+$elementLink: $blue600;
+$elementLinkHover: $blue800;
+
+// hr
+$elementThr: $stone200;
+
+// table
+$elementTable: $slate50;
+$elementTh: $gray500;

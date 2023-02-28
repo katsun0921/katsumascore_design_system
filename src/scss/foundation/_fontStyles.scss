@@ -1,3 +1,4 @@
+@import '../global/mixin/fontSize';
 @use '../global/variable/color' as color;
 @use '../global/variable/fontSize' as fontSize;
 
@@ -6,9 +7,9 @@ body input,
 body textarea,
 select {
   line-height: 1.8;
-  font-size: fontSize.$fontSizeBasic;
+  @include text-base;
   font-weight: normal;
-  color: color.$colorFontBasic;
+  color: color.$gray500;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -21,7 +22,7 @@ h6 {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   padding: 0px;
-  color: color.$colorFontHeading;
+  color: color.$gray700;
   margin: 0px 0px 15px 0px;
   line-height: 1.4;
 }
