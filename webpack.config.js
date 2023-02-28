@@ -6,13 +6,16 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 module.exports = {
 	mode: 'development',
 	entry: './src/scss/index.scss',
-	module: {
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
 		rules: [
 			{
 				test: /\.s[ac]ss$/i,
 				use: [
 					MiniCssExtractPlugin.loader,
-					'css-loader',
+          'css-loader',
 					'sass-loader',
 				],
 			}
