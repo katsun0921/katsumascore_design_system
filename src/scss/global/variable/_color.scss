@@ -1,10 +1,13 @@
 // primary
 
 // tailwindcss https://tailwindcss.com/docs/customizing-colors
-// slate
+// basic
 $white: #fff;
-$slate50: #f8fafc;
 $black: #000;
+
+// slate
+$slate50: #f8fafc;
+$slate900: #0f172a;
 
 // gray
 $gray100: #f3f4f6;
@@ -18,6 +21,10 @@ $blue800: #1e40af;
 // stone
 $stone200: #e7e5e4;
 
+// yellow
+$yellow50: #fefce8;
+$yellow200: #fde68a;
+
 // Element Color
 // link
 $elementLink: $blue600;
@@ -29,3 +36,9 @@ $elementThr: $stone200;
 // table
 $elementTable: $slate50;
 $elementTh: $gray500;
+
+// ins
+$elementIns: $yellow200;
+
+// mark
+$elementMark: $yellow50;
