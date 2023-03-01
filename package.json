@@ -7,13 +7,13 @@
     "npm": "8.x"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s dist",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
     "format": "prettier --write ./src",
     "fix": "npm run format",
     "dev": "webpack --watch",
-    "build": "rm -rf dist && webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production && sh copy_style.sh"
   },
   "dependencies": {
     "@types/node": "18.11.18",

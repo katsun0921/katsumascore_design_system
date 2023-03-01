@@ -25,69 +25,12 @@
 25. PRETYPHOTO STYLES
 26. PAGE LOADER
 27. RESPONSIVE STYLES
-
+28. TRANSLATION STYLES
 
 /*
 =============================================== 03. MAIN CONTAINERS ===============================================
 */
 /* -------------------- A. MAIN CONTAINER STYLES -------------------- */
-.width-container-pro {
-  width:1200px;
-  margin: 0 auto;
-  position:relative;
-  padding:0px;
-}
-
-.progression-studios-header-full-width-no-gap #ratency-progression-header-top .width-container-pro,
-footer#site-footer.progression-studios-footer-full-width .width-container-pro,
-.progression-studios-header-full-width #ratency-progression-header-top .width-container-pro,
-.progression-studios-page-title-full-width #page-title-pro .width-container-pro {
-  width:auto;
-  padding-right:50px;
-  padding-left:50px;
-}
-
-.progression-studios-header-full-width header#masthead-pro .width-container-pro {
-  width:auto;
-  margin:0px auto;
-  padding:0px;
-}
-
-@media only screen and (min-width: 960px) {
-.progression-studios-header-full-width-no-gap.progression-studios-header-cart-width-adjustment header#masthead-pro .width-container-pro,
-.progression-studios-header-full-width.progression-studios-header-cart-width-adjustment header#masthead-pro .width-container-pro {
-  padding-right:0px;
-}
-}
-
-.progression-studios-header-full-width-no-gap header#masthead-pro .width-container-pro {
-  width:auto;
-  padding-right:20px;
-}
-
-#page-title-pro {
-  margin-bottom:50px;
-}
-
-#content-pro {
-  position:relative;
-  padding-bottom:50px;
-}
-
-body.single-post #content-pro {
-  padding-top:60px;
-}
-
-#main-container-pro {
-  float:left;
-  width:72%;
-  position:relative;
-}
-
-.sidebar {
-  float:right;
-  width:24%;
-}
 
 
 /* Mobiles Sidebar Styles */
@@ -148,7 +91,7 @@ body .sidebar.progression-studios-mobile-sidebar {
   -webkit-font-smoothing:antialiased;
 }
 
-.progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .width-container-pro {
+.progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container {
   width:auto;
   padding-right:50px ;
   padding-left:50px ;
@@ -168,7 +111,7 @@ header#masthead-pro:after {
   display:none;
 }
 
-header#masthead-pro .width-container-pro.progression-studios-logo-container {
+header#masthead-pro .l-container.progression-studios-logo-container {
   z-index:50;
 }
 
@@ -5713,39 +5656,39 @@ body div.pp_default a.pp_expand:hover {
   }
 
 
-  body #boxed-layout-pro .width-container-pro,
-  .width-container-pro  {
+  body #boxed-layout-pro .l-container,
+  .l-container  {
     width:94%;
     padding-left:0px;
     padding-right:0px;
   }
 
 
-  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .width-container-pro,
-  .progression-studios-header-full-width-no-gap #ratency-progression-header-top .width-container-pro,
-  footer#site-footer.progression-studios-footer-full-width .width-container-pro,
-  .progression-studios-page-title-full-width #page-title-pro .width-container-pro,
-  .progression-studios-header-full-width #ratency-progression-header-top .width-container-pro,
-  .progression-studios-header-full-width header#masthead-pro .width-container-pro {
+  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
+  .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
+  footer#site-footer.progression-studios-footer-full-width .l-container,
+  .progression-studios-page-title-full-width #page-title-pro .l-container,
+  .progression-studios-header-full-width #ratency-progression-header-top .l-container,
+  .progression-studios-header-full-width header#masthead-pro .l-container {
     width:94%;
     position:relative;
     padding:0px;
   }
 
-  .progression-studios-header-full-width header#masthead-pro .width-container-pro {
+  .progression-studios-header-full-width header#masthead-pro .l-container {
     width:auto;
     margin:0 auto;
     position:relative;
     padding:0px;
   }
 
-  footer#site-footer.progression-studios-footer-full-width .width-container-pro,
-  footer#site-footer .width-container-pro {
+  footer#site-footer.progression-studios-footer-full-width .l-container,
+  footer#site-footer .l-container {
     width:92%;
   }
 
-  .progression-studios-header-full-width-no-gap.progression-studios-header-cart-width-adjustment header#masthead-pro .width-container-pro,
-  .progression-studios-header-full-width.progression-studios-header-cart-width-adjustment header#masthead-pro .width-container-pro {
+  .progression-studios-header-full-width-no-gap.progression-studios-header-cart-width-adjustment header#masthead-pro .l-container,
+  .progression-studios-header-full-width.progression-studios-header-cart-width-adjustment header#masthead-pro .l-container {
     width:96%;
     margin-left:4%;
     padding-right:0;
@@ -5902,36 +5845,36 @@ body div.pp_default a.pp_expand:hover {
     width:100%;
   }
 
-  body #boxed-layout-pro .width-container-pro, .width-container-pro  {
+  body #boxed-layout-pro .l-container, .l-container  {
     width:92%;
     padding-left:0px;
     padding-right:0px;
   }
-  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .width-container-pro,
-  .progression-studios-header-full-width-no-gap #ratency-progression-header-top .width-container-pro,
-  footer#site-footer.progression-studios-footer-full-width .width-container-pro,
-  .progression-studios-page-title-full-width #page-title-pro .width-container-pro,
-  .progression-studios-header-full-width #ratency-progression-header-top .width-container-pro,
-  .progression-studios-header-full-width header#masthead-pro .width-container-pro {
+  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
+  .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
+  footer#site-footer.progression-studios-footer-full-width .l-container,
+  .progression-studios-page-title-full-width #page-title-pro .l-container,
+  .progression-studios-header-full-width #ratency-progression-header-top .l-container,
+  .progression-studios-header-full-width header#masthead-pro .l-container {
     width:92%;
     position:relative;
     padding:0px;
   }
 
-  .progression-studios-header-full-width header#masthead-pro .width-container-pro {
+  .progression-studios-header-full-width header#masthead-pro .l-container {
     width:auto;
     margin:0 auto;
     position:relative;
     padding:0px;
   }
 
-  footer#site-footer.progression-studios-footer-full-width .width-container-pro,
-  footer#site-footer .width-container-pro {
+  footer#site-footer.progression-studios-footer-full-width .l-container,
+  footer#site-footer .l-container {
     width:88%;
   }
 
-  .progression-studios-header-full-width-no-gap.progression-studios-header-cart-width-adjustment header#masthead-pro .width-container-pro,
-  .progression-studios-header-full-width.progression-studios-header-cart-width-adjustment header#masthead-pro .width-container-pro {
+  .progression-studios-header-full-width-no-gap.progression-studios-header-cart-width-adjustment header#masthead-pro .l-container,
+  .progression-studios-header-full-width.progression-studios-header-cart-width-adjustment header#masthead-pro .l-container {
     width:94%;
     margin-left:6%;
     padding-right:0;
@@ -6206,4 +6149,175 @@ body div.pp_default a.pp_expand:hover {
     margin-bottom:20px;
   }
 
+}
+
+/* --------------------
+28. CSS3 TRANSITIONS
+あとでmixinをincludeをする
+-------------------- */
+h2.progression-ratency-progression-slider-title,
+h2.overlay-progression-blog-title,
+.related-overlay-blog-meta-category-list span,
+.overlay-progression-studios-blog-image,
+#progression-studios-nav-bg,
+h3.helpmeout-loop-category__title,
+.wpcrowd-arrow-down,
+select,
+.sf-menu li.highlight-button a:before,
+.mobile-menu-icon-pro,
+a, input, textarea {
+  transition-duration: 250ms;
+  transition-property: color, background-color, opacity, border;
+  transition-timing-function: ease-in-out;
+}
+
+.progression-ratency-slider-thumb-gradient {
+  transition-duration: 350ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+.helpmeout-categoryoverlay-image-color,
+#progression-studios-header-login-container a.progresion-studios-login-icon,
+.wpneo-buttons-group button, input.wpneo-submit-campaign, input#wpneo_active_edit_form,
+.helpmeout-overlay,
+.helpmeout-rewards-select_button button.select_rewards_button,
+ul.wpneo-crowdfunding-update li span.round-circle,
+button.wpneo_donate_button,
+h2.woocommerce-loop-category__title,
+h2.woocommerce-loop-product__title,
+#progression-shopping-cart-toggle a i.shopping-cart-header-icon,
+#progression-studios-header-search-icon i,
+#boxed-layout-pro input#submit,
+.tml-submit-wrap input.button-primary,
+body .acf-form .acf-field .acf-input-wrap input, .acf-form-submit input.button,
+#woocomerce-tabs-container-progression-studios .woocommerce-tabs ul.wc-tabs li,
+#woocomerce-tabs-container-progression-studios .woocommerce-tabs ul.wc-tabs li a,
+#boxed-layout-pro button.button,
+ul.progression-filter-button-group li:after,
+ul.progression-filter-button-group li,
+.flex-control-paging li a,
+.slider-play-icon,
+.single-blog-play-icon,
+ul.blog-single-social-sharing li a:before,
+.blog-play-icon,
+footer#site-footer a,
+.tp-thumbs.custom .tp-thumb, .progression-mini-banner-icon,
+#progression-shopping-cart-count span.progression-cart-count,
+.pp_contract:after, .pp_expand:after,
+a.pp_close:before, a.pp_close:after, a.pp_previous:before, a.pp_next:before, .sf-menu a:before  {
+  transition-duration: 250ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+#logo-pro img,
+.sf-menu a,
+#progression-shopping-cart-count a {
+  transition-duration: 250ms;
+  transition-property:  padding-top, padding-bottom, color, background-color, width;
+  transition-timing-function: ease-in-out;
+}
+
+header#masthead-pro:after {
+  transition-duration: 350ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+header#masthead-pro {
+  transition-duration: 350ms;
+  transition-property: background;
+  transition-timing-function: ease-in-out;
+}
+
+.no-hover-transition {
+  transition-duration: 0ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+/* Animation For Menus */
+@keyframes ProMoveUp {
+  from { }
+  to { transform: translateY(0px); opacity: 1;  }
+}
+
+@keyframes ProMoveOut {
+  from { visibility:visible; opacity:1; }
+  to {  opacity: 0; visibility:hidden; }
+}
+
+li.sfHover ul.sf-mega,
+li.sfHover ul.sub-menu {
+  transform: translateY(20px);
+  opacity:0;
+  animation-duration:250ms;
+  animation-name: ProMoveUp;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+body #progression-checkout-basket {
+  opacity:0;
+  visibility:hidden;
+}
+
+body .hover-out-class #progression-checkout-basket {
+  animation-duration:200ms;
+  animation-name: ProMoveOut;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+body .activated-class #progression-checkout-basket {
+  transform: translateY(20px);
+  opacity:0;
+  visibility:visible;
+  animation-duration:250ms;
+  animation-name: ProMoveUp;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+body #progression-studios-header-search-icon.hide-search-icon-pro #panel-search-progression {
+  animation-duration:200ms;
+  animation-name: ProMoveOut;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+body #progression-studios-header-search-icon.active-search-icon-pro #panel-search-progression {
+  transform: translateY(20px);
+  visibility:visible;
+  animation-duration:250ms;
+  animation-name: ProMoveUp;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+body #panel-search-progression {
+  visibility: hidden;
+  z-index:5;
+  opacity: 0;
+}
+
+
+body #progression-studios-header-login-container.helpmeout-hover-out-class #progression-studios-panel-login {
+  animation-duration:200ms;
+  animation-name: ProMoveOut;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+body #progression-studios-header-login-container.helpmeout-activated-class #progression-studios-panel-login {
+  transform: translateY(20px);
+  visibility:visible;
+  animation-duration:250ms;
+  animation-name: ProMoveUp;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+body #progression-studios-panel-login {
+  visibility: hidden;
+  z-index:15;
+  opacity: 0;
 }

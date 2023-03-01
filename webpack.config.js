@@ -23,13 +23,13 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'style.css'
+			filename: 'build.css'
 		}),
 		new FixStyleOnlyEntriesPlugin(),
 	],
   resolve: {
     alias: {
-      '@scss': path.resolve(__dirname, './src/scss')
+      '@scss': path.resolve(__dirname, 'src/scss')
     }
   }
 };
