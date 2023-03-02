@@ -2,29 +2,29 @@
 
 // tailwindcss https://tailwindcss.com/docs/customizing-colors
 // basic
-$white: #fff;
-$black: #000;
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 
 // slate
-$slate50: #f8fafc;
-$slate900: #0f172a;
+$slate50: rgb(248 250 252);
+$slate900: rgb(15 23 42);
 
 // gray
-$gray100: #f3f4f6;
-$gray300: #d1d5db;
-$gray500: #6b7280;
-$gray700: #374151;
+$gray100: rgb(243 244 246);
+$gray300: rgb(209 213 219);
+$gray500: rgb(107 114 128);
+$gray700: rgb(55 65 81);
 
 // blue
-$blue600: #2563eb;
-$blue800: #1e40af;
+$blue600: rgb(37 99 235);
+$blue800: rgb(30 64 175);
 
 // stone
-$stone200: #e7e5e4;
+$stone200: rgb(231 229 228);
 
 // yellow
-$yellow50: #fefce8;
-$yellow200: #fde68a;
+$yellow50: rgb(254 252 232);
+$yellow200: rgb(254 240 138);
 
 // Element Color
 // link
