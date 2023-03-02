@@ -1,0 +1,45 @@
+// primary
+
+// tailwindcss https://tailwindcss.com/docs/customizing-colors
+// basic
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+// slate
+$slate50: rgb(248 250 252);
+$slate900: rgb(15 23 42);
+
+// gray
+$gray100: rgb(243 244 246);
+$gray300: rgb(209 213 219);
+$gray500: rgb(107 114 128);
+$gray700: rgb(55 65 81);
+
+// blue
+$blue600: rgb(37 99 235);
+$blue800: rgb(30 64 175);
+
+// stone
+$stone200: rgb(231 229 228);
+
+// yellow
+$yellow50: rgb(254 252 232);
+$yellow200: rgb(254 240 138);
+
+// Element Color
+// link
+$elementLink: $blue600;
+$elementLinkHover: $blue800;
+
+// hr
+$elementThr: $stone200;
+
+// table
+$elementTable: $slate50;
+$elementTh: $gray500;
+
+// ins
+$elementIns: $yellow200;
+
+// mark
+$elementMark: $yellow50;
