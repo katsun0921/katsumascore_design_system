@@ -1,0 +1,12 @@
+// https://tailwindcss.com/docs/float
+$float-values: (
+  'float-right': right,
+  'float-left': left,
+  'float-none': none,
+);
+
+@each $name, $properties in $float-values {
+  .u-#{$name} {
+    float: $properties;
+  }
+}
