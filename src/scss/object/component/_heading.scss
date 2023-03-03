@@ -1,0 +1,16 @@
+@use '../../global/variable/color' as color;
+@use '../../global/variable/fontWeight' as fontWeight;
+@import '../global/mixin/fontSize';
+
+.c-heading {
+  &__title {
+    word-break: break-word;
+    word-wrap: break-word;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    color: color.$white;
+    font-weight: fontWeight.$fontMedium;
+    font-size: 68px;
+  }
+}
