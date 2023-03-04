@@ -31,61 +31,6 @@
 */
 
 
-/* Breadcrumbs Styles */
-ul#breadcrumbs-progression-studios {
-  list-style:none;
-  text-align:center;
-  position:relative;
-  z-index:20;
-  color:#ffffff;
-  padding:0px;
-  margin:35px 0px 0px 0px;
-  font-size:14px;
-  font-weight:600;
-}
-
-ul#breadcrumbs-progression-studios li {
-  display:inline;
-  padding:0px;
-  margin:0px;
-  color:rgba(255,255,255,  0.7);
-}
-
-ul#breadcrumbs-progression-studios li:last-child:after, #page-title-pro ul#breadcrumbs-progression-studios li.home {
-  display:none;
-}
-
-ul#breadcrumbs-progression-studios li a {
-  color:rgba(255,255,255,  0.7);
-}
-
-
-ul#breadcrumbs-progression-studios li a:hover {
-  color:#ffffff;
-}
-
-ul#breadcrumbs-progression-studios li:after {
-  display:inline-block;
-  position:relative;
-  top:-1px;
-  font-size:12px;
-  padding:0px 10px;
-  content:"—";
-}
-
-ul#breadcrumbs-progression-studios li.current_item {
-  margin-left:-4px;
-}
-
-ul#breadcrumbs-progression-studios li:last-child:after {
-  display:none;
-}
-
-body.error404 ul#breadcrumbs-progression-studios li:nth-child(3) {
-  display:none;
-}
-
-
 /* Blog Post Options */
 #progression-studios-post-category {
   text-align:center;
