@@ -1,4 +1,5 @@
 // primary
+$category: rgb(92, 57, 242);
 
 // tailwindcss https://tailwindcss.com/docs/customizing-colors
 // basic
@@ -43,3 +44,19 @@ $elementIns: $yellow200;
 
 // mark
 $elementMark: $yellow50;
+
+$colors: (
+  'white': $white,
+  'black': $black,
+  'slate-50': $slate50,
+  'slate-900': $slate900,
+  'gray-100': $gray100,
+  'gray-300': $gray300,
+  'gray-500': $gray500,
+  'gray-700': $gray700,
+  'blue-600': $blue600,
+  'blue-800': $blue800,
+  'stone-200': $stone200,
+  'yellow-50': $yellow50,
+  'yellow-200': $yellow200,
+);

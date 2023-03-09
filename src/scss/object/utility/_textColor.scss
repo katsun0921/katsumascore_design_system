@@ -1,0 +1,7 @@
+@use '../../global/variable/color' as color;
+
+@each $name, $value in color.$colors {
+  .u-text-#{$name} {
+    color: $value;
+  }
+}

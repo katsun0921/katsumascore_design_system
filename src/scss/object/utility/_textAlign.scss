@@ -1,0 +1,15 @@
+// https://tailwindcss.com/docs/text-align
+$text-align-values: (
+  'text-left': left,
+  'text-center': center,
+  'text-right': right,
+  'text-justify': justify,
+  'text-start': start,
+  'text-end': end,
+);
+
+@each $name, $properties in $float-values {
+  .u-#{$name} {
+    text-align: $properties;
+  }
+}
