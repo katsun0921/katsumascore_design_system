@@ -18,11 +18,18 @@ module.exports = {
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
+    },{
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
     })
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname, '../src'),
     };
+    // @see https://github.com/storybookjs/storybook/issues/9070
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'))
+    fileLoaderRule.exclude = /\.svg$/
     return config
   },
+  staticDirs: [{ from: '../public/', to: '/dist' }],
 }

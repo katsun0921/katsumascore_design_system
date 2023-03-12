@@ -29,30 +29,6 @@
 =============================================== 05. HEADER SEARCH AND ICONS ===============================================
 */
 
-ul.progression-studios-header-social-icons li {
-  display:inline;
-  margin:0px;
-  padding:0px;
-}
-
-ul.progression-studios-header-social-icons li a {
-  display:inline-block;
-  text-align:center;
-  margin:0px 7px 0px 7px;
-  border-radius:50px;
-  width:30px;
-  height:30px;
-  line-height:30px;
-  font-size:14px;
-  background:rgba(255,255,255,  0.12);
-  color:rgba(255,255,255,  0.85);
-}
-
-ul.progression-studios-header-social-icons li a:hover {
-  color:#ffffff;
-  background:rgba(255,255,255,  0.2);
-}
-
 
 #masthead-pro .search-form input.search-field {
   padding:6px 28px 6px 0px;

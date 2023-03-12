@@ -8,7 +8,7 @@ $text-align-values: (
   'text-end': end,
 );
 
-@each $name, $properties in $float-values {
+@each $name, $properties in $text-align-values {
   .u-#{$name} {
     text-align: $properties;
   }

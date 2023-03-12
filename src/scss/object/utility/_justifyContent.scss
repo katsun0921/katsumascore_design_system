@@ -1,0 +1,15 @@
+// https://tailwindcss.com/docs/justify-content
+$justify-content-values: (
+  'justify-start': flex-start,
+  'justify-end': flex-end,
+  'justify-center': center,
+  'justify-between': space-between,
+  'justify-around': space-around,
+  'justify-evenly': space-evenly,
+);
+
+@each $name, $properties in $justify-content-values {
+  .u-#{$name} {
+    justify-content: $properties;
+  }
+}
