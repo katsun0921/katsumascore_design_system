@@ -1,0 +1,16 @@
+.c-search {
+  &__field {
+    padding: 6px 28px 6px 0px;
+    width: 290px;
+    max-width: 90%;
+    font-style: italic;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    background-color: transparent;
+    background-position: right 5px;
+    background-repeat: no-repeat;
+    box-shadow: none;
+  }
+}

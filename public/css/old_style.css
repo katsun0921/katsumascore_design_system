@@ -147,11 +147,6 @@ footer#site-footer .search-form input.search-field {
   max-width:600px;
 }
 
-.search-form {
-  max-width:400px;
-  margin-bottom:30px;
-}
-
 .search-form input.search-field {
   background-color:#f5f5f5;
   border:2px solid #f5f5f5;
@@ -3325,14 +3320,6 @@ ul.blog-single-social-sharing .progression-unskew-text {
   transform: skewX(-8deg);
 }
 
-#boxed-layout-pro .form-submit input#submit,
-.tml-submit-wrap input.button-primary,
-.tml input#wp-submit,
-#boxed-layout-pro button.button,
-#boxed-layout-pro a.button {
-  font-style:normal;
-  transform: skewX(-8deg);
-}
 
 
 .post-password-form input {
@@ -3537,11 +3524,8 @@ form#mc-embedded-subscribe-form .clear {
   padding:18px 24px 17px 24px;
 }
 
-#boxed-layout-pro .form-submit input#submit,
 .tml-submit-wrap input.button-primary,
-.tml input#wp-submit,
-#boxed-layout-pro button.button,
-#boxed-layout-pro a.button {
+.tml input#wp-submit {
   line-height:1;
   border:none;
   text-align:center;
@@ -5010,17 +4994,6 @@ body div.pp_default a.pp_expand:hover {
   transition: all 600ms;
 }
 
-#boxed-layout-pro.progression-studios-preloader {
-  margin-top:50px;
-  opacity:0;
-}
-#boxed-layout-pro.progression-studios-preloader.progression-preloader-completed {
-  animation-duration:500ms;
-  animation-name: ProMoveUpPageLoader;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay:350ms;
-}
 
 /* Animation For Menus & Masonry CSS3 */
 @keyframes ProMoveUpPageLoader {
@@ -5046,18 +5019,6 @@ body div.pp_default a.pp_expand:hover {
 
   #progression-sticky-header {
     position:relative !important;
-  }
-
-  body #boxed-layout-pro {
-    width:100%;
-  }
-
-
-  body #boxed-layout-pro .l-container,
-  .l-container  {
-    width:94%;
-    padding-left:0px;
-    padding-right:0px;
   }
 
 
@@ -5237,16 +5198,6 @@ body div.pp_default a.pp_expand:hover {
     position:relative !important;
   }
 
-
-  body #boxed-layout-pro {
-    width:100%;
-  }
-
-  body #boxed-layout-pro .l-container, .l-container  {
-    width:92%;
-    padding-left:0px;
-    padding-right:0px;
-  }
   .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
   .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
   footer#site-footer.progression-studios-footer-full-width .l-container,
@@ -5584,12 +5535,10 @@ h2.woocommerce-loop-category__title,
 h2.woocommerce-loop-product__title,
 #progression-shopping-cart-toggle a i.shopping-cart-header-icon,
 #progression-studios-header-search-icon i,
-#boxed-layout-pro input#submit,
 .tml-submit-wrap input.button-primary,
 body .acf-form .acf-field .acf-input-wrap input, .acf-form-submit input.button,
 #woocomerce-tabs-container-progression-studios .woocommerce-tabs ul.wc-tabs li,
 #woocomerce-tabs-container-progression-studios .woocommerce-tabs ul.wc-tabs li a,
-#boxed-layout-pro button.button,
 ul.progression-filter-button-group li:after,
 ul.progression-filter-button-group li,
 .flex-control-paging li a,
