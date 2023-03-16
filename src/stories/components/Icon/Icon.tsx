@@ -1,6 +1,8 @@
 import React from 'react';
-import { IconTwitter, IconRss } from './SvgIcons';
 import '@/scss/object/component/_icon.scss';
+import logoFacebook from '@/assets/images/logo-facebook.png';
+import logoRss from '@/assets/images/logo-rss.png';
+import logoTwitterCircle from '@/assets/images/logo-twitter-blue-circle.png';
 
 type IconProps = {
   type: string;
@@ -11,6 +13,7 @@ type IconProps = {
 export const Icon = ({ type, className, template }: IconProps) => {
   const elementClassName = className ? `c-icon ${className}` : 'c-icon';
   let backgroundColor = '';
+  let logoFile = '';
 
   switch (template) {
     case 'header':
@@ -21,24 +24,17 @@ export const Icon = ({ type, className, template }: IconProps) => {
       break;
   }
 
-  const iconView = () => {
-    switch (type) {
-      case 'twitter':
-        return (
-          <>
-            <IconTwitter />
-          </>
-        );
-      case 'rss':
-        return (
-          <>
-            <IconRss />
-          </>
-        );
-      default:
-        return <></>;
-    }
-  };
+  switch (type) {
+    case 'facebook':
+      logoFile = logoFacebook;
+      break;
+    case 'rss':
+      logoFile = logoRss;
+      break;
+    case 'twitter-blue-circle':
+      logoFile = logoTwitterCircle;
+      break;
+  }
 
   return (
     <div
@@ -48,7 +44,7 @@ export const Icon = ({ type, className, template }: IconProps) => {
       }}
     >
       <a className={elementClassName} href="" target="_blank">
-        {iconView()}
+        <img src={logoFile} alt="" />
       </a>
     </div>
   );

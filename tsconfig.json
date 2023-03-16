@@ -2,7 +2,8 @@
   "baseUrl": "./",
   "paths": {
     "@/*": ["src/*"],
-    "@/scss/*": ["src/scss/*"]
+    "@/scss/*": ["src/scss/*"],
+    "@/assets/*": ["src/assets/*"]
   },
   "compilerOptions": {
     "target": "es5",

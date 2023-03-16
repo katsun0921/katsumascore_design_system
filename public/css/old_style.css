@@ -171,7 +171,6 @@ footer#site-footer .search-form input.search-field {
 =============================================== 07. ELEMENTOR CUSTOM STYLES ===============================================
 */
 /* Remove Header/Footer from Elementor Canvas */
-body.single-elementor_library #progression-studios-header-position,
 body.single-elementor_library footer#site-footer {
   display:none !important;
 }
@@ -5022,7 +5021,6 @@ body div.pp_default a.pp_expand:hover {
   }
 
 
-  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
   .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
   footer#site-footer.progression-studios-footer-full-width .l-container,
   .progression-studios-page-title-full-width #page-title-pro .l-container,
@@ -5198,7 +5196,6 @@ body div.pp_default a.pp_expand:hover {
     position:relative !important;
   }
 
-  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
   .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
   footer#site-footer.progression-studios-footer-full-width .l-container,
   .progression-studios-page-title-full-width #page-title-pro .l-container,

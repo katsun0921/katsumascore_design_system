@@ -17,29 +17,10 @@ const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
 export const IconTwitter = Template.bind({});
 IconTwitter.args = {
-  type: 'twitter',
-};
-
-export const IconTwitterHeader = Template.bind({});
-IconTwitterHeader.args = {
-  type: 'twitter',
-  className: 'c-icon__header',
-  template: 'header',
-};
-
-export const IconTwitterCircle = Template.bind({});
-IconTwitterCircle.args = {
-  type: 'twitter',
+  type: 'twitter-blue-circle',
 };
 
 export const IconRss = Template.bind({});
 IconRss.args = {
   type: 'rss',
-};
-
-export const IconRssHeader = Template.bind({});
-IconRssHeader.args = {
-  type: 'rss',
-  className: 'c-icon__header',
-  template: 'header',
 };

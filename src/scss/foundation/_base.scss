@@ -152,14 +152,6 @@ sub {
   bottom: -0.25em;
 }
 
-svg .twitter {
-  fill: rgb(29, 155, 240);
-}
-
-svg .rss {
-  fill: rgb(242, 101, 34);
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
