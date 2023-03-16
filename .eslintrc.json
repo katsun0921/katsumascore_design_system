@@ -1,7 +1,15 @@
 {
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
   "extends": "next/core-web-vitals",
   "rules": {
     // Other rules
     "@next/next/no-img-element": "off"
+  },
+  "globals": {
+    "globalVar": "writable",
+    "globalObj": "readonly"
   }
 }

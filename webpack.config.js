@@ -5,14 +5,22 @@ const enabledSourceMap = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 	mode: 'development',
-	entry: './src/scss/index.scss',
+	entry: './src/js/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
   module: {
 		rules: [
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: [
+          'ts-loader'
+        ]
+      },
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.scss$/i,
 				use: [
           // CSSファイルを抽出するように MiniCssExtractPlugin のローダーを指定
           {
@@ -56,9 +64,6 @@ module.exports = {
             options: {
               //  production モードでなければソースマップを有効に
               sourceMap: enabledSourceMap,
-              sassOptions: {
-                includePaths: [path.resolve(BASE_PATH, 'scss/')],
-              },
             },
           },
 				],
@@ -73,6 +78,9 @@ module.exports = {
   resolve: {
     alias: {
       '@scss': path.resolve(__dirname, 'src/scss')
-    }
+    },
+    extensions: [
+      '.ts', '.js',
+    ],
   }
 };

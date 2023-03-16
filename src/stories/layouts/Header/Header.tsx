@@ -2,7 +2,7 @@ import React from 'react';
 import '@/scss/layout/_container.scss';
 import '@/scss/layout/_header.scss';
 
-export const Header = () => (
+export const Header = ({}) => (
   <header id="masthead-pro" className="l-header">
     <div className="progression-studios-logo-container u-z-50">
       <div className="l-header__logo">

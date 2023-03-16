@@ -3,19 +3,10 @@ import React from 'react';
 import { Header } from './layouts/Header/Header';
 import './page.css';
 
-type User = {
-  name: string;
-};
-
-export const Page: React.VFC = () => {
-  const [user, setUser] = React.useState<User>();
-
+export const Page: React.VFC = ({}) => {
   return (
     <article>
-      <Header
-        user={user}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-      />
+      <Header />
 
       <section>
         <h2>Pages in Storybook</h2>
