@@ -1,45 +1,38 @@
 import React from 'react';
 import '@/scss/layout/_container.scss';
 import '@/scss/layout/_header.scss';
+import '@/scss/object/utility/index.scss';
+import logoPrimary from '@/assets/images/logo-primary.png';
+import logoFacebook from '@/assets/images/logo-facebook.png';
+import logoRss from '@/assets/images/logo-rss.png';
+import logoTwitterCircle from '@/assets/images/logo-twitter-blue-circle.png';
 
-export const Header = ({}) => (
-  <header id="masthead-pro" className="l-header">
-    <div className="progression-studios-logo-container u-z-50">
+export const Header = ({}) => {
+  const snsLinks = [logoRss, logoFacebook, logoTwitterCircle];
+  return (
+    <header id="masthead-pro" className="l-header">
       <div className="l-header__logo">
         <h1
           id="logo-pro"
           className="u-m-0 u-py-3 u-w-28 u-leading-none logo-inside-nav-pro noselect"
         >
           <a href="/" rel="home">
-            <img
-              src=""
-              alt=""
-              className="progression-studios-default-logo progression-studios-hide-mobile-custom-logo<?php if (get_theme_mod('progression_studios_sticky_logo')) : ?> progression-studios-default-logo-hide<?php endif; ?>"
-              width="120"
-            />
+            <img src={logoPrimary} alt="" className="u-w-24" width="100" />
           </a>
         </h1>
       </div>
       <div></div>
       <div>
         <ul className="u-flex justify-between u-gap-x-5">
-          <li>
-            <a
-              href="<?php echo esc_url(get_theme_mod('progression_studios_header_rss')); ?>"
-              target="_blank"
-              className="c-icon c-icon__header"
-            ></a>
-          </li>
-          <li>
-            <a
-              href="<?php echo esc_url(get_theme_mod('progression_studios_header_twitter')); ?>"
-              target="_blank"
-              className="c-icon c-icon__header"
-              title="<?php echo esc_html__( 'Twitter', 'progression-elements-ratency' ); ?>"
-            ></a>
-          </li>
+          {snsLinks.map((link, i) => (
+            <li key={i}>
+              <a href="" target="_blank" className="c-icon c-icon__header">
+                <img src={link} alt="" className="" width="100" />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};

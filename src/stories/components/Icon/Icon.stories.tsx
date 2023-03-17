@@ -15,6 +15,16 @@ export default {
 
 const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
 
+export const IconPrimary = Template.bind({});
+IconPrimary.args = {
+  type: 'primary',
+};
+
+export const IconFacebook = Template.bind({});
+IconFacebook.args = {
+  type: 'facebook',
+};
+
 export const IconTwitter = Template.bind({});
 IconTwitter.args = {
   type: 'twitter-blue-circle',

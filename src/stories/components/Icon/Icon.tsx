@@ -1,5 +1,6 @@
 import React from 'react';
 import '@/scss/object/component/_icon.scss';
+import logoPrimary from '@/assets/images/logo-primary.png';
 import logoFacebook from '@/assets/images/logo-facebook.png';
 import logoRss from '@/assets/images/logo-rss.png';
 import logoTwitterCircle from '@/assets/images/logo-twitter-blue-circle.png';
@@ -25,6 +26,9 @@ export const Icon = ({ type, className, template }: IconProps) => {
   }
 
   switch (type) {
+    case 'primary':
+      logoFile = logoPrimary;
+      break;
     case 'facebook':
       logoFile = logoFacebook;
       break;
