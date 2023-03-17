@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": ["next/core-web-vitals", "eslint:recommend"],
+  "rules": {
+    // Other rules
+    "@next/next/no-img-element": "off",
+    "only-arrow-functions": true
+  },
+  "globals": {
+    "globalVar": "writable",
+    "globalObj": "readonly"
+  }
 }

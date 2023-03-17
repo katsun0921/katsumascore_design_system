@@ -1,7 +1,5 @@
 /*  Table of Contents
 
-05. HEADER SEARCH AND ICONS
-06. SEARCH FORM STYLES
 07. ELEMENTOR CUSTOM STYLES
 08. CART HEADER DROP DOWN
 09. HEADER TOP STYLES
@@ -25,182 +23,11 @@
 27. RESPONSIVE STYLES
 28. TRANSLATION STYLES
 
-/*
-=============================================== 05. HEADER SEARCH AND ICONS ===============================================
-*/
-
-ul.progression-studios-header-social-icons li {
-  display:inline;
-  margin:0px;
-  padding:0px;
-}
-
-ul.progression-studios-header-social-icons li a {
-  display:inline-block;
-  text-align:center;
-  margin:0px 7px 0px 7px;
-  border-radius:50px;
-  width:30px;
-  height:30px;
-  line-height:30px;
-  font-size:14px;
-  background:rgba(255,255,255,  0.12);
-  color:rgba(255,255,255,  0.85);
-}
-
-ul.progression-studios-header-social-icons li a:hover {
-  color:#ffffff;
-  background:rgba(255,255,255,  0.2);
-}
-
-
-#masthead-pro .search-form input.search-field {
-  padding:6px 28px 6px 0px;
-  width:290px;
-  max-width:90%;
-  border-radius:0px;
-  font-style:italic;
-  font-size:15px;
-  box-shadow:none;
-  border:none;
-  border-bottom:2px solid rgba(255,255,255,  0.08);
-  color:rgba(255,255,255,  0.85);
-  background-color:transparent;
-  background-position:right 5px;
-  background-image:url(images/search-magnify-light.png);
-  background-repeat:no-repeat;
-  box-shadow: none;
-  margin:0px auto !important;
-}
-
-#masthead-pro .search-form input.search-field::-webkit-input-placeholder {
-  color:rgba(255,255,255,  0.56);
-}
-#masthead-pro .search-form input.search-field::-moz-placeholder {
-  color:rgba(255,255,255,  0.56);
-}
-#masthead-pro .search-form input.search-field:-ms-input-placeholder {
-  color:rgba(255,255,255,  0.56);
-}
-#masthead-pro .search-form input.search-field:-moz-placeholder {
-  color:rgba(255,255,255,  0.56);
-}
-
-#masthead-pro .search-form input.search-field::placeholder {
-  color:rgba(255,255,255,  0.56);
-}
-
-#masthead-pro .search-form input.search-field:focus {
-  outline:none;
-  border-color:rgba(255,255,255,  0.18);
-  color:rgba(255,255,255,  0.85);
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  #masthead-pro .search-form input.search-field {background-image: url(images/search-magnify-light@2x.png); background-size:40px 30px;}
-}
-
-#masthead-pro .search-form input.search-submit {
-  display:none;
-}
-
-
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field {
-  border-color:rgba(0,0,0,  0.08);
-  color:rgba(0,0,0,  0.85);
-  background-image:url(images/search-magnify-dark.png);
-}
-
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field::-webkit-input-placeholder {
-  color:rgba(0,0,0,  0.56);
-}
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field::-moz-placeholder {
-  color:rgba(0,0,0,  0.56);
-}
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field:-ms-input-placeholder {
-  color:rgba(0,0,0,  0.56);
-}
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field:-moz-placeholder {
-  color:rgba(0,0,0,  0.56);
-}
-
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field::placeholder {
-  color:rgba(0,0,0,  0.56);
-}
-
-.progression-studios-header-search-dark #masthead-pro .search-form input.search-field:focus {
-  outline:none;
-  border-color:rgba(0,0,0,  0.18);
-  color:rgba(0,0,0,  0.85);
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  .progression-studios-header-search-dark #masthead-pro .search-form input.search-field {background-image: url(images/search-magnify-dark@2x.png); background-size:40px 30px;}
-}
-
-
-/*
-=============================================== 06. SEARCH FORM STYLES ===============================================
-*/
-.search-form input.search-field:focus {
-  outline:none;
-}
-.search-form {
-  text-align:center;
-  margin:0 auto;
-}
-
-footer#site-footer .search-form,
-#content-pro .search-form {
-  margin-left:0px;
-}
-
-
-
-.search-form input {
-  padding:16px 18px;
-  margin:0 auto;
-  border:none;
-}
-
-footer#site-footer .search-form input.search-field {
-  background:#ffffff;
-}
-
-.elementor-section-stretched .search-form {
-  max-width:600px;
-}
-
-.search-form {
-  max-width:400px;
-  margin-bottom:30px;
-}
-
-.search-form input.search-field {
-  background-color:#f5f5f5;
-  border:2px solid #f5f5f5;
-  margin:0px;
-  width: calc(100% - 44px);
-  padding:13px 22px;
-  font-size:14px;
-  background-repeat:no-repeat;
-  border-radius:60px;
-}
-
-
-
-.search-form button,
-.search-form input.search-submit {
-  display:none;
-}
-
-
 
 /*
 =============================================== 07. ELEMENTOR CUSTOM STYLES ===============================================
 */
 /* Remove Header/Footer from Elementor Canvas */
-body.single-elementor_library #progression-studios-header-position,
 body.single-elementor_library footer#site-footer {
   display:none !important;
 }
@@ -3349,14 +3176,6 @@ ul.blog-single-social-sharing .progression-unskew-text {
   transform: skewX(-8deg);
 }
 
-#boxed-layout-pro .form-submit input#submit,
-.tml-submit-wrap input.button-primary,
-.tml input#wp-submit,
-#boxed-layout-pro button.button,
-#boxed-layout-pro a.button {
-  font-style:normal;
-  transform: skewX(-8deg);
-}
 
 
 .post-password-form input {
@@ -3561,11 +3380,8 @@ form#mc-embedded-subscribe-form .clear {
   padding:18px 24px 17px 24px;
 }
 
-#boxed-layout-pro .form-submit input#submit,
 .tml-submit-wrap input.button-primary,
-.tml input#wp-submit,
-#boxed-layout-pro button.button,
-#boxed-layout-pro a.button {
+.tml input#wp-submit {
   line-height:1;
   border:none;
   text-align:center;
@@ -5034,17 +4850,6 @@ body div.pp_default a.pp_expand:hover {
   transition: all 600ms;
 }
 
-#boxed-layout-pro.progression-studios-preloader {
-  margin-top:50px;
-  opacity:0;
-}
-#boxed-layout-pro.progression-studios-preloader.progression-preloader-completed {
-  animation-duration:500ms;
-  animation-name: ProMoveUpPageLoader;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay:350ms;
-}
 
 /* Animation For Menus & Masonry CSS3 */
 @keyframes ProMoveUpPageLoader {
@@ -5072,20 +4877,7 @@ body div.pp_default a.pp_expand:hover {
     position:relative !important;
   }
 
-  body #boxed-layout-pro {
-    width:100%;
-  }
 
-
-  body #boxed-layout-pro .l-container,
-  .l-container  {
-    width:94%;
-    padding-left:0px;
-    padding-right:0px;
-  }
-
-
-  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
   .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
   footer#site-footer.progression-studios-footer-full-width .l-container,
   .progression-studios-page-title-full-width #page-title-pro .l-container,
@@ -5261,17 +5053,6 @@ body div.pp_default a.pp_expand:hover {
     position:relative !important;
   }
 
-
-  body #boxed-layout-pro {
-    width:100%;
-  }
-
-  body #boxed-layout-pro .l-container, .l-container  {
-    width:92%;
-    padding-left:0px;
-    padding-right:0px;
-  }
-  .progression-studios-header-full-width #progression-studios-header-width header#masthead-pro .l-container,
   .progression-studios-header-full-width-no-gap #ratency-progression-header-top .l-container,
   footer#site-footer.progression-studios-footer-full-width .l-container,
   .progression-studios-page-title-full-width #page-title-pro .l-container,
@@ -5608,12 +5389,10 @@ h2.woocommerce-loop-category__title,
 h2.woocommerce-loop-product__title,
 #progression-shopping-cart-toggle a i.shopping-cart-header-icon,
 #progression-studios-header-search-icon i,
-#boxed-layout-pro input#submit,
 .tml-submit-wrap input.button-primary,
 body .acf-form .acf-field .acf-input-wrap input, .acf-form-submit input.button,
 #woocomerce-tabs-container-progression-studios .woocommerce-tabs ul.wc-tabs li,
 #woocomerce-tabs-container-progression-studios .woocommerce-tabs ul.wc-tabs li a,
-#boxed-layout-pro button.button,
 ul.progression-filter-button-group li:after,
 ul.progression-filter-button-group li,
 .flex-control-paging li a,

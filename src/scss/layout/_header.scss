@@ -1,5 +1,9 @@
+@use '../global/variable/color' as color;
+
 .l-header {
+  background-color: color.$header;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
 }

@@ -1,29 +1,8 @@
 // wordpress template
-.progression-studios-transparent-header #progression-studios-header-position {
-  position: absolute;
-  width: 100%;
-  z-index: 50;
-}
-
-#progression-studios-header-position {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .progression-studios-transparent-header header#masthead-pro {
   background-color: transparent;
   box-shadow: none;
   -webkit-font-smoothing: antialiased;
-}
-
-.progression-studios-header-full-width
-  #progression-studios-header-width
-  header#masthead-pro
-  .l-container {
-  width: auto;
-  padding-right: 50px;
-  padding-left: 50px;
 }
 
 .progression-studios-transparent-header
@@ -77,11 +56,6 @@ body.admin-bar .progression-sticky-scrolled {
   display: block;
 }
 
-.progression-sticky-scrolled
-  .progression-studios-default-logo-hide.progression-studios-default-logo {
-  display: none;
-}
-
 .progression-studios-custom-logo-per-page-hide-default {
   display: none;
 }
@@ -115,15 +89,6 @@ header#masthead-pro.progression-studios-nav-center
   nav#site-navigation {
   display: table;
   margin: 0 auto;
-}
-
-.progression-disable-logo-below-per-page
-  header#masthead-pro
-  .progression-studios-logo-container,
-.progression-disable-logo-below-per-page
-  #header-container-logo-progression
-  .progression-studios-logo-container {
-  display: none;
 }
 
 #progression-shopping-cart-count a {

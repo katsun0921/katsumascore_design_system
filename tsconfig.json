@@ -2,7 +2,8 @@
   "baseUrl": "./",
   "paths": {
     "@/*": ["src/*"],
-    "@/scss/*": ["src/scss/*"]
+    "@/scss/*": ["src/scss/*"],
+    "@/assets/*": ["src/assets/*"]
   },
   "compilerOptions": {
     "target": "es5",
@@ -11,7 +12,7 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    //"noEmit": true, ts-loaderを導入したらエラーがでる
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -19,6 +20,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "./index.d.ts"],
   "exclude": ["node_modules"]
 }
