@@ -16,6 +16,4 @@ const Template: ComponentStory<typeof Search> = (args) => <Search {...args} />;
 
 export const SearchHeader = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-SearchHeader.args = {
-  label: 'Search',
-};
+SearchHeader.args = {};

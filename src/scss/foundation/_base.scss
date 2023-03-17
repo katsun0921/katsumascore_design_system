@@ -56,8 +56,6 @@ ol {
 }
 
 img {
-  height: 100%;
-  width: 100%;
   border: 0;
   max-width: 100%;
   a & {
@@ -175,6 +173,7 @@ button {
 }
 
 input {
+  border: none;
   line-height: normal;
   cursor: pointer;
   -webkit-appearance: button;

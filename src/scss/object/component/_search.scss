@@ -1,16 +1,31 @@
+@use '../../global/variable/color' as color;
+@import '../../global/mixin/fontSize';
+
+$searchBlockSize: 28px;
 .c-search {
+  &__label {
+    padding: 6px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    &::before {
+      content: '';
+      display: block;
+      width: $searchBlockSize;
+      height: $searchBlockSize + 10px;
+      border-top-right-radius: 12px 12px;
+      border-bottom-right-radius: 12px 12px;
+      position: absolute;
+      top: 0;
+      right: -$searchBlockSize;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
   &__field {
-    padding: 6px 28px 6px 0px;
+    position: relative;
     width: 290px;
+    @include text-sm;
     max-width: 90%;
     font-style: italic;
-    font-size: 15px;
-    border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
     color: rgba(255, 255, 255, 0.85);
     background-color: transparent;
-    background-position: right 5px;
-    background-repeat: no-repeat;
-    box-shadow: none;
   }
 }

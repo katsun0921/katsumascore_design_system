@@ -76,10 +76,6 @@
   #masthead-pro .search-form input.search-field {background-image: url(images/search-magnify-light@2x.png); background-size:40px 30px;}
 }
 
-#masthead-pro .search-form input.search-submit {
-  display:none;
-}
-
 
 .progression-studios-header-search-dark #masthead-pro .search-form input.search-field {
   border-color:rgba(0,0,0,  0.08);

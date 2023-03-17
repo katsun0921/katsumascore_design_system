@@ -6,12 +6,13 @@ import logoPrimary from '@/assets/images/logo-primary.png';
 import logoFacebook from '@/assets/images/logo-facebook.png';
 import logoRss from '@/assets/images/logo-rss.png';
 import logoTwitterCircle from '@/assets/images/logo-twitter-blue-circle.png';
+import { Search } from '../../components/Search/Search';
 
 export const Header = ({}) => {
   const snsLinks = [logoRss, logoFacebook, logoTwitterCircle];
   return (
     <header id="masthead-pro" className="l-header">
-      <div className="l-header__logo">
+      <div>
         <h1
           id="logo-pro"
           className="u-m-0 u-py-3 u-w-28 u-leading-none logo-inside-nav-pro noselect"
@@ -21,7 +22,7 @@ export const Header = ({}) => {
           </a>
         </h1>
       </div>
-      <div></div>
+      <div>{<Search />}</div>
       <div>
         <ul className="u-flex justify-between u-gap-x-5">
           {snsLinks.map((link, i) => (
