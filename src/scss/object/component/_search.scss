@@ -4,28 +4,24 @@
 $searchBlockSize: 28px;
 .c-search {
   &__label {
-    padding: 6px 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    &::before {
-      content: '';
-      display: block;
-      width: $searchBlockSize;
-      height: $searchBlockSize + 10px;
-      border-top-right-radius: 12px 12px;
-      border-bottom-right-radius: 12px 12px;
-      position: absolute;
-      top: 0;
-      right: -$searchBlockSize;
-      background-color: rgba(255, 255, 255, 0.5);
-    }
   }
   &__field {
-    position: relative;
+    padding: 6px 0;
     width: 290px;
     @include text-sm;
-    max-width: 90%;
     font-style: italic;
     color: rgba(255, 255, 255, 0.85);
-    background-color: transparent;
+  }
+  &__submit {
+    display: block;
+    width: $searchBlockSize;
+    height: $searchBlockSize + 10px;
+    border-top-right-radius: 12px 12px;
+    border-bottom-right-radius: 12px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

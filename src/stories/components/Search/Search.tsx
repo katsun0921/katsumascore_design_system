@@ -8,8 +8,8 @@ import magnifyingGlass from '@/assets/images/magnifying-glass.png';
  */
 export const Search = ({}) => {
   return (
-    <form method="get" className="c-search" action="">
-      <label className="u-relative c-search__label">
+    <form method="get" className="c-search u-flex" action="">
+      <label className="c-search__label">
         <span className="screen-reader-text"></span>
         <input
           type="search"
@@ -19,15 +19,13 @@ export const Search = ({}) => {
           value=""
           name="s"
         />
-        <img
-          className="u-absolute u-inset-y-0 u-my-auto"
-          src={magnifyingGlass}
-          alt=""
-          width="32"
-          height="32"
-        />
       </label>
-      <input type="submit" className="u-hidden search-submit" value="" />
+      <input
+        type="submit"
+        style={{ backgroundImage: `url(${magnifyingGlass})` }}
+        className="search-submit c-search__submit"
+        value=""
+      />
     </form>
   );
 };
