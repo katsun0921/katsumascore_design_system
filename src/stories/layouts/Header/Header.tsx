@@ -12,7 +12,7 @@ export const Header = ({}) => {
   const snsLinks = [logoRss, logoFacebook, logoTwitterCircle];
   return (
     <header id="masthead-pro" className="l-header">
-      <div>
+      <div className="l-header__logo">
         <h1
           id="logo-pro"
           className="u-m-0 u-py-3 u-w-28 u-leading-none logo-inside-nav-pro noselect"
@@ -22,8 +22,8 @@ export const Header = ({}) => {
           </a>
         </h1>
       </div>
-      <div>{<Search />}</div>
-      <div>
+      <div className="l-header__search">{<Search />}</div>
+      <div className="l-header__snsLinks">
         <ul className="u-flex justify-between u-gap-x-5">
           {snsLinks.map((link, i) => (
             <li key={i}>

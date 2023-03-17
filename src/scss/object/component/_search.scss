@@ -1,4 +1,4 @@
-@use '../../global/variable/color' as color;
+@use '../../global/variable/colors' as color;
 @import '../../global/mixin/fontSize';
 
 $searchBlockSize: 28px;
@@ -7,7 +7,7 @@ $searchBlockSize: 28px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   }
   &__field {
-    padding: 6px 0;
+    padding: 6px 1em;
     width: 290px;
     @include text-sm;
     font-style: italic;
