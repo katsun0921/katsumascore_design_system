@@ -44,13 +44,6 @@ header .sf-mega {width:1200px; left:50%; margin-left:-600px;}
   text-align:left;
 }
 
-.mobile-menu-icon-pro {
-  color:#707070;
-  padding:41px 0px 41px 10px;
-  margin:0 auto;
-  font-size:18px;
-  line-height:1;
-}
 
 .progression-studios-nav-count-cat-off span.progression-studios-nav-cat-count {
   display:none;
@@ -452,29 +445,7 @@ html[xmlns] .flexslider .slides { display: block; }
 /*
 =============================================== 13. MOBILE NAVIGATION STYLES ===============================================
 */
-span.progression-mobile-menu-text {
-  padding-left:6px;
-  position:relative;
-  top:-2px;
-  text-transform:uppercase;
-  font-weight:500;
-  font-family:'Fira Sans Condensed', sans-serif;
-}
 
-.mobile-menu-icon-pro i {
-  min-width:22px;
-}
-.mobile-menu-icon-pro {
-  cursor:pointer;
-  line-height:1;
-  display:none;
-  text-align:center;
-  padding-right:6px;
-}
-
-.active-mobile-icon-pro .mobile-menu-icon-pro .fa-bars:before {
-  content:"\f00d";
-}
 
 .menu-collapser {
   display:none !important;
@@ -4174,9 +4145,6 @@ body div.pp_default a.pp_expand:hover {
 
 
 
-  .mobile-menu-icon-pro {
-    display:block;
-  }
 
   .progression-studios-transparent-header header#masthead-pro {
     position:relative;
@@ -4363,10 +4331,6 @@ body div.pp_default a.pp_expand:hover {
 
   #panel-search-progression {display:none !important;}
 
-
-  .mobile-menu-icon-pro {
-    display:block;
-  }
 
   .progression-studios-hide-mobile-custom-logo {
     display:none;

@@ -1,8 +1,6 @@
 @use '../global/variable/colors' as color;
 @import '../global/mixin/screens';
-@import '../global/mixin/transition';
 
 .l-navigation {
   background: color.$navigation;
-  @include standard-transition;
 }

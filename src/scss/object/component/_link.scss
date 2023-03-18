@@ -1,12 +1,16 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
 @import '../../global/mixin/fontSize';
+@import '../../global/mixin/transition';
 
 .c-link {
-  &__navigation {
+  &__header {
+    display: flex;
+    justify-content: center;
     font-family: 'Sawarabi Gothic', sans-serif;
     // wordpress のnew ProgressionFrontendWalkerにclassを追記したくないので、要素でしている
     > li {
+      $AnchorPaddingY: 28px;
       position: relative;
       &:not(:last-child)::after {
         content: '';
@@ -20,9 +24,40 @@
         transform: translateY(-50%);
       }
       > a {
-        padding: 28px 42px;
+        position: relative;
+        padding: $AnchorPaddingY 42px;
         display: block;
         color: color.$white;
+        &::before {
+          content: '';
+          background: rgba(255, 255, 255, 0);
+          display: block;
+          position: absolute;
+          bottom: calc(#{$AnchorPaddingY} - 10px);
+          height: 2px;
+          width: 0;
+          @include all-transition;
+        }
+        .progression-studios-nav-cat-count {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.11);
+          display: inline-block;
+          border-radius: 30px;
+          text-align: center;
+          height: 18px;
+          padding: 0 6px;
+          line-height: 18px;
+          font-size: 10px;
+          margin-bottom: -6px;
+          position: relative;
+          top: -2px;
+          margin-left: 6px;
+        }
+      }
+      &.current-menu-item > a::before,
+      > a:hover::before {
+        width: calc(100% - 84px);
+        background: rgba(255, 255, 255, 0.3);
       }
     }
   }

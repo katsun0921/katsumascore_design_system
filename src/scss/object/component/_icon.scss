@@ -19,3 +19,92 @@
     }
   }
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hamburger-menu {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.bar:nth-child(1) {
+  top: 0;
+}
+
+.bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+  bottom: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .bar:nth-child(1) {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .bar:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .bar:nth-child(3) {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .menu li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
