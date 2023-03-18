@@ -39,19 +39,14 @@
           @include all-transition;
         }
         .progression-studios-nav-cat-count {
-          color: #ffffff;
           background: rgba(255, 255, 255, 0.11);
           display: inline-block;
-          border-radius: 30px;
+          border-radius: 50%;
           text-align: center;
-          height: 18px;
-          padding: 0 6px;
-          line-height: 18px;
-          font-size: 10px;
-          margin-bottom: -6px;
-          position: relative;
-          top: -2px;
-          margin-left: 6px;
+          width: 1.5em;
+          height: 1.5em;
+          line-height: 1.5em;
+          margin-left: 0.5em;
         }
       }
       &.current-menu-item > a::before,
