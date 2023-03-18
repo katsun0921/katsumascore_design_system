@@ -4,13 +4,13 @@
 
 .c-category {
   text-align: center;
-  @include text-sm;
   display: inline-block;
   font-weight: fontWeight.$fontMedium;
   color: color.$white;
   background: color.$category;
   padding: 9px 22px;
   transform: skewX(-8deg);
+  @include text-sm;
   & a {
     color: color.$white;
   }

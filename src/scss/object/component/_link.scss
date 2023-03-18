@@ -1,0 +1,29 @@
+@use '../../global/variable/colors' as color;
+@use '../../global/variable/fontWeight' as fontWeight;
+@import '../../global/mixin/fontSize';
+
+.c-link {
+  &__navigation {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    // wordpress のnew ProgressionFrontendWalkerにclassを追記したくないので、要素でしている
+    > li {
+      position: relative;
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.3);
+        top: 50%;
+        right: 0;
+        height: 1.6em;
+        display: block;
+        width: 2px;
+        transform: translateY(-50%);
+      }
+      > a {
+        padding: 28px 42px;
+        display: block;
+        color: color.$white;
+      }
+    }
+  }
+}

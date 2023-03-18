@@ -1,6 +1,7 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const enabledSourceMap = process.env.NODE_ENV !== 'production';
 
 module.exports = {
@@ -73,7 +74,10 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: 'build.css'
-		})
+		}),
+    new StylelintPlugin({
+      fix: true,
+    }),
 	],
   resolve: {
     alias: {

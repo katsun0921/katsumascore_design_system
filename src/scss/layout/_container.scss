@@ -6,6 +6,14 @@
   position: relative;
   padding: 0px;
 
+  @media only screen and (min-width: 960px) {
+    #{className.$progression-studios-header-full-width-no-gap}.progression-studios-header-cart-width-adjustment
+      header#masthead-pro
+      .l-container {
+      padding-right: 0px;
+    }
+  }
+
   #{className.$progression-studios-header-full-width-no-gap}
     #ratency-progression-header-top
     .l-container,
@@ -23,17 +31,6 @@
     width: auto;
     margin: 0px auto;
     padding: 0px;
-  }
-
-  @media only screen and (min-width: 960px) {
-    #{className.$progression-studios-header-full-width-no-gap}.progression-studios-header-cart-width-adjustment
-      header#masthead-pro
-      .l-container,
-    #{className.$progression-studios-header-full-width-no-gap}.progression-studios-header-cart-width-adjustment
-      header#masthead-pro
-      .l-container {
-      padding-right: 0px;
-    }
   }
 
   #{className.$progression-studios-header-full-width-no-gap}
