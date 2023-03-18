@@ -1,11 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Icon, HamburgerMenu } from './Icon';
+import { Icon, IconImage } from './Icon';
 
 export default {
   title: 'Component/Icon',
   component: Icon,
+  subcomponents: { IconImage },
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
@@ -13,24 +14,26 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof Icon>;
 
-const Template: ComponentStory<typeof Icon> = (args) => <Icon {...args} />;
+const TemplateImage: ComponentStory<typeof Icon> = (args) => (
+  <Icon {...args}>
+    <IconImage props={args} />
+  </Icon>
+);
 
-export const IconPrimary = Template.bind({});
-IconPrimary.args = {
+export const Primary = TemplateImage.bind({});
+Primary.args = {
   type: 'primary',
 };
 
-export const IconFacebook = Template.bind({});
-IconFacebook.args = {
+export const Facebook = TemplateImage.bind({});
+Facebook.args = {
   type: 'facebook',
 };
-
-export const IconTwitter = Template.bind({});
-IconTwitter.args = {
+export const TwitterBlueCircle = TemplateImage.bind({});
+TwitterBlueCircle.args = {
   type: 'twitter-blue-circle',
 };
-
-export const IconRss = Template.bind({});
-IconRss.args = {
+export const Rss = TemplateImage.bind({});
+Rss.args = {
   type: 'rss',
 };

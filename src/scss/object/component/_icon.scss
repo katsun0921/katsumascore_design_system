@@ -1,22 +1,8 @@
 .c-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
   background: rgba(255, 255, 255, 0.12);
   &:hover {
     background: rgba(255, 255, 255, 0.2);
-  }
-  &__header {
-    & svg {
-      width: 55%;
-    }
-    & .twitter,
-    & .rss {
-      fill: rgb(255, 255, 255);
-    }
   }
 }
 
