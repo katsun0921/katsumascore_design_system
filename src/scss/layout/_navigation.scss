@@ -1,6 +1,17 @@
 @use '../global/variable/colors' as color;
 @import '../global/mixin/screens';
+@import '../global/mixin/fontSize';
 
 .l-navigation {
   background: color.$navigation;
+  &__menuButton {
+    color: color.$white;
+    padding: 25px 0;
+    @include text-xl;
+    .c-icon__hamburgerMenuLine {
+      background-color: color.$white;
+    }
+  }
+  &.hidden-mobile-menu {
+  }
 }
