@@ -6,7 +6,7 @@ const enabledSourceMap = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/index.ts',
+  entry: './src/ts/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'

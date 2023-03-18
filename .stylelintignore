@@ -7,3 +7,4 @@ src/inc/font-awesome/css/font-awesome.css
 src/inc/font-awesome/css/font-awesome.min.css
 src/inc/pe-icon-7-stroke/css/helper.css
 src/inc/pe-icon-7-stroke/css/pe-icon-7-stroke.css
+src/scss/inc/_flexslider.scss

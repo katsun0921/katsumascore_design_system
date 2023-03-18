@@ -27,23 +27,32 @@ $hamburgerMenuLineHeight: calc(#{$hamburgerMenuHeight} / 3 - 4px);
     transition: transform 0.3s ease-out;
     &:nth-child(1) {
       top: $hamburgerMenuLineHeight;
-      .menu-open & {
-        top: 50%;
-        transform: translateY(-50%) rotate(-45deg);
-      }
     }
 
     &:nth-child(2) {
       top: 50%;
       transform: translateY(-50%);
-      .menu-open & {
-        opacity: 0;
-      }
     }
 
     &:nth-child(3) {
       bottom: 0;
-      .menu-open & {
+    }
+  }
+}
+
+.menu-open {
+  .c-icon {
+    &__hamburgerMenuLine {
+      &:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
       }
