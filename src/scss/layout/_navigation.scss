@@ -40,13 +40,12 @@ $countLinkList: 4;
     .c-link__header {
       display: flex;
       background-color: color.$category;
+      max-height: calc(#{$linkListHeight} * #{$countLinkList});
     }
   }
 }
-.open-menu {
-  .l-navigation__list {
-    .c-link__header {
-      max-height: calc(#{$linkListHeight} * #{$countLinkList});
-    }
+.l-navigation__list.open-menu {
+  .c-link__header {
+    max-height: calc(#{$linkListHeight} * #{$countLinkList});
   }
 }
