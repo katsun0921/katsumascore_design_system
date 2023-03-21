@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Icon, IconImage, HamburgerMenu } from './Icon';
+import { Icon, IconImage } from './Icon';
 
 export default {
   title: 'Component/Icon',
   component: Icon,
-  subcomponents: { IconImage, HamburgerMenu },
+  subcomponents: { IconImage },
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
@@ -17,11 +17,6 @@ export default {
 const TemplateImage: ComponentStory<typeof Icon> = (args) => (
   <Icon {...args}>
     <IconImage props={args} />
-  </Icon>
-);
-const TemplateHamburgerMenu: ComponentStory<typeof Icon> = (args) => (
-  <Icon {...args}>
-    <HamburgerMenu />
   </Icon>
 );
 
@@ -40,10 +35,5 @@ TwitterBlueCircle.args = {
 };
 export const Rss = TemplateImage.bind({});
 Rss.args = {
-  type: 'rss',
-};
-
-export const IconHamburgerMenu = TemplateHamburgerMenu.bind({});
-IconHamburgerMenu.args = {
   type: 'rss',
 };

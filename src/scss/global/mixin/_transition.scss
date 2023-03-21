@@ -4,8 +4,8 @@
   transition-timing-function: ease-in-out;
 }
 
-@mixin standard-transition {
+@mixin select-props-transition($props) {
   transition-duration: 250ms;
-  transition-property: color, background-color, opacity, border;
+  transition-property: #{$props};
   transition-timing-function: ease-in-out;
 }

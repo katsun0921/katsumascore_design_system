@@ -3,6 +3,7 @@
 @import '../../global/mixin/fontSize';
 @import '../../global/mixin/transition';
 
+$AnchorPaddingY: 28px;
 .c-link {
   &__header {
     display: flex;
@@ -10,7 +11,6 @@
     font-family: 'Sawarabi Gothic', sans-serif;
     // wordpress のnew ProgressionFrontendWalkerにclassを追記したくないので、要素でしている
     > li {
-      $AnchorPaddingY: 28px;
       position: relative;
       &:not(:last-child)::after {
         content: '';

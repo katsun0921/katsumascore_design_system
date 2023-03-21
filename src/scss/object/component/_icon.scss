@@ -1,61 +1,7 @@
-$hamburgerMenuHeight: 24px;
-$hamburgerMenuLineHeight: calc(#{$hamburgerMenuHeight} / 3 - 4px);
 .c-icon {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.12);
   &:hover {
     background: rgba(255, 255, 255, 0.2);
-  }
-  &__hamburgerMenu {
-    display: block;
-    width: 30px;
-    height: $hamburgerMenuHeight;
-    position: relative;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    background-color: transparent;
-  }
-  &__hamburgerMenuLine {
-    display: block;
-    width: 100%;
-    height: $hamburgerMenuLineHeight;
-    background-color: #000;
-    position: absolute;
-    left: 0;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-out;
-    &:nth-child(1) {
-      top: $hamburgerMenuLineHeight;
-    }
-
-    &:nth-child(2) {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    &:nth-child(3) {
-      bottom: 0;
-    }
-  }
-}
-
-.menu-open {
-  .c-icon {
-    &__hamburgerMenuLine {
-      &:nth-child(1) {
-        top: 50%;
-        transform: translateY(-50%) rotate(-45deg);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        top: 50%;
-        transform: translateY(-50%) rotate(45deg);
-      }
-    }
   }
 }

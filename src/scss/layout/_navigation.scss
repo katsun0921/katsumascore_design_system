@@ -1,21 +1,55 @@
 @use '../global/variable/colors' as color;
 @import '../global/mixin/screens';
 @import '../global/mixin/fontSize';
+@import '../global/mixin/transition';
+@import '../object/component/link';
 
+$linkListHeight: calc(#{$AnchorPaddingY} * 2 + 1.5rem);
+$countLinkList: 4;
 .l-navigation {
   background: color.$navigation;
   &__menuButton {
     color: color.$white;
     padding: 25px 0;
-    @include text-xl;
-    .c-icon__hamburgerMenuLine {
-      background-color: color.$white;
+    &--hidden {
+      display: none;
+    }
+    .c-hamburgerMenu {
+      color: color.$white;
+      &__line {
+        background-color: color.$white;
+      }
     }
   }
   &__list {
     .c-link__header {
+      @include select-props-transition('max-height');
+      max-height: 0;
       display: block;
       background-color: color.$header;
     }
+  }
+}
+
+// Desktop 表示
+.l-navigation--isDesktop {
+  .l-navigation__menuButton {
+    display: none;
+  }
+  & .l-navigation__list {
+    .c-link__header {
+      display: flex;
+      background-color: color.$category;
+    }
+  }
+  .l-navigation__list {
+    .c-link__header {
+      display: flex;
+    }
+  }
+}
+.open-menu {
+  .c-link__header {
+    max-height: calc(#{$linkListHeight} * #{$countLinkList});
   }
 }

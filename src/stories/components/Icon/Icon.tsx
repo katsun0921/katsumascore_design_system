@@ -1,6 +1,5 @@
 import React from 'react';
 import type { ReactNode } from 'react';
-import { clickHamburgerMenu } from '../../../ts/hamburger-menu/hamburger-menu';
 import '@/scss/object/component/_icon.scss';
 import logoPrimary from '@/assets/images/logo-primary.png';
 import logoFacebook from '@/assets/images/logo-facebook.png';
@@ -67,20 +66,5 @@ export const IconImage = ({ className, props }: TIconImageProps) => {
     <a className={elementClassName} href="" target="_blank">
       <img src={logoFile} alt="" width="30" />
     </a>
-  );
-};
-
-export const HamburgerMenu = ({}) => {
-  return (
-    <button
-      type="button"
-      id="js-menu-button"
-      className="c-icon__hamburgerMenu"
-      onClick={() => clickHamburgerMenu()}
-    >
-      <span className="c-icon__hamburgerMenuLine"></span>
-      <span className="c-icon__hamburgerMenuLine"></span>
-      <span className="c-icon__hamburgerMenuLine"></span>
-    </button>
   );
 };
