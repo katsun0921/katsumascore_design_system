@@ -3,9 +3,16 @@ import { preloader } from './preloader/preloader';
 import { clickHamburgerMenu } from './hamburgerMenu/hamburgerMenu';
 import { changeClassWhenResizeOnNavigation } from './navigation/';
 
-preloader();
-
 window.addEventListener('load', function () {
-  clickHamburgerMenu();
+  preloader();
+  changeClassWhenResizeOnNavigation();
+  const menuButton = document.querySelector('#js-menu-button');
+  if (!!menuButton) {
+    menuButton.addEventListener('click', function () {
+      clickHamburgerMenu();
+    });
+  }
+});
+window.addEventListener('resize', function () {
   changeClassWhenResizeOnNavigation();
 });
