@@ -23,10 +23,10 @@ $countLinkList: 4;
   }
   &__list {
     .c-link__header {
-      @include select-props-transition('max-height');
       max-height: 0;
       display: block;
       background-color: color.$header;
+      @include select-props-transition('max-height');
     }
   }
 }
@@ -36,20 +36,17 @@ $countLinkList: 4;
   .l-navigation__menuButton {
     display: none;
   }
-  & .l-navigation__list {
+  .l-navigation__list {
     .c-link__header {
       display: flex;
       background-color: color.$category;
     }
   }
-  .l-navigation__list {
-    .c-link__header {
-      display: flex;
-    }
-  }
 }
 .open-menu {
-  .c-link__header {
-    max-height: calc(#{$linkListHeight} * #{$countLinkList});
+  .l-navigation__list {
+    .c-link__header {
+      max-height: calc(#{$linkListHeight} * #{$countLinkList});
+    }
   }
 }

@@ -4,11 +4,11 @@ $hamburgerMenuLineHeight: calc(#{$hamburgerMenuHeight} / 3 - 4px);
 .c-hamburgerMenu {
   display: flex;
   align-items: center;
-  @include text-xl;
   cursor: pointer;
   border: none;
   padding: 0;
   background-color: transparent;
+  @include text-xl;
   &__lineContainer {
     position: relative;
     width: 30px;

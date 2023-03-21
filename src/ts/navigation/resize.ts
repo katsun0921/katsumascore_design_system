@@ -1,4 +1,4 @@
-export const changeClassOnResize = () => {
+export const changeClassWhenResizeOnNavigation = () => {
   const navigation = document.querySelector('.l-navigation');
   const navigationList = document.querySelector('.l-navigation__list');
   const mediaQuery = window.matchMedia('(min-width: 1024px)');
