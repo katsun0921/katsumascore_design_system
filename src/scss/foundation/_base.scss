@@ -1,4 +1,4 @@
-@use '../global/variable/color' as color;
+@use '../global/variable/colors' as color;
 @use '../global/variable/fontWeight' as fontWeight;
 @import '../global/mixin/fontSize';
 
@@ -9,8 +9,8 @@ html {
 body {
   color: color.$slate900;
   font-weight: normal;
-  @include text-base;
   font-family: 'Noto Sans', sans-serif;
+  @include text-base;
 }
 
 h1,
@@ -38,6 +38,9 @@ a {
   color: color.$elementLink;
   outline: none !important;
   text-decoration: none;
+  blockquote & {
+    color: color.$gray500;
+  }
   &:hover,
   &:active {
     outline: 0;
@@ -53,6 +56,8 @@ a {
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -82,10 +87,6 @@ blockquote {
   border-left: 4px solid color.$gray100;
   margin-left: 0px;
   padding-left: 30px;
-  a:hover,
-  a {
-    color: color.$gray500;
-  }
 }
 
 dfn {
@@ -201,19 +202,6 @@ textarea {
   background-color: color.$slate50;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td {
-  vertical-align: top;
-}
-
-video,
-audio {
-  max-width: 100%;
-}
-
-table {
   width: 100%;
   background: color.$white;
   border-collapse: separate;
@@ -223,31 +211,33 @@ table {
   border-left: 1px solid color.$elementTable;
   border-top: 1px solid color.$elementTable;
 }
-
-th,
 td {
-  color: color.$elementTh;
-  border: 1px solid color.$elementTable;
+  border-width: 0 1px 1px 0;
+  vertical-align: top;
 }
-table th {
+
+video,
+audio {
+  max-width: 100%;
+}
+
+th {
   background: color.$elementTable;
-}
-table caption,
-table th,
-table td {
-  font-weight: normal;
-  text-align: left;
-}
-table th {
   border-width: 0 1px 1px 0;
   font-weight: 700;
 }
-table td {
-  border-width: 0 1px 1px 0;
-}
-table tr th,
-table tr td {
+
+th,
+td {
   padding: 8px 12px;
+  color: color.$elementTh;
+  border: 1px solid color.$elementTable;
+}
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
 }
 
 abbr[title] {

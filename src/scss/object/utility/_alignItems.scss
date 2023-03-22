@@ -1,0 +1,14 @@
+// https://tailwindcss.com/docs/align-items
+$justify-content-values: (
+  'items-start': flex-start,
+  'items-end': flex-end,
+  'items-center': center,
+  'items-baseline': baseline,
+  'items-stretch': stretch,
+);
+
+@each $name, $properties in $justify-content-values {
+  .u-#{$name} {
+    align-items: $properties;
+  }
+}

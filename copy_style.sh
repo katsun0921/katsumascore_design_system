@@ -4,9 +4,10 @@ echo "ビルドしたsytleファイルのコピーを開始"
 
 PATH_KATSUMASCORE="/c/Users/katsu/Local Sites/katsumascore/app/public/wp-content/themes/ratency-progression"
 
-echo "style.cssを削除"
+echo "style.cssとbundle.jsを削除"
 
 rm "$PATH_KATSUMASCORE"/style.css
+rm "$PATH_KATSUMASCORE"/bundle.js
 
 echo "古いsytleファイルとビルドしたsytle.cssをマージ"
 
@@ -20,3 +21,4 @@ cat "$build_style" "$old_style" > "$new_style"
 
 echo "ビルドしたsytle.cssをコピー"
 cp ./dist/style.css "$PATH_KATSUMASCORE"
+cp ./dist/bundle.js "$PATH_KATSUMASCORE/js"

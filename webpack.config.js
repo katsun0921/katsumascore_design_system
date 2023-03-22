@@ -1,17 +1,18 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const enabledSourceMap = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-	mode: 'development',
-	entry: './src/js/index.ts',
+  mode: 'development',
+  entry: './src/ts/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
-		rules: [
+    rules: [
       {
         test: /\.ts$/,
         exclude: /node_modules/,
@@ -19,9 +20,18 @@ module.exports = {
           'ts-loader'
         ]
       },
-			{
-				test: /\.scss$/i,
-				use: [
+      {
+        test: /.(jpg|png|gif|svg)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '../img/[name].[ext]',
+          }
+        }
+      },
+      {
+        test: /\.scss$/i,
+        use: [
           // CSSファイルを抽出するように MiniCssExtractPlugin のローダーを指定
           {
             loader: MiniCssExtractPlugin.loader,
@@ -48,12 +58,18 @@ module.exports = {
               // PostCSS でもソースマップを有効に
               sourceMap: enabledSourceMap,
               postcssOptions: {
-              // ベンダープレフィックスを自動付与
-              plugins: [
-                require('autoprefixer')({
-                  // Specify autoprefixer options, if any
-                  grid: true
-                  })
+                // ベンダープレフィックスを自動付与
+                plugins: [
+                  require('autoprefixer')({
+                    // Specify autoprefixer options, if any
+                    grid: true
+                  }),
+                  require('css-declaration-sorter')({
+                    order: 'concentric-css'
+                  }),
+                  require('postcss-sort-media-queries')({
+                    sort: 'mobile-first',
+                  }),
                 ],
               },
             },
@@ -66,18 +82,21 @@ module.exports = {
               sourceMap: enabledSourceMap,
             },
           },
-				],
-			}
-		],
-	},
-	plugins: [
-		new MiniCssExtractPlugin({
-			filename: 'build.css'
-		})
-	],
+        ],
+      }
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'build.css'
+    }),
+    new StylelintPlugin({
+      fix: true,
+    }),
+  ],
   resolve: {
     alias: {
-      '@scss': path.resolve(__dirname, 'src/scss')
+      '@scss': path.resolve(__dirname, 'src/scss'),
     },
     extensions: [
       '.ts', '.js',

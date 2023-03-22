@@ -8,7 +8,8 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    '@storybook/addon-viewport'
   ],
   "framework": "@storybook/react",
   "core": {
@@ -31,5 +32,5 @@ module.exports = {
     fileLoaderRule.exclude = /\.svg$/
     return config
   },
-  staticDirs: [{ from: '../public', to: '/' }],
+  staticDirs: [{ from: '../dist', to: '/' }],
 }

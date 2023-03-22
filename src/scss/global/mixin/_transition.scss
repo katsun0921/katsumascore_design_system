@@ -1,0 +1,11 @@
+@mixin all-transition {
+  transition-duration: 250ms;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin select-props-transition($props) {
+  transition-duration: 250ms;
+  transition-property: #{$props};
+  transition-timing-function: ease-in-out;
+}

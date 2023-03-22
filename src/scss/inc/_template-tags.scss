@@ -60,37 +60,6 @@ body.admin-bar .progression-sticky-scrolled {
   display: none;
 }
 
-#progression-nav-container {
-  float: right;
-}
-
-header#masthead-pro.progression-studios-nav-left #progression-nav-container {
-  float: left;
-}
-
-header#masthead-pro.progression-studios-nav-left h1#logo-pro {
-  margin-right: 30px;
-}
-
-header#masthead-pro.progression-studios-nav-center #progression-nav-container {
-  width: 100%;
-  margin: 0 auto;
-  float: none;
-}
-@media only screen and (max-width: 1300px) {
-  header#masthead-pro.progression-studios-nav-center
-    #progression-nav-container {
-    width: auto;
-  }
-}
-
-header#masthead-pro.progression-studios-nav-center
-  #progression-nav-container
-  nav#site-navigation {
-  display: table;
-  margin: 0 auto;
-}
-
 #progression-shopping-cart-count a {
   margin: 0px;
 }

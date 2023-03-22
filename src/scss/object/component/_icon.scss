@@ -1,21 +1,40 @@
+@use '../../global/variable/colors' as color;
+
 .c-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
   background: rgba(255, 255, 255, 0.12);
   &:hover {
     background: rgba(255, 255, 255, 0.2);
   }
-  &__header {
-    & svg {
-      width: 55%;
+  &__arrowInCircle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: color.$slate50;
+    opacity: 0.7;
+    border-radius: 50%;
+    &::after {
+      content: '';
+      margin: 0 auto;
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid color.$gray700;
+      border-right: 3px solid color.$gray700;
     }
-    & .twitter,
-    & .rss {
-      fill: rgb(255, 255, 255);
+    &:hover {
+      background-color: color.$slate300;
+    }
+    &__next {
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+    &__prev {
+      &::after {
+        transform: rotate(-135deg);
+      }
     }
   }
 }
