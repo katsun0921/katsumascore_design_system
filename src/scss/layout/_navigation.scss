@@ -2,11 +2,10 @@
 @import '../global/mixin/screens';
 @import '../global/mixin/fontSize';
 @import '../global/mixin/transition';
-@import '../object/component/link';
-
-$linkListHeight: calc(#{$AnchorPaddingY} * 2 + 1.5rem);
-$countLinkList: 4;
 .l-navigation {
+  $AnchorPaddingY: 28px;
+  $linkListHeight: calc(#{$AnchorPaddingY} * 2 + 1.5rem);
+  $countLinkList: 4;
   background: color.$navigation;
   &__menuButton {
     color: color.$white;
@@ -29,23 +28,23 @@ $countLinkList: 4;
       @include select-props-transition('max-height');
     }
   }
-}
 
-// Desktop 表示
-.l-navigation--isDesktop {
-  .l-navigation__menuButton {
-    display: none;
-  }
-  .l-navigation__list {
-    .c-link__header {
-      display: flex;
-      background-color: color.$category;
-      max-height: calc(#{$linkListHeight} * #{$countLinkList});
+  // Desktop 表示
+  &--isDesktop {
+    .l-navigation__menuButton {
+      display: none;
+    }
+    .l-navigation__list {
+      .c-link__header {
+        display: flex;
+        background-color: color.$category;
+        max-height: calc(#{$linkListHeight} * #{$countLinkList});
+      }
     }
   }
-}
-.l-navigation__list.open-menu {
-  .c-link__header {
-    max-height: calc(#{$linkListHeight} * #{$countLinkList});
+  &__list.open-menu {
+    .c-link__header {
+      max-height: calc(#{$linkListHeight} * #{$countLinkList});
+    }
   }
 }
