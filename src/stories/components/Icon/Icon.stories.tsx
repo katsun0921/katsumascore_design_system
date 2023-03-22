@@ -45,9 +45,9 @@ Rss.args = {
 };
 export const IconArrowInCircleRight = TemplateStyle.bind({});
 IconArrowInCircleRight.args = {
-  className: 'c-icon__arrowInCircle c-icon__arrowInCircle__right',
+  className: 'c-icon__arrowInCircle c-icon__arrowInCircle__next',
 };
 export const IconArrowInCircleLeft = TemplateStyle.bind({});
 IconArrowInCircleLeft.args = {
-  className: 'c-icon__arrowInCircle c-icon__arrowInCircle__left',
+  className: 'c-icon__arrowInCircle c-icon__arrowInCircle__prev',
 };

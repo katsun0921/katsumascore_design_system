@@ -26,12 +26,12 @@
     &:hover {
       background-color: color.$slate300;
     }
-    &__right {
+    &__next {
       &::after {
         transform: rotate(45deg);
       }
     }
-    &__left {
+    &__prev {
       &::after {
         transform: rotate(-135deg);
       }
