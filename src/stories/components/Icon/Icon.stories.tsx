@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Icon, IconImage } from './Icon';
+import { Icon, IconImage, IconStyle } from './Icon';
 
 export default {
   title: 'Component/Icon',
@@ -17,6 +17,12 @@ export default {
 const TemplateImage: ComponentStory<typeof Icon> = (args) => (
   <Icon {...args}>
     <IconImage props={args} />
+  </Icon>
+);
+
+const TemplateStyle: ComponentStory<typeof Icon> = (args) => (
+  <Icon {...args}>
+    <IconStyle props={args} />
   </Icon>
 );
 
@@ -36,4 +42,12 @@ TwitterBlueCircle.args = {
 export const Rss = TemplateImage.bind({});
 Rss.args = {
   type: 'rss',
+};
+export const IconArrowInCircleRight = TemplateStyle.bind({});
+IconArrowInCircleRight.args = {
+  className: 'c-icon__arrowInCircle c-icon__arrowInCircle__right',
+};
+export const IconArrowInCircleLeft = TemplateStyle.bind({});
+IconArrowInCircleLeft.args = {
+  className: 'c-icon__arrowInCircle c-icon__arrowInCircle__left',
 };

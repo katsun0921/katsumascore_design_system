@@ -11,11 +11,11 @@ type TIconProps = {
   children: ReactNode;
   type: string;
   elmMenu: string;
+  className?: string;
 };
 
 type TIconImageProps = {
   props: TIconProps;
-  className?: string;
 };
 
 export const Icon = ({ template, children }: TIconProps) => {
@@ -42,8 +42,8 @@ export const Icon = ({ template, children }: TIconProps) => {
   );
 };
 
-export const IconImage = ({ className, props }: TIconImageProps) => {
-  const { type } = props;
+export const IconImage = ({ props }: TIconImageProps) => {
+  const { type, className } = props;
   const elementClassName = className ? `c-icon ${className}` : 'c-icon';
   let logoFile = '';
 
@@ -67,4 +67,10 @@ export const IconImage = ({ className, props }: TIconImageProps) => {
       <img src={logoFile} alt="" width="30" />
     </a>
   );
+};
+
+export const IconStyle = ({ props }: TIconImageProps) => {
+  const { className } = props;
+
+  return <a className={className} href="#"></a>;
 };

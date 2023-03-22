@@ -1,7 +1,40 @@
+@use '../../global/variable/colors' as color;
+
 .c-icon {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.12);
   &:hover {
     background: rgba(255, 255, 255, 0.2);
+  }
+  &__arrowInCircle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: color.$slate50;
+    opacity: 0.7;
+    border-radius: 50%;
+    &::after {
+      content: '';
+      margin: 0 auto;
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid color.$gray700;
+      border-right: 3px solid color.$gray700;
+    }
+    &:hover {
+      background-color: color.$slate300;
+    }
+    &__right {
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+    &__left {
+      &::after {
+        transform: rotate(-135deg);
+      }
+    }
   }
 }
