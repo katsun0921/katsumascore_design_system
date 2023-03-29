@@ -1,0 +1,56 @@
+@use '../../global/variable/colors' as color;
+@use '../../global/variable/fontWeight' as fontWeight;
+@import '../../global/mixin/fontSize';
+
+.c-widget {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  > h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: fontWeight.$fontNormal;
+    margin-bottom: 30px;
+    color: color.$slate900;
+    @include text-xl;
+  }
+  &_categories {
+    .cat-item {
+      position: relative;
+      margin: 0 0 12px;
+      padding: 0 0 12px 20px;
+      border-bottom: 1px solid #dfe0e2;
+      &::before {
+        background: color.$slate900;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        content: '';
+        transform: translateY(-6px);
+        width: 10px;
+        height: 8px;
+        clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 100%, 0 0);
+      }
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .count {
+          $fontSize: 0.75rem;
+          $blockSize: calc(#{$fontSize} + 10px);
+          color: color.$gray500;
+          display: inline-block;
+          text-align: center;
+          width: $blockSize;
+          height: $blockSize;
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.06);
+          line-height: $blockSize;
+          font-size: $fontSize;
+        }
+      }
+    }
+  }
+}
