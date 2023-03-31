@@ -1,6 +1,5 @@
 /*  Table of Contents
 
-15. PAGINATION STYLES
 16. BLOG INDEX STYLES
 17. BLOG INDEX OVERLAY STYLES
 18. BLOG POST STYLES
@@ -15,93 +14,6 @@
 27. RESPONSIVE STYLES
 28. TRANSLATION STYLES
 */
-
-
-/*
-=============================================== 15. PAGINATION STYLES ===============================================
-*/
-.post-views.entry-meta {
-  display:none;
-}
-
-/* Pagination */
-#content-pro ul.page-numbers {
-  list-style:none;
-  margin:25px 0px 10px 0px;
-  padding:0px;
-  text-align:center;
-}
-#content-pro ul.page-numbers li {
-  margin:0px;
-  padding:0px;
-  display:inline;
-}
-
-/* Blog Post Pagination */
-.progression-page-nav {
-  margin:20px 0 25px 0;
-  list-style:none;
-  text-align:center;
-  font-size:13px;
-}
-
-.progression-page-nav span, .progression-page-nav a {
-  display:inline-block;
-  line-height:1;
-  text-align:center;
-  margin:0px 2px 5px 2px;
-  font-size:15px;
-  padding:14px 15px;
-  min-width:16px;
-  background:rgba(0,0,0,0.07);
-  color:#1e023d;
-  border-radius:0px;
-  font-weight:400;
-  font-family:'Share', sans-serif;
-  font-style:normal;
-  text-transform:uppercase;
-}
-.progression-page-nav a:hover span {
-  color:#ffffff;
-}
-.progression-page-nav a span {
-  padding:0px;
-  background:none;
-  min-width:none;
-  margin:0px;
-  border:none;
-  color:#070707;
-  box-shadow:none;
-}
-
-#content-pro ul.page-numbers li span.current, #content-pro ul.page-numbers li a {
-  display:inline-block;
-  text-align:center;
-  margin:0px 2px 2px 2px;
-  line-height:1;
-  font-size:15px;
-  padding:13px 16px;
-  min-width:16px;
-  background:rgba(0,0,0,0.07);
-  color:#1e023d;
-  border-radius:0px;
-  font-family:'Share', sans-serif;
-  font-style:normal;
-  text-transform:uppercase;
-
-  transform: skewX(-8deg);
-}
-
-.progression-page-nav a:hover, .progression-page-nav span, #content-pro ul.page-numbers li a:hover, #content-pro ul.page-numbers li span.current {
-  background:#f4f2f6;
-  color:#1e023d;
-}
-
-#content-pro ul.page-numbers li span.dots {
-  display:inline-block;
-  padding:0px 5px;
-}
-
 
 /*
 =============================================== 16. BLOG INDEX STYLES ===============================================

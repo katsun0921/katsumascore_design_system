@@ -7,7 +7,7 @@ PATH_KATSUMASCORE="/c/Users/katsu/Local Sites/katsumascore/app/public/wp-content
 echo "style.cssとbundle.jsを削除"
 
 rm "$PATH_KATSUMASCORE"/style.css
-rm "$PATH_KATSUMASCORE"/bundle.js
+rm "$PATH_KATSUMASCORE"/js/bundle.js
 
 echo "古いsytleファイルとビルドしたsytle.cssをマージ"
 

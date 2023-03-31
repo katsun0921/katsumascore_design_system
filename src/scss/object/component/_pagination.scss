@@ -1,0 +1,33 @@
+@use '../../global/variable/colors' as color;
+@use '../../global/variable/fontWeight' as fontWeight;
+
+.c-pagination {
+  margin: 20px 0 25px 0;
+  list-style: none;
+  text-align: center;
+  span,
+  a {
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    margin: 0px 2px 5px 2px;
+    padding: 14px 15px;
+    min-width: 16px;
+    border-radius: 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: #f4f2f6;
+    color: #1e023d;
+  }
+  a {
+    padding: 0px;
+    background: none;
+    min-width: none;
+    margin: 0px;
+    border: none;
+    color: #070707;
+    &:hover {
+      color: color.$white;
+    }
+  }
+}
