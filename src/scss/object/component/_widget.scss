@@ -7,14 +7,19 @@
     margin-bottom: 50px;
   }
   > h2 {
+    padding-bottom: 20px;
     text-transform: uppercase;
     font-style: italic;
     font-weight: fontWeight.$fontNormal;
-    margin-bottom: 30px;
     color: color.$slate900;
     @include text-xl;
   }
-  &_categories {
+  &.widget_block {
+    h2 {
+      margin-bottom: -50px;
+    }
+  }
+  &.widget_categories {
     .cat-item {
       position: relative;
       margin: 0 0 12px;
