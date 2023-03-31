@@ -1,5 +1,8 @@
+@import '../global/mixin/screens';
+
 .l-content {
-  float: left;
-  width: 72%;
-  position: relative;
+  width: 100%;
+  @include mq('md') {
+    width: 72%;
+  }
 }

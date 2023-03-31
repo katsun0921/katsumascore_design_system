@@ -1,10 +1,10 @@
 // https://tailwindcss.com/docs/screens
 $breakpoint: (
-  sm: 'screen and (min-width: 640px)',
-  md: 'screen and (min-width: 768px)',
-  lg: 'screen and (min-width: 1024px)',
-  xl: 'screen and (min-width: 1280px)',
-  2xl: 'screen and (min-width: 1536px)',
+  sm: 'screen and (640px <= width)',
+  md: 'screen and (768px <= width)',
+  lg: 'screen and (1024px <= width)',
+  xl: 'screen and (1280px <= width)',
+  2xl: 'screen and (1536px <= width)',
 );
 
 @mixin mq($bp) {

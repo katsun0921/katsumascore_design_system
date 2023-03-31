@@ -1,6 +1,8 @@
 @use '../global/variable/className' as className;
+@import '../global/mixin/screens';
 
 .l-container {
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -38,5 +40,11 @@
     & {
     width: auto;
     padding-right: 20px;
+  }
+  &__showLeftSidebar {
+    @include mq('md') {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
