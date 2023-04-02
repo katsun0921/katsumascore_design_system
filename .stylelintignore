@@ -1,5 +1,5 @@
 public/css/old_style.css
-public/css/reset.css
+public/css/foundation.css
 src/scss/fondation/_reset.scss
 src/scss/inc/_customizer.scss
 src/scss/inc/_template-tags.scss

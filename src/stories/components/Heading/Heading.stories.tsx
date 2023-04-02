@@ -16,7 +16,13 @@ export default {
 } as ComponentMeta<typeof Heading>;
 
 const Template: ComponentStory<typeof Heading> = (args) => (
-  <Heading {...args} />
+  <div
+    style={{
+      backgroundColor: args.color,
+    }}
+  >
+    <Heading {...args} />
+  </div>
 );
 
 export const TitleHeading = Template.bind({});

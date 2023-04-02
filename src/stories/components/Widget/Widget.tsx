@@ -32,22 +32,22 @@ export const Widgets = ({ children }: TWidgetsProps) => {
 
 export const WidgetCategories = ({}) => {
   return (
-    <div className="c-widget widget_categories">
+    <div className='c-widget widget_categories'>
       <h2>Categories</h2>
       <ul>
-        <li className="cat-item">
-          <a href="http://katsumascore.local/category/anime/">
-            アニメ<span className="count">5</span>
+        <li className='cat-item'>
+          <a href='http://katsumascore.local/category/anime/'>
+            アニメ<span className='count'>5</span>
           </a>
         </li>
-        <li className="cat-item">
-          <a href="http://katsumascore.local/category/drama/">
-            ドラマ <span className="count">1</span>
+        <li className='cat-item'>
+          <a href='http://katsumascore.local/category/drama/'>
+            ドラマ <span className='count'>1</span>
           </a>
         </li>
-        <li className="cat-item">
-          <a href="http://katsumascore.local/category/movie/">
-            映画 <span className="count">12</span>
+        <li className='cat-item'>
+          <a href='http://katsumascore.local/category/movie/'>
+            映画 <span className='count'>12</span>
           </a>
         </li>
       </ul>
@@ -60,7 +60,7 @@ export const WidgetHeading = ({ props }: TWidgetsHeadingProps) => {
   const HeadingTag = `h${headingLevel}` as keyof JSX.IntrinsicElements;
 
   return (
-    <div className="c-widget widget_block">
+    <div className='c-widget widget_block'>
       <HeadingTag>{label}</HeadingTag>
     </div>
   );
@@ -70,8 +70,8 @@ export const WidgetText = ({ props }: TWidgetsTextProps) => {
   const { label, isLink } = props;
 
   return (
-    <div className="c-widget widget_block widget_text">
-      <p>{isLink ? <a href="#">{label}</a> : label}</p>
+    <div className='c-widget widget_block widget_text'>
+      <p>{isLink ? <a href='#'>{label}</a> : label}</p>
     </div>
   );
 };

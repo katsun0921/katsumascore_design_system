@@ -63,8 +63,8 @@ export const IconImage = ({ props }: TIconImageProps) => {
   }
 
   return (
-    <a className={elementClassName} href="" target="_blank">
-      <img src={logoFile} alt="" width="30" />
+    <a className={elementClassName} href='' target='_blank'>
+      <img src={logoFile} alt='' width='30' />
     </a>
   );
 };
@@ -72,5 +72,5 @@ export const IconImage = ({ props }: TIconImageProps) => {
 export const IconStyle = ({ props }: TIconImageProps) => {
   const { className } = props;
 
-  return <a className={className} href="#"></a>;
+  return <a className={className} href='#'></a>;
 };

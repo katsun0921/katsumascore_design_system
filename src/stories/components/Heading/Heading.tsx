@@ -4,15 +4,16 @@ import '@/scss/object/component/_heading.scss';
 type HeadingProps = {
   color?: string;
   headingLevel: '1' | '2' | '3' | '4' | '5' | '6';
-  type?: string;
+  type?: 'post' | 'title';
   isLink: boolean;
+  label: string;
 };
 
 export const Heading = ({
-  color,
   headingLevel,
   type,
   isLink = false,
+  label = 'title の見出し',
 }: HeadingProps) => {
   const HeadingTag = `h${headingLevel}` as keyof JSX.IntrinsicElements;
   let classProps = '';
@@ -25,14 +26,14 @@ export const Heading = ({
   }
 
   return (
-    <div style={{ backgroundColor: color }}>
+    <>
       {isLink ? (
         <HeadingTag className={classProps}>
-          <a href="#">title の見出し</a>
+          <a href='#'>{label}</a>
         </HeadingTag>
       ) : (
-        <HeadingTag className={classProps}>title の見出し</HeadingTag>
+        <HeadingTag className={classProps}>{label}</HeadingTag>
       )}
-    </div>
+    </>
   );
 };

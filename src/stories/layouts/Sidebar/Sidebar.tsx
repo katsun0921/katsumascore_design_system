@@ -27,7 +27,7 @@ export const Sidebar = ({}) => {
   };
 
   return (
-    <div className="l-sidebar">
+    <div className='l-sidebar'>
       <WidgetCategories />
       <WidgetHeading {...headingProps} />
       <WidgetText {...linkTextProps} />
