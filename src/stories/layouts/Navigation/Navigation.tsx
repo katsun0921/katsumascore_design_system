@@ -12,11 +12,11 @@ export const Navigation = ({}) => {
   });
   window.addEventListener('resize', () => changeClassWhenResizeOnNavigation());
   return (
-    <div className="l-navigation l-navigation--isDesktop">
-      <div className="l-navigation__menuButton u-flex u-justify-center u-items-center u-gap-x-4">
-        <HamburgerMenu label="MENU" />
+    <div className='l-navigation l-navigation--isDesktop'>
+      <div className='l-navigation__menuButton u-flex u-justify-center u-items-center u-gap-x-4'>
+        <HamburgerMenu label='MENU' />
       </div>
-      <nav id="js-mobile-menu" className="l-navigation__list u-opacity-0">
+      <nav id='js-mobile-menu' className='l-navigation__list u-opacity-0'>
         <Link />
       </nav>
     </div>

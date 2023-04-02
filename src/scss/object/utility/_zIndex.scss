@@ -1,3 +1,5 @@
+// https://tailwindcss.com/docs/z-index#setting-the-z-index
+
 @for $i from 0 through 5 {
   .u-z-#{$i}0 {
     z-index: 10 * $i;

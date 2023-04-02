@@ -12,25 +12,25 @@ import { Navigation } from '../Navigation/Navigation';
 export const Header = ({}) => {
   const snsLinks = [logoRss, logoFacebook, logoTwitterCircle];
   return (
-    <header id="masthead-pro">
-      <div className="l-header">
-        <div className="l-header__logo">
+    <header id='masthead-pro'>
+      <div className='l-header'>
+        <div className='l-header__logo'>
           <h1
-            id="logo-pro"
-            className="u-m-0 u-py-3 u-w-28 u-leading-none logo-inside-nav-pro noselect"
+            id='logo-pro'
+            className='u-m-0 u-py-3 u-w-28 u-leading-none logo-inside-nav-pro noselect'
           >
-            <a href="/" rel="home">
-              <img src={logoPrimary} alt="" className="u-w-24" width="100" />
+            <a href='/' rel='home'>
+              <img src={logoPrimary} alt='' className='u-w-24' width='100' />
             </a>
           </h1>
         </div>
-        <div className="l-header__search">{<Search />}</div>
-        <div className="l-header__snsLinks">
-          <ul className="u-flex justify-between u-gap-x-5">
+        <div className='l-header__search'>{<Search />}</div>
+        <div className='l-header__snsLinks'>
+          <ul className='u-flex justify-between u-gap-x-5'>
             {snsLinks.map((link, i) => (
               <li key={i}>
-                <a href="" target="_blank" className="c-icon">
-                  <img src={link} alt="" className="" width="48" />
+                <a href='' target='_blank' className='c-icon'>
+                  <img src={link} alt='' className='' width='48' />
                 </a>
               </li>
             ))}

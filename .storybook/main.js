@@ -32,5 +32,5 @@ module.exports = {
     fileLoaderRule.exclude = /\.svg$/
     return config
   },
-  staticDirs: [{ from: '../dist', to: '/' }],
+  staticDirs: [{ from: '../public/', to: '/' }],
 }

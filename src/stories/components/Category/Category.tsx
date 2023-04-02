@@ -9,7 +9,7 @@ type CategoryProps = {
 export const Category = ({ label, size, ...props }: CategoryProps) => {
   const mode = !!size ? `c-category__${size}` : '';
   return (
-    <a className={['c-category', mode].join(' ')} href="">
+    <a className={['c-category', mode].join(' ')} href=''>
       {label}
     </a>
   );
