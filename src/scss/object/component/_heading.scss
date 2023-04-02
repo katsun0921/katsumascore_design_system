@@ -1,5 +1,6 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
+@import '../../global/mixin/fontSize';
 
 .c-heading {
   &__title {
@@ -12,5 +13,16 @@
     font-weight: fontWeight.$fontMedium;
     font-size: 68px;
     line-height: 1.4;
+  }
+  &__post {
+    display: inline-block;
+    color: #2f2f2f;
+    @include text-2xl;
+    & a {
+      color: color.$category;
+      &:hover {
+        color: color.$categoryHover;
+      }
+    }
   }
 }

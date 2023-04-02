@@ -19,7 +19,24 @@ const Template: ComponentStory<typeof Heading> = (args) => (
   <Heading {...args} />
 );
 
-export const HeadingTitle = Template.bind({});
-HeadingTitle.args = {
+export const TitleHeading = Template.bind({});
+TitleHeading.args = {
+  headingLevel: '1',
+  type: 'title',
   color: 'rgb(0, 0, 0)',
+};
+
+export const PostHeading = Template.bind({});
+PostHeading.args = {
+  headingLevel: '3',
+  type: 'post',
+  color: 'rgb(255, 255, 255)',
+};
+
+export const PostLinkHeading = Template.bind({});
+PostLinkHeading.args = {
+  headingLevel: '3',
+  type: 'post',
+  color: 'rgb(255, 255, 255)',
+  isLink: true,
 };

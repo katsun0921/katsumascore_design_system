@@ -17,7 +17,13 @@ const Template: ComponentStory<typeof Category> = (args) => (
   <Category {...args} />
 );
 
-export const CategoryLabel = Template.bind({});
-CategoryLabel.args = {
+export const Primary = Template.bind({});
+Primary.args = {
   label: '映画',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  label: '映画',
+  size: 'small',
 };
