@@ -14,4 +14,9 @@
   & a {
     color: color.$white;
   }
+  &__small {
+    font-size: 0.75rem; /* 12px */
+    line-height: 0.75rem;
+    padding: 9px 20px;
+  }
 }

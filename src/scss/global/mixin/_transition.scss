@@ -9,3 +9,9 @@
   transition-property: #{$props};
   transition-timing-function: ease-in-out;
 }
+
+@mixin link-transition {
+  transition-duration: 250ms;
+  transition-property: color, background-color, opacity, border;
+  transition-timing-function: ease-in-out;
+}

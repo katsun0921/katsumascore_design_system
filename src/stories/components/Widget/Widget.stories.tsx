@@ -32,23 +32,23 @@ const TemplateWidgetText: ComponentStory<typeof Widgets> = (args) => (
   </Widgets>
 );
 
-export const PageWidgetCategories = TemplateWidgetCategories.bind({});
-PageWidgetCategories.args = {};
+export const PartWidgetCategories = TemplateWidgetCategories.bind({});
+PartWidgetCategories.args = {};
 
-export const PageWidgetHeading = TemplateWidgetHeading.bind({});
-PageWidgetHeading.args = {
+export const PartWidgetHeading = TemplateWidgetHeading.bind({});
+PartWidgetHeading.args = {
   headingLevel: '2',
   label: 'heading',
 };
 
-export const PageWidgetText = TemplateWidgetText.bind({});
-PageWidgetText.args = {
+export const PartWidgetText = TemplateWidgetText.bind({});
+PartWidgetText.args = {
   isLink: false,
   label: 'お問い合わせはこちら',
 };
 
-export const PageWidgetLinkText = TemplateWidgetText.bind({});
-PageWidgetLinkText.args = {
+export const PartWidgetLinkText = TemplateWidgetText.bind({});
+PartWidgetLinkText.args = {
   isLink: true,
   label: 'お問い合わせはこちら',
 };

@@ -1,6 +1,7 @@
 @use '../global/variable/colors' as color;
 @use '../global/variable/fontWeight' as fontWeight;
 @import '../global/mixin/fontSize';
+@import '../global/mixin/transition';
 
 html {
   font-size: 16px;
@@ -38,6 +39,7 @@ a {
   color: color.$elementLink;
   outline: none !important;
   text-decoration: none;
+  @include link-transition;
   blockquote & {
     color: color.$gray500;
   }

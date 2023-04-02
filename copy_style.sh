@@ -2,7 +2,7 @@
 
 echo "ビルドしたsytleファイルのコピーを開始"
 
-PATH_KATSUMASCORE="/c/Users/katsu/Local Sites/katsumascore/app/public/wp-content/themes/ratency-progression"
+PATH_KATSUMASCORE="/c/Users/katsu/Local Sites/katsumascore/app/public/wp-content/themes/katsumascore"
 
 echo "style.cssとbundle.jsを削除"
 
