@@ -35,6 +35,10 @@ h3 {
   @include text-xl;
 }
 
+p {
+  margin: 0;
+}
+
 a {
   color: color.$elementLink;
   outline: none !important;
