@@ -1,0 +1,12 @@
+// https://tailwindcss.com/docs/flex-wrap
+$flex-wrap-values: (
+  'flex-wrap': wrap,
+  'flex-wrap-reverse': wrap-reverse,
+  'flex-nowrap': nowrap,
+);
+
+@each $name, $properties in $flex-wrap-values {
+  .u-#{$name} {
+    flex-wrap: $properties;
+  }
+}

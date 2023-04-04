@@ -46,3 +46,10 @@ PostLinkHeading.args = {
   color: 'rgb(255, 255, 255)',
   isLink: true,
 };
+
+export const PostRelatedHeading = Template.bind({});
+PostRelatedHeading.args = {
+  headingLevel: '3',
+  type: 'related',
+  color: 'rgb(255, 255, 255)',
+};

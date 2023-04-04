@@ -16,13 +16,13 @@ export const Post = ({ children }: TPostProps) => (
 
 export const PostOverlay = ({}) => {
   return (
-    <a className='l-postImageOverlay' href='#'>
-      <div
-        className='l-postImageOverlay__image'
-        style={{
-          backgroundImage: 'url(/images/dummy-540X400.webp)',
-        }}
-      ></div>
+    <a
+      className='l-postImageOverlay'
+      href='#'
+      style={{
+        backgroundImage: 'url(/images/dummy-540X400.webp)',
+      }}
+    >
       <span className='u-z-20 u-absolute u-right-1-5 u-top-1-5'>
         <Score score='3' />
       </span>

@@ -25,4 +25,22 @@
       }
     }
   }
+  &__related {
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: 'Shippori Mincho', serif;
+    padding-bottom: 15px;
+    color: #1e023d;
+    position: relative;
+    @include text-2xl;
+    &::before {
+      content: '';
+      display: block;
+      background-color: color.$category;
+      position: absolute;
+      bottom: 0px;
+      width: 35px;
+      height: 3px;
+    }
+  }
 }

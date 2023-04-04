@@ -19,5 +19,5 @@ const TemplatePostOverlay: ComponentStory<typeof Post> = (args) => (
   </Post>
 );
 
-export const LayoutPostOverlay = TemplatePostOverlay.bind({});
-LayoutPostOverlay.args = {};
+export const LayoutPostImageOverlay = TemplatePostOverlay.bind({});
+LayoutPostImageOverlay.args = {};

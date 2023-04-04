@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../scss/foundation/_base.scss';
+import './Foundation.scss';
 
 const block = {
   padding: '20px',
@@ -16,6 +17,16 @@ export const Base = () => (
       <h1>見出し1</h1>
       <h2>見出し2</h2>
       <h3>見出し3</h3>
+    </div>
+    <div style={block}>
+      <h2 className='heading2'>フォントファミリー</h2>
+      <p>フォントファミリー Noto Sans</p>
+      <p className='font-family__Sawarabi'>
+        フォントファミリー Sawarabi+Gothic
+      </p>
+      <p className='font-family__Shippori'>
+        フォントファミリー Shippori Mincho
+      </p>
     </div>
     <div style={block}>
       <h2 className='heading2'>本文テキスト</h2>

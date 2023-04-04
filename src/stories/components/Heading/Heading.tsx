@@ -4,7 +4,7 @@ import '@/scss/object/component/_heading.scss';
 type HeadingProps = {
   color?: string;
   headingLevel: '1' | '2' | '3' | '4' | '5' | '6';
-  type?: 'post' | 'title';
+  type?: 'post' | 'title' | 'related';
   isLink: boolean;
   label: string;
 };
@@ -21,6 +21,8 @@ export const Heading = ({
     classProps = 'c-heading__post';
   } else if (type === 'title') {
     classProps = 'c-heading__title';
+  } else if (type === 'related') {
+    classProps = 'c-heading__related';
   } else {
     classProps = 'c-heading';
   }
