@@ -37,7 +37,7 @@
   }
 }
 .l-postRelated {
-  $blockMargin: 8px;
+  $blockMargin: 4px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -47,7 +47,7 @@
     width: 100%;
   }
   > li {
-    width: calc(100% - (#{$blockMargin} / 2));
+    width: calc(100% - #{$blockMargin});
     .l-postImageOverlay {
       width: 100%;
     }
@@ -64,6 +64,7 @@
     }
     &:nth-child(3) {
       margin-left: auto;
+      margin-top: auto;
       grid-area: 2 / 2 / 3 / 3;
     }
   }
