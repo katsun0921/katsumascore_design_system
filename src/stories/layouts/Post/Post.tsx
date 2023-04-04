@@ -16,9 +16,9 @@ export const Post = ({ children }: TPostProps) => (
 
 export const PostOverlay = ({}) => {
   return (
-    <a className='l-postOverlay' href='#'>
+    <a className='l-postImageOverlay' href='#'>
       <div
-        className='l-postOverlay__image'
+        className='l-postImageOverlay__image'
         style={{
           backgroundImage: 'url(/images/dummy-540X400.webp)',
         }}
@@ -29,7 +29,7 @@ export const PostOverlay = ({}) => {
       <span className='u-z-20 u-relative'>
         <Category label='映画' size='small' />
       </span>
-      <div className='l-postOverlay__content'>
+      <div className='l-postImageOverlay__content'>
         <Heading
           headingLevel='3'
           isLink={false}
