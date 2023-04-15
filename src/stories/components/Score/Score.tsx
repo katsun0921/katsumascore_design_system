@@ -4,12 +4,13 @@ import '@/scss/object/utility/index.scss';
 
 export type TScoreProps = {
   score: '1' | '2' | '3' | '4' | '5';
+  size?: 'small' | 'medium' | 'large';
 };
 
-export const Score = ({ score }: TScoreProps) => {
+export const Score = ({ score, size }: TScoreProps) => {
   return (
-    <span className='c-score'>
+    <div className={['c-score', `c-score__${size}`].join(' ')}>
       <span className='c-score__count'>{score}</span>
-    </span>
+    </div>
   );
 };

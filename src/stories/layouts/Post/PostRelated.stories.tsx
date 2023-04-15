@@ -2,7 +2,6 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { PostsRelatedRand } from './PostRelated';
-import { Post } from './Post';
 
 export default {
   title: 'Layout/Post',

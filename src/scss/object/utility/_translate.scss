@@ -1,0 +1,31 @@
+// https://tailwindcss.com/docs/translate#removing-transforms
+$translate-values: (
+  '0': 0,
+  'half': 50%,
+  'one-third': 33.333333%,
+  'two-third': 66.666667%,
+  'quarter': 25%,
+  'four-thirds': 75%,
+  'full': 100%,
+);
+
+@each $name, $properties in $translate-values {
+  .u-translate-#{$name} {
+    transform: translate(#{$properties}, #{$properties});
+  }
+  .u-minus-translate-#{$name} {
+    transform: translate(#{-1 * $properties}, #{-1 * $properties});
+  }
+  .u-translate-x-#{$name} {
+    transform: translateX(#{$properties});
+  }
+  .u-translate-y-#{$name} {
+    transform: translateY(#{$properties});
+  }
+  .u-minus-translate-x-#{$name} {
+    transform: translateX(#{-1 * $properties});
+  }
+  .u-minus-translate-y-#{$name} {
+    transform: translateY(#{-1 * $properties});
+  }
+}

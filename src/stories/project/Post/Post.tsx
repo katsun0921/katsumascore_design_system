@@ -30,12 +30,14 @@ export const PostOverlay = ({}) => {
         <Category label='映画' size='small' />
       </span>
       <div className='l-postImageOverlay__content'>
-        <Heading
-          headingLevel='3'
-          isLink={false}
-          type='post'
-          label='ジュピター[映画マトリックスのウォシャウスキー姉弟監督が手がけるSF大作]'
-        />
+        <div className='u-p-3'>
+          <Heading
+            headingLevel='3'
+            isLink={false}
+            type='post'
+            label='ジュピター[映画マトリックスのウォシャウスキー姉弟監督が手がけるSF大作]'
+          />
+        </div>
       </div>
     </a>
   );

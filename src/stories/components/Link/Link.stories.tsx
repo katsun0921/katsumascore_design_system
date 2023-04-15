@@ -1,27 +1,47 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Link } from './Link';
+import { Link, LinkHeader, LinkFacebook, LinkTwitter } from './Link';
 
 export default {
   title: 'Component/Link',
   component: Link,
+  subcomponents: { LinkHeader, LinkFacebook, LinkTwitter },
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
     backgrounds: {
       default: 'header',
-      values: [
-        {
-          name: 'header',
-          value: 'rgb(92, 57, 242)',
-        },
-      ],
+      values: [],
     },
   },
 } as ComponentMeta<typeof Link>;
 
-const Template: ComponentStory<typeof Link> = (args) => <Link {...args} />;
+const TemplateLinkHeader: ComponentStory<typeof Link> = (args) => (
+  <Link {...args}>
+    <LinkHeader />
+  </Link>
+);
 
-export const PageLink = Template.bind({});
-PageLink.args = {};
+const TemplateLinkFacebook: ComponentStory<typeof Link> = (args) => (
+  <Link {...args}>
+    <LinkFacebook />
+  </Link>
+);
+
+const TemplateLinkTwitter: ComponentStory<typeof Link> = (args) => (
+  <Link {...args}>
+    <LinkTwitter />
+  </Link>
+);
+
+export const Header = TemplateLinkHeader.bind({});
+Header.args = {
+  backgroundColor: 'rgb(92, 57, 242)',
+};
+
+export const Facebook = TemplateLinkFacebook.bind({});
+Facebook.args = {};
+
+export const Twitter = TemplateLinkTwitter.bind({});
+Twitter.args = {};

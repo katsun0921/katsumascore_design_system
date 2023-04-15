@@ -14,6 +14,11 @@ body {
   @include text-base;
 }
 
+::selection {
+  color: color.$white;
+  background: color.$category;
+}
+
 h1,
 h2,
 h3,

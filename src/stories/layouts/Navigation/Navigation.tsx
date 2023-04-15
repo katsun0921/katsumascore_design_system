@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '../../components/Link/Link';
+import { LinkHeader } from '../../components/Link/Link';
 import { HamburgerMenu } from '../../components/HamburgerMenu/HamburgerMenu';
 import { changeClassWhenResizeOnNavigation } from '../../../ts/navigation/';
 import '@/scss/layout/_container.scss';
@@ -17,7 +17,7 @@ export const Navigation = ({}) => {
         <HamburgerMenu label='MENU' />
       </div>
       <nav id='js-mobile-menu' className='l-navigation__list u-opacity-0'>
-        <Link />
+        <LinkHeader />
       </nav>
     </div>
   );

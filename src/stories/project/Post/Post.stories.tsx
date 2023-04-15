@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Post, PostOverlay } from './Post';
 
 export default {
-  title: 'Layout/Post',
+  title: 'Project/Post',
   component: Post,
   subcomponents: { PostOverlay },
   parameters: {

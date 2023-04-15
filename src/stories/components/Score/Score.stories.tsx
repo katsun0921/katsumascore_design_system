@@ -14,8 +14,9 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Score> = (args) => <Score {...args} />;
 
-export const DisplayScore = Template.bind({});
+export const MediumScore = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-DisplayScore.args = {
+MediumScore.args = {
   score: '3',
+  size: 'medium',
 };

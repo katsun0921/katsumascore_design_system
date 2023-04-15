@@ -5,6 +5,7 @@
 
 .c-link {
   $AnchorPaddingY: 28px;
+  $socialFontSize: 14px;
   &__header {
     display: flex;
     justify-content: center;
@@ -54,6 +55,49 @@
         width: calc(100% - 84px);
         background: rgba(255, 255, 255, 0.3);
       }
+    }
+  }
+  &__social {
+    $socialHeight: 50px;
+    display: block;
+    font-size: $socialFontSize;
+    text-align: center;
+    height: $socialHeight;
+    line-height: $socialHeight;
+    color: color.$white;
+    position: relative;
+    text-transform: uppercase;
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+      opacity: 0.8;
+    }
+  }
+  &__socialText {
+    $socialTextHeight: calc(#{$socialFontSize} * 1.5);
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0px;
+      left: calc(($socialTextHeight * -1) - ($socialFontSize / 2));
+      width: $socialTextHeight;
+      height: $socialTextHeight;
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: block;
+      content: '';
+    }
+  }
+  &__twitter {
+    background: color.$twitter;
+    .c-link__socialText::before {
+      background-image: url('https://katsumascore.blog/images/logo-twitter-white.png');
+    }
+  }
+
+  &__facebook {
+    background: color.$facebook;
+    .c-link__socialText::before {
+      background-image: url('https://katsumascore.blog/images/logo-facebook.png');
     }
   }
 }
