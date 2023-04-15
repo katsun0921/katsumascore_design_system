@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Post, PostOverlay } from './Post';
 
 export default {
-  title: 'Layout/Post',
+  title: 'Project/Post',
   component: Post,
   subcomponents: { PostOverlay },
   parameters: {
@@ -19,5 +19,5 @@ const TemplatePostOverlay: ComponentStory<typeof Post> = (args) => (
   </Post>
 );
 
-export const LayoutPostOverlay = TemplatePostOverlay.bind({});
-LayoutPostOverlay.args = {};
+export const LayoutPostImageOverlay = TemplatePostOverlay.bind({});
+LayoutPostImageOverlay.args = {};

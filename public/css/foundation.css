@@ -26,15 +26,6 @@ main {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -45,6 +36,10 @@ hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+}
+
+dl, dt, dd {
+  margin: 0;
 }
 
 /**
@@ -316,6 +311,11 @@ body {
   line-height: 1.5rem; /* 24px */
 }
 
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgba(92, 57, 242, 0.8);
+}
+
 h1,
 h2,
 h3,
@@ -340,6 +340,10 @@ h2 {
 h3 {
   font-size: 1.25rem; /* 20px */
   line-height: 1.75rem; /* 28px */
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -633,3 +637,5 @@ abbr[title] {
 .pp_gallery {
   display: none !important;
 }
+
+/*# sourceMappingURL=fondation.css.map */

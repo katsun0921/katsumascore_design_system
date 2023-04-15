@@ -14,6 +14,11 @@ body {
   @include text-base;
 }
 
+::selection {
+  color: color.$white;
+  background: color.$category;
+}
+
 h1,
 h2,
 h3,
@@ -33,6 +38,10 @@ h2 {
 }
 h3 {
   @include text-xl;
+}
+
+p {
+  margin: 0;
 }
 
 a {

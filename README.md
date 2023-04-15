@@ -57,3 +57,7 @@ tailwindcssの名前を参照する
 https://tailwindcss.com/docs/installation
 
 pageのclass名はp-wordpressのファイル名とする
+
+### Background url
+
+background-image: url()はhttps://katsumascore.blog/images/filename で指定する

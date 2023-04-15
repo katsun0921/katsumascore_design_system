@@ -2,17 +2,10 @@
 @use '../../global/variable/fontWeight' as fontWeight;
 
 .c-score {
-  $blockWidth: 62px;
-  $blockHeight: 72px;
   $blockClipPath: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
-  display: inline-block;
   position: relative;
-  width: $blockWidth;
-  height: $blockHeight;
   text-align: center;
   font-style: italic;
-  font-weight: 400;
-  font-size: 22px;
   color: color.$white;
   &::before {
     content: '';
@@ -27,8 +20,10 @@
     left: 0;
     margin: auto;
     clip-path: $blockClipPath;
+    z-index: 0;
   }
-  &__count {
+  &::after {
+    content: '';
     position: absolute;
     display: inline-block;
     width: 90%;
@@ -40,6 +35,23 @@
     bottom: 0;
     left: 0;
     margin: auto;
-    line-height: calc(#{$blockHeight} * 0.9);
+    z-index: 1;
+  }
+  &__medium {
+    font-size: 22px;
+    width: 62px;
+    height: 72px;
+  }
+  &__large {
+    font-size: 30px;
+    width: 96px;
+    height: 105px;
+  }
+  &__count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
   }
 }

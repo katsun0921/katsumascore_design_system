@@ -1,22 +1,28 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Score } from './Score';
+import { Tags } from './Tag';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Component/Score',
-  component: Score,
+  title: 'Component/Tag',
+  component: Tags,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Score>;
+} as ComponentMeta<typeof Tags>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Score> = (args) => <Score {...args} />;
+const Template: ComponentStory<typeof Tags> = (args) => <Tags {...args} />;
 
-export const MediumScore = Template.bind({});
+export const PrimaryTags = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-MediumScore.args = {
-  score: '3',
-  size: 'medium',
+PrimaryTags.args = {
+  tags: [
+    {
+      label: 'Wordpress Tag',
+    },
+    {
+      label: 'Wordpress Tag2',
+    },
+  ],
 };

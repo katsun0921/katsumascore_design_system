@@ -1,0 +1,34 @@
+@use '../../global/variable/colors' as color;
+
+.p-info {
+  position: relative;
+  border: 4px solid rgba($color: color.$black, $alpha: 0.1);
+  border-bottom-width: 14px;
+  padding: 90px 35px 35px;
+  margin-top: 1.5rem;
+
+  &__score {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 20px;
+  }
+  &__detail {
+    > dt {
+      margin-top: 1em;
+    }
+  }
+  &__iframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* This is the aspect ratio of 16:9 */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
