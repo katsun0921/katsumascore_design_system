@@ -1,7 +1,5 @@
 /*  Table of Contents
 
-18. BLOG POST STYLES
-19. SKEW STYLES
 20. CONTACT FORM STYLES
 21. BUTTON STYLES
 22. FOOTER STYLES
@@ -12,65 +10,6 @@
 27. RESPONSIVE STYLES
 28. TRANSLATION STYLES
 */
-
-
-/*
-=============================================== 19. SKEW STYLES ===============================================
-*/
-.progression-ratency-slider-categories a {
-  transform: skewX(-8deg);
-}
-
-.tagcloud a,
-.tags-progression a {
-  transform: skewX(-8deg);
-}
-
-.overlay-blog-meta-category-list a {
-  transform: skewX(-8deg);
-}
-
-.related-overlay-blog-meta-category-list span {
-  transform: skewX(-8deg);
-}
-
-#progression-studios-post-category a,
-.blog-meta-category-list a {
-  transform: skewX(-8deg);
-}
-
-ul.blog-single-social-sharing li a {
-  transform: skewX(-15deg);
-}
-
-ul.blog-single-social-sharing .progression-unskew-text {
-  transform: skewX(15deg);
-}
-
-.progression-page-nav span, .progression-page-nav a {
-  transform: skewX(-8deg);
-}
-
-#content-pro ul.page-numbers li span.current, #content-pro ul.page-numbers li a {
-  transform: skewX(-8deg);
-}
-#content-pro .search-form input.search-field {
-  transform: skewX(-8deg);
-}
-
-
-
-.post-password-form input {
-  transform: skewX(-8deg);
-}
-
-.post-password-form input[type=submit],
-#respond input.submit,
-.wpcf7-form input.wpcf7-submit {
-  font-style:normal;
-  transform: skewX(-8deg);
-}
-
 
 
 /*
