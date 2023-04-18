@@ -1,0 +1,74 @@
+@use '../../global/variable/colors' as color;
+@use '../../global/variable/fontWeight' as fontWeight;
+@import '../../global/mixin/fontSize';
+@import '../../global/mixin/transition';
+
+.c-list {
+  &__header {
+    $AnchorPaddingY: 28px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    // wordpress のnew ProgressionFrontendWalkerにclassを追記したくないので、要素でしている
+    > li {
+      position: relative;
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.3);
+        top: 50%;
+        right: 0;
+        height: 1.6em;
+        display: block;
+        width: 2px;
+        transform: translateY(-50%);
+      }
+      > a {
+        position: relative;
+        padding: $AnchorPaddingY 42px;
+        display: block;
+        color: color.$white;
+        &::before {
+          content: '';
+          background: rgba(255, 255, 255, 0);
+          display: block;
+          position: absolute;
+          bottom: calc(#{$AnchorPaddingY} - 10px);
+          height: 2px;
+          width: 0;
+          @include all-transition;
+        }
+        .progression-studios-nav-cat-count {
+          background: rgba(255, 255, 255, 0.11);
+          display: inline-block;
+          border-radius: 50%;
+          text-align: center;
+          width: 1.5em;
+          height: 1.5em;
+          line-height: 1.5em;
+          margin-left: 0.5em;
+        }
+      }
+      &.current-menu-item > a::before,
+      > a:hover::before {
+        width: calc(100% - 84px);
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+  &__termList {
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
+  }
+  &__termCount {
+    width: 25px;
+    height: 25px;
+    line-height: 1.5;
+    font-size: 1em;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: inline-block;
+    text-align: center;
+  }
+}

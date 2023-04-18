@@ -21,7 +21,7 @@
     }
   }
   &__list {
-    .c-link__header {
+    .c-list__header {
       max-height: 0;
       display: block;
       background-color: color.$header;
@@ -35,7 +35,7 @@
       display: none;
     }
     .l-navigation__list {
-      .c-link__header {
+      .c-list__header {
         display: flex;
         background-color: color.$category;
         max-height: calc(#{$linkListHeight} * #{$countLinkList});
@@ -43,7 +43,7 @@
     }
   }
   &__list.open-menu {
-    .c-link__header {
+    .c-list__header {
       max-height: calc(#{$linkListHeight} * #{$countLinkList});
     }
   }

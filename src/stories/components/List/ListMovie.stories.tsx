@@ -10,7 +10,7 @@ import {
 import type { TCharacter } from './ListMovie';
 
 export default {
-  title: 'Component/ListMovie',
+  title: 'Component/List',
   component: ListsMovie,
   subcomponents: {
     ListMovieSingleInfo,
