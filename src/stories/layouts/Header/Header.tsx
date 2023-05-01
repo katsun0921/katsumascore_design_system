@@ -3,14 +3,11 @@ import '@/scss/layout/_container.scss';
 import '@/scss/layout/_header.scss';
 import '@/scss/object/utility/index.scss';
 import logoPrimary from '@/assets/images/logo-primary.png';
-import logoFacebook from '@/assets/images/logo-facebook.png';
-import logoRss from '@/assets/images/logo-rss.png';
-import logoTwitterCircle from '@/assets/images/logo-twitter-blue-circle.png';
 import { Search } from '../../components/Search/Search';
 import { Navigation } from '../Navigation/Navigation';
+import { ListSocialIcon } from '../../components/List/ListSocialIcon';
 
 export const Header = ({}) => {
-  const snsLinks = [logoRss, logoFacebook, logoTwitterCircle];
   return (
     <header id='masthead-pro'>
       <div className='l-header'>
@@ -24,17 +21,11 @@ export const Header = ({}) => {
             </a>
           </h1>
         </div>
-        <div className='l-header__search'>{<Search />}</div>
+        <div className='l-header__search'>
+          <Search />
+        </div>
         <div className='l-header__snsLinks'>
-          <ul className='u-flex justify-between u-gap-x-5'>
-            {snsLinks.map((link, i) => (
-              <li key={i}>
-                <a href='' target='_blank' className='c-icon'>
-                  <img src={link} alt='' className='' width='48' />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <ListSocialIcon />
         </div>
       </div>
       <Navigation />

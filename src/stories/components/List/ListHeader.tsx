@@ -36,17 +36,9 @@ const headerNavigationMenu: TLinksHeader = [
   },
 ];
 
-export const ListHeader = ({
-  backgroundColor,
-}: {
-  backgroundColor: string;
-}) => {
+export const ListHeader = ({}) => {
   return (
-    <ul
-      id='menu-category'
-      className='c-list__header'
-      style={{ backgroundColor }}
-    >
+    <ul id='menu-category' className='c-list__header'>
       {headerNavigationMenu.map((link, i) => {
         return (
           <li key={i} className={link.current ? 'current-menu-item' : ''}>

@@ -22,17 +22,17 @@ Taxonomy.args = {
   lists: [
     {
       name: 'アニメ',
-      count: '8',
+      count: 8,
       link: '#',
     },
     {
       name: 'ドラマ',
-      count: '1',
+      count: 1,
       link: '#',
     },
     {
       name: '映画',
-      count: '12',
+      count: 12,
       link: '#',
     },
   ],

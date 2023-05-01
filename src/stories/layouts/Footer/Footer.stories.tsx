@@ -14,5 +14,5 @@ export default {
 
 const Template: ComponentStory<typeof Footer> = (args) => <Footer {...args} />;
 
-export const PageFooter = Template.bind({});
-PageFooter.args = {};
+export const LayoutFooter = Template.bind({});
+LayoutFooter.args = {};

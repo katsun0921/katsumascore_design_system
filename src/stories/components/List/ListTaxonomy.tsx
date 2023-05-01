@@ -10,7 +10,7 @@ export type TListTaxonomyProps = {
 export type TListProps = {
   name: string;
   link: string;
-  count: string;
+  count: number;
 };
 
 export const ListTaxonomy = ({ label, lists }: TListTaxonomyProps) => {
