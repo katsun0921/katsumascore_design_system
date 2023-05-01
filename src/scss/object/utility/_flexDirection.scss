@@ -1,0 +1,13 @@
+// https://tailwindcss.com/docs/flex-direction
+$flex-direction-values: (
+  'flex-row': row,
+  'flex-row-reverse': row-reverse,
+  'flex-col': column,
+  'flex-col-reverse': column-reverse,
+);
+
+@each $name, $properties in $flex-direction-values {
+  .u-#{$name} {
+    flex-direction: $properties;
+  }
+}
