@@ -20,6 +20,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  @include mq('sm') {
+    width: 100%;
+  }
   .c-category {
     transform: skew(0);
   }

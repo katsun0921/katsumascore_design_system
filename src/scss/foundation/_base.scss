@@ -300,15 +300,6 @@ abbr[title] {
 .invisible {
   visibility: hidden;
 }
-.wp-caption,
-.clearfix-pro:after,
-.clearfix-pro:before {
-  content: '';
-  display: table;
-}
-.clearfix-pro:after {
-  clear: both;
-}
 
 .bypostauthor,
 .gallery-caption,
