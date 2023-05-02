@@ -50,3 +50,9 @@ export const Button = ({
     </button>
   );
 };
+
+export const ButtonLoadmore = () => (
+  <div>
+    <a href='#'>Load More</a>
+  </div>
+);
