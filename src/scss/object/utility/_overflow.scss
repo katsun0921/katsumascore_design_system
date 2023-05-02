@@ -1,0 +1,18 @@
+// https://tailwindcss.com/docs/overflow
+
+$overflow-values: (
+  'auto': auto,
+  'hidden': hidden,
+  'clip': clip,
+  'visible': visible,
+  'scroll': scroll,
+  'x-auto': auto,
+  'y-auto': auto,
+  'x-hidden': hidden,
+);
+
+@each $name, $property in $overflow-values {
+  .u-overflow-#{$name} {
+    overflow: $property;
+  }
+}

@@ -1,8 +1,7 @@
 public/css/old_style.css
 public/css/foundation.css
 src/scss/fondation/_reset.scss
-src/scss/inc/_customizer.scss
-src/scss/inc/_template-tags.scss
+src/scss/inc/**
 src/inc/font-awesome/css/font-awesome.css
 src/inc/font-awesome/css/font-awesome.min.css
 src/inc/pe-icon-7-stroke/css/helper.css
