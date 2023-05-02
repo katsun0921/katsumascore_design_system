@@ -1,5 +1,6 @@
-// SLIDER STYLES
+@import '../global/mixin/screens';
 
+// SLIDER STYLES
 .slider-background-overlay-color {
   position: absolute;
   width: 100%;
@@ -48,6 +49,14 @@
 
 .progression-ratency-slider-container-max-width {
   margin: 0 auto;
+}
+
+.progression-ratency-slider-container {
+  width: 100%;
+  position: relative;
+  @include mq('lg') {
+    width: 70%;
+  }
 }
 
 .progression-ratency-progression-slider-title {
