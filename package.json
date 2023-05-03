@@ -8,7 +8,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./public/storybook",
+    "build-storybook": "build-storybook -o ./dist/storybook",
     "prepare": "husky install",
     "format": "prettier --write ./src",
     "fix": "npm run format",
