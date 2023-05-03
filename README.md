@@ -4,6 +4,8 @@
 
 Storybookを使用し、各コンポーネントをまとめています。
 
+[github page](https://katsun0921.github.io/katsumascore_design_system/)
+
 ## CSS 設計
 
 cssクラス名は[FLOCSS](https://github.com/hiloki/flocss)を採用
