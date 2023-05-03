@@ -13,7 +13,8 @@
     "format": "prettier --write ./src",
     "fix": "npm run format",
     "dev": "webpack --watch",
-    "build": "rm -rf dist && webpack --mode production && sh copy_style.sh"
+    "build": "rm -rf dist && webpack --mode production",
+    "cp_build": "npm run build && sh copy_style.sh"
   },
   "dependencies": {
     "@types/node": "18.11.18",
