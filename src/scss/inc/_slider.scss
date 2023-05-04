@@ -204,8 +204,9 @@
   height: 100%;
   width: 30%;
   z-index: 20;
-  @include mq('md') {
-    display: none;
+  display: none;
+  @include mq('lg') {
+    display: block;
   }
 }
 
