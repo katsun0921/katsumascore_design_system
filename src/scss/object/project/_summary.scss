@@ -1,0 +1,12 @@
+@use '../../global/variable/colors' as color;
+
+.p-summary {
+  blockquote {
+    border-left: 4px solid color.$category;
+    padding-left: 30px;
+    outline: none;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// https://tailwindcss.com/docs/list-style-type
+$list-style-type-values: (
+  'list-none': none,
+  'list-disc': disc,
+  'list-decimal': decimal,
+);
+
+@each $name, $properties in $list-style-type-values {
+  .u-#{$name} {
+    list-style-type: $properties;
+  }
+}
