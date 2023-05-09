@@ -1,5 +1,6 @@
 @use '../../global/variable/colors' as color;
 @import '../../global/mixin/fontSize';
+@import '../../global/mixin/transition';
 
 $searchBlockSize: 28px;
 .c-search {
@@ -22,5 +23,22 @@ $searchBlockSize: 28px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+.c-search__box {
+  .c-search {
+    &__field {
+      transform: skewX(-8deg);
+      border: 2px solid color.$gray500;
+      margin-right: 1rem;
+      @include text-sm;
+      @include all-transition;
+      &:active,
+      &:hover,
+      &:focus {
+        border-color: color.$category;
+      }
+    }
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import '@/scss/object/component/_search.scss';
 import '@/scss/object/utility/index.scss';
-import magnifyingGlass from '@/assets/images/magnifying-glass.png';
 
 /**
  * Primary UI component for user interaction
@@ -22,7 +21,9 @@ export const Search = ({}) => {
       </label>
       <input
         type='submit'
-        style={{ backgroundImage: `url(${magnifyingGlass})` }}
+        style={{
+          backgroundImage: `url(https://katsumascore.blog/images/magnifying-glass.png)`,
+        }}
         className='search-submit c-search__submit'
         value=''
       />
