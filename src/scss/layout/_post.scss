@@ -9,37 +9,7 @@
     border: 2px solid rgba(17, 17, 17, 0.1);
   }
 }
-.l-postImageOverlay {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  width: 353px;
-  height: 300px;
-  border-radius: 6px;
-  background: color.$black;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  @include mq('sm') {
-    width: 100%;
-  }
-  .c-category {
-    transform: skew(0);
-  }
-  .c-heading__post {
-    color: color.$white;
-  }
-  &__content {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: 10;
-    text-shadow: 1px 1px 2px color.$black;
-    background-color: rgba($color: color.$black, $alpha: 0.3);
-  }
-}
+
 .l-postRelated {
   $blockMargin: 4px;
   display: flex;

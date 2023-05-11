@@ -1,0 +1,67 @@
+@use '../../global/variable/className' as className;
+@use '../../global/variable/colors' as color;
+@import '../../global/mixin/screens';
+
+.p-postImageOverlay {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 353px;
+  height: 300px;
+  border-radius: 6px;
+  background: color.$black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  @include mq('sm') {
+    width: 100%;
+  }
+  .c-category {
+    transform: skew(0);
+  }
+  .c-heading__post {
+    color: color.$white;
+  }
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+    text-shadow: 1px 1px 2px color.$black;
+    background-color: rgba($color: color.$black, $alpha: 0.3);
+  }
+}
+
+.p-postLeftImage {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  border-bottom: 2px solid rgba($color: color.$black, $alpha: 0.1);
+  &__image {
+    width: calc(100% / 3);
+    height: 100%;
+    background: rgba($color: color.$black, $alpha: 0.1);
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .c-heading__post {
+    color: color.$category;
+  }
+  &__content {
+    $margin: 32px;
+    width: calc((100% / 3 * 2));
+    height: calc(100% - (#{$margin} * 2));
+    padding-right: $margin;
+    position: relative;
+    overflow: hidden;
+  }
+}

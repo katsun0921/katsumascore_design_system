@@ -1,0 +1,90 @@
+// https://tailwindcss.com/docs/height
+$width-values: (
+  'h-0': 0px,
+  'h-px': 1px,
+  // 2px
+  'h-0_5': 0.125rem,
+  // 4px
+  'h-1': 0.25rem,
+  // 6px
+  'h-1_5': 0.375rem,
+  //8px
+  'h-2': 0.5rem,
+  //10px
+  'h-2_5': 0.625rem,
+  //12px
+  'h-3': 0.75rem,
+  // 14px
+  'h-3_5': 0.875rem,
+  // 16px
+  'h-4': 1rem,
+  // 18px
+  'h-5': 1.25rem,
+  // 20px
+  'h-6': 1.5rem,
+  // 24px
+  'h-7': 1.75rem,
+  // 32px
+  'h-8': 2rem,
+  // 36px
+  'h-9': 2.25rem,
+  // 40px
+  'h-10': 2.5rem,
+  // 44px
+  'h-11': 2.75rem,
+  // 48px
+  'h-12': 3rem,
+  // 56px
+  'h-14': 3.5rem,
+  // 64px
+  'h-16': 4rem,
+  // 80px
+  'h-20': 5rem,
+  // 96px
+  'h-24': 6rem,
+  // 112px
+  'h-28': 7rem,
+  // 128px
+  'h-32': 8rem,
+  // 144px
+  'h-36': 9rem,
+  // 160px
+  'h-40': 10rem,
+  // 176px
+  'h-44': 11rem,
+  // 192px
+  'h-48': 12rem,
+  // 208px
+  'h-52': 13rem,
+  // 224px
+  'h-56': 14rem,
+  // 240px
+  'h-60': 15rem,
+  // 256px
+  'h-64': 16rem,
+  // 288px
+  'h-72': 18rem,
+  // 320px
+  'h-80': 20rem,
+  // 384px
+  'h-96': 24rem,
+  'h-auto': auto,
+  'h-50per': 50%,
+  'h-25per': 25%,
+  'h-75per': 75%,
+  'h-20per': 20%,
+  'h-40per': 40%,
+  'h-60per': 60%,
+  'h-80per': 80%,
+  'h-full': 100%,
+  'h-screen': 100vw,
+  'h-min': min-content,
+  'h-max': max-content,
+  'h-fit': fit-content,
+);
+
+@each $name, $properties in $width-values {
+  .u-#{$name} {
+    height: $properties;
+  }
+}
