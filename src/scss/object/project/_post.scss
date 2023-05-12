@@ -74,10 +74,33 @@
   // 黄金比1:1.6 でセット
   $width: 360px;
   $height: calc(#{$width} * 1.6);
+  $margin: 32px;
+  $borderWidth: 2px;
   display: block;
   width: $width;
   height: $height;
   position: relative;
+  overflow: hidden;
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: calc(100% - (#{$borderWidth} * 2));
+    height: $margin;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: color.$white;
+  }
+  &:before {
+    bottom: $margin;
+    background: linear-gradient(0deg, rgba($color: color.$white, $alpha: 1) 0%, rgba($color: color.$white, $alpha: 0) 100%);
+    z-index: 40;
+  }
+  &::after {
+    bottom: 0;
+    z-index: 30;
+    border-bottom: $borderWidth solid rgba($color: color.$black, $alpha: 0.1);
+  }
   &__image {
     border-radius: 6px 6px 0 0;
     background: color.$black;
@@ -98,18 +121,17 @@
     color: color.$category;
   }
   &__content {
-    $margin: 32px;
+    background-color: color.$white;
     height: $width;
     padding: $margin;
     position: relative;
     border-width: 0 2px 2px 2px;
     border-style: solid;
     border-color: rgba($color: color.$black, $alpha: 0.1);
+    z-index: 0;
   }
   &__excerpt {
     margin-top: 0.5rem;
     color: color.$black;
-    overflow: hidden;
-    height: 18em;
   }
 }
