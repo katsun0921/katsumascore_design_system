@@ -15,16 +15,12 @@ $rss: rgb(236, 124, 28);
 $white: rgb(255 255 255);
 $black: rgb(0 0 0);
 
-// slate
-$slate50: rgb(248 250 252);
-$slate300: rgb(203 213 225);
-$slate900: rgb(15 23 42);
-
 // gray
 $gray100: rgb(243 244 246);
 $gray300: rgb(209 213 219);
 $gray500: rgb(107 114 128);
 $gray700: rgb(55 65 81);
+$gray900: rgb(17, 24, 39);
 
 // blue
 $blue600: rgb(37 99 235);
@@ -46,7 +42,7 @@ $elementLinkHover: $blue800;
 $elementThr: $stone200;
 
 // table
-$elementTable: $slate50;
+$elementTable: $gray100;
 $elementTh: $gray500;
 
 // ins
@@ -58,12 +54,11 @@ $elementMark: $yellow50;
 $colors: (
   'white': $white,
   'black': $black,
-  'slate-50': $slate50,
-  'slate-900': $slate900,
   'gray-100': $gray100,
   'gray-300': $gray300,
   'gray-500': $gray500,
   'gray-700': $gray700,
+  'gray-900': $gray900,
   'blue-600': $blue600,
   'blue-800': $blue800,
   'stone-200': $stone200,

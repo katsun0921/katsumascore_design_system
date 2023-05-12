@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostOverlay } from '../../project/Post/PostOverlay';
+import { PostOverlay } from '../../projects/Post/PostOverlay';
 import '@/scss/foundation/_base.scss';
 import '@/scss/layout/_post.scss';
 import '@/scss/object/project/_post.scss';

@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  color: color.$slate900;
+  color: color.$gray900;
   font-weight: normal;
   font-family: 'Noto Sans', sans-serif;
   @include text-base;
@@ -204,7 +204,7 @@ input {
     box-sizing: content-box;
   }
   &:invalid {
-    background-color: color.$slate50;
+    background-color: color.$gray100;
   }
 }
 
@@ -212,7 +212,7 @@ textarea {
   overflow: auto;
   vertical-align: top;
   resize: vertical;
-  background-color: color.$slate50;
+  background-color: color.$gray100;
   @include link-transition;
 }
 table {
