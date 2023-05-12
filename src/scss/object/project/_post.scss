@@ -6,8 +6,10 @@
   position: relative;
   overflow: hidden;
   display: block;
-  width: 353px;
-  height: 300px;
+  // 黄金比1:1.6 でセット
+  $height: 360px;
+  width: calc(#{$height} * 1.6);
+  height: $height;
   border-radius: 6px;
   background: color.$black;
   background-repeat: no-repeat;
@@ -39,7 +41,7 @@
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  height: 300px;
+  height: 360px;
   border-bottom: 2px solid rgba($color: color.$black, $alpha: 0.1);
   &__image {
     width: calc(100% / 3);
@@ -77,6 +79,7 @@
   height: $height;
   position: relative;
   &__image {
+    border-radius: 6px 6px 0 0;
     background: color.$black;
     height: calc(#{$height} - #{$width});
     width: 100%;
