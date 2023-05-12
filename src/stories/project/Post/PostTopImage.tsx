@@ -6,20 +6,20 @@ import dummyImage from '@/assets/images/dummy-540X400.webp';
 import '@/scss/layout/_post.scss';
 import '@/scss/object/utility/index.scss';
 
-type TPostLeftImageProps = {
+type TPostTopImageProps = {
   excerpt: string;
 };
 
-export const PostLeftImage = ({ excerpt }: TPostLeftImageProps) => {
+export const PostTopImage = ({ excerpt }: TPostTopImageProps) => {
   return (
-    <a className='p-postLeftImage' href='#'>
-      <div className='p-postLeftImage__image'>
+    <a className='p-postTopImage' href='#'>
+      <div className='p-postTopImage__image'>
         <img src={dummyImage} alt='' width={540} />
+        <div className='u-absolute u-right-2 u-top-2'>
+          <Score score='3' />
+        </div>
       </div>
-      <div className='u-absolute u-right-2 u-top-2'>
-        <Score score='3' />
-      </div>
-      <div className='p-postLeftImage__content'>
+      <div className='p-postTopImage__content'>
         <div>
           <div className='u-mb-4'>
             <Category label='映画' size='small' />
@@ -30,7 +30,7 @@ export const PostLeftImage = ({ excerpt }: TPostLeftImageProps) => {
             type='post'
             label='夏目漱石「私の個人主義」'
           />
-          <p className='u-text-black u-mt-2'>{excerpt}</p>
+          <p className='p-postTopImage__excerpt'>{excerpt}</p>
         </div>
       </div>
     </a>

@@ -44,10 +44,12 @@
   &__image {
     width: calc(100% / 3);
     height: 100%;
-    background: rgba($color: color.$black, $alpha: 0.1);
+    background: color.$black;
     position: relative;
     img {
       position: absolute;
+      width: auto;
+      max-height: 80%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -63,5 +65,48 @@
     padding-right: $margin;
     position: relative;
     overflow: hidden;
+  }
+}
+
+.p-postTopImage {
+  display: block;
+  // 黄金比1:1.6 でセット
+  $width: 360px;
+  $height: calc(#{$width} * 1.6);
+  width: $width;
+  height: $height;
+  position: relative;
+  &__image {
+    background: color.$black;
+    height: calc(#{$height} - #{$width});
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      height: auto;
+      max-width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .c-heading__post {
+    color: color.$category;
+  }
+  &__content {
+    $margin: 32px;
+    height: $width;
+    padding: $margin;
+    position: relative;
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
+    border-color: rgba($color: color.$black, $alpha: 0.1);
+  }
+  &__excerpt {
+    margin-top: 0.5rem;
+    color: color.$black;
+    overflow: hidden;
+    height: 18em;
   }
 }
