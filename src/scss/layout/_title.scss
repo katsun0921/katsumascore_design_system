@@ -1,6 +1,7 @@
 @use '../global/variable/colors' as color;
 
 .l-title {
+  max-height: 540px;
   background: color.$gray900;
   padding: 150px 0px;
   position: relative;

@@ -1,0 +1,13 @@
+// https://tailwindcss.com/docs/background-size
+
+$bg-size-values: (
+  'bg-auto': auto,
+  'bg-cover': cover,
+  'bg-contain': contain,
+);
+
+@each $name, $properties in $bg-size-values {
+  .u-#{$name} {
+    background-size: $properties;
+  }
+}
