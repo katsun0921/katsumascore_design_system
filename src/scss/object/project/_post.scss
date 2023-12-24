@@ -8,7 +8,7 @@
   position: relative;
   overflow: hidden;
   display: block;
-  width: calc(#{$height} * 1.6);
+  max-width: calc(#{$height} * 1.6);
   height: $height;
   border-radius: 6px;
   background: color.$black;
