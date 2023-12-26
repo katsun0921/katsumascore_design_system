@@ -77,7 +77,8 @@
   $margin: 32px;
   $borderWidth: 2px;
   display: block;
-  width: $width;
+  width: 100%;
+  min-width: $width;
   height: $height;
   position: relative;
   overflow: hidden;

@@ -13,15 +13,9 @@
 .l-postRelated {
   $blockMargin: 4px;
   display: flex;
-  flex-wrap: wrap;
+  gap: $blockMargin;
   > * {
-    width: calc((100% / 3) - (#{$blockMargin} * 2));
-    .l-postImageOverlay {
-      width: 100%;
-    }
-    &:not(:nth-child(3n)) {
-      margin-right: calc(#{$blockMargin} * 3);
-    }
+    flex: 1;
   }
   &__3columns {
     display: grid;
