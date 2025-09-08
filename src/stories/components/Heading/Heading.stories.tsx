@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Heading } from './Heading';
 
@@ -13,9 +13,9 @@ export default {
   argTypes: {
     color: { control: 'color' },
   },
-} as ComponentMeta<typeof Heading>;
+} satisfies Meta<typeof Heading>;
 
-const Template: ComponentStory<typeof Heading> = (args) => (
+const meta: Meta<typeof Heading> = (args) => (
   <div
     style={{
       backgroundColor: args.color,

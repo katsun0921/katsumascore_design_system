@@ -1,37 +1,31 @@
-const path = require('path');
+import { resolve } from 'path';
 
-module.exports = {
-  "stories": [
-    "../src/stories/**/*.stories.mdx",
-    "../src/stories/**/*.stories.@(js|jsx|ts|tsx)"
+export default {
+  stories: [
+    '../src/stories/**/*.stories.mdx',
+    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)'
   ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    '@storybook/addon-viewport',
-    '@whitespace/storybook-addon-html',
-  ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
+  addons: ['@storybook/addon-links', '@storybook/addon-docs'],
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
   },
-  "webpackFinal": async (config, { configType }) => {
+  webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
-    },{
+    }, {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
-    })
+    });
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname, '../src'),
+      '@': resolve(new URL('../src', import.meta.url).pathname),
     };
     // @see https://github.com/storybookjs/storybook/issues/9070
-    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'))
-    fileLoaderRule.exclude = /\.svg$/
-    return config
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
+    return config;
   },
   staticDirs: [{ from: '../public/', to: '/' }],
-}
+};

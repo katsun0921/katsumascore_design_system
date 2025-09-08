@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Header } from './Header';
 
@@ -10,9 +10,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Header>;
+} satisfies Meta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const meta: Meta<typeof Header> = (args) => <Header {...args} />;
 
 export const PageHeader = Template.bind({});
 PageHeader.args = {};

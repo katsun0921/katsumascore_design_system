@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { ListHeader } from './ListHeader';
 
@@ -14,7 +14,7 @@ export default {
       values: [],
     },
   },
-} as ComponentMeta<typeof ListHeader>;
+} satisfies Meta<typeof ListHeader>;
 
 const TemplateLinkHeader: ComponentStory<typeof ListHeader> = (args) => (
   <ListHeader {...args} />

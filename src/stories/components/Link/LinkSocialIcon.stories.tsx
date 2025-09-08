@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   LinkSocialIcon,
@@ -20,7 +20,7 @@ export default {
       values: [],
     },
   },
-} as ComponentMeta<typeof LinkSocialIcon>;
+} satisfies Meta<typeof LinkSocialIcon>;
 
 const TemplateLinkFacebook: ComponentStory<typeof LinkSocialIcon> = (args) => (
   <LinkSocialIcon {...args}>

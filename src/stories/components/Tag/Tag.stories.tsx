@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Tags } from './Tag';
 
@@ -9,10 +9,10 @@ export default {
   component: Tags,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Tags>;
+} satisfies Meta<typeof Tags>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Tags> = (args) => <Tags {...args} />;
+const meta: Meta<typeof Tags> = (args) => <Tags {...args} />;
 
 export const PrimaryTags = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

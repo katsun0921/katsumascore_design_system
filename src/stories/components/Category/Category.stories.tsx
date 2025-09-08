@@ -1,9 +1,9 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Category } from './Category';
 
-export default {
+const meta: Meta<typeof Category> = {
   title: 'Component/Category',
   component: Category,
   parameters: {
@@ -11,19 +11,20 @@ export default {
     layout: 'fullscreen',
   },
   argTypes: {},
-} as ComponentMeta<typeof Category>;
-
-const Template: ComponentStory<typeof Category> = (args) => (
-  <Category {...args} />
-);
-
-export const Primary = Template.bind({});
-Primary.args = {
-  label: '映画',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  label: '映画',
-  size: 'small',
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
+  args: {
+    label: '映画',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    label: '映画',
+    size: 'small',
+  },
 };

@@ -1,25 +1,27 @@
 {
-  "baseUrl": "./",
-  "paths": {
-    "@/*": ["src/*"],
-    "@/scss/*": ["src/scss/*"],
-    "@/assets/*": ["src/assets/*"]
-  },
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable"],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    //"noEmit": true, ts-loaderを導入したらエラーがでる
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/scss/*": ["src/scss/*"],
+      "@/assets/*": ["src/assets/*"]
+    }
   },
-  "include": ["**/*.ts", "**/*.tsx", "./index.d.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src", "vite.config.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Sharing } from './Sharing';
 
@@ -10,9 +10,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Sharing>;
+} satisfies Meta<typeof Sharing>;
 
-const Template: ComponentStory<typeof Sharing> = (args) => (
+const meta: Meta<typeof Sharing> = (args) => (
   <Sharing {...args} />
 );
 

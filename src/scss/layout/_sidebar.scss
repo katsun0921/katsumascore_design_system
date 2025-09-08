@@ -1,7 +1,7 @@
-@import '../global/mixin/screens';
+@use '../global/mixin/screens';
 
 .l-sidebar {
-  @include mq('md') {
+  @include screens.mq('md') {
     width: 24%;
   }
 }

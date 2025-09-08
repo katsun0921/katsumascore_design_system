@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Link, LinkFacebook, LinkTwitter } from './Link';
 
@@ -15,7 +15,7 @@ export default {
       values: [],
     },
   },
-} as ComponentMeta<typeof Link>;
+} satisfies Meta<typeof Link>;
 
 const TemplateLinkFacebook: ComponentStory<typeof Link> = (args) => (
   <Link {...args}>

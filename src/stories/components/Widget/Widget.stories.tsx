@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Widgets, WidgetCategories, WidgetHeading, WidgetText } from './Widget';
 
@@ -12,7 +12,7 @@ export default {
     layout: 'fullscreen',
   },
   argTypes: {},
-} as ComponentMeta<typeof Widgets>;
+} satisfies Meta<typeof Widgets>;
 
 const TemplateWidgetCategories: ComponentStory<typeof Widgets> = (args) => (
   <Widgets {...args}>

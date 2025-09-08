@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
   ListsMovie,
@@ -21,7 +21,7 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof ListsMovie>;
+} satisfies Meta<typeof ListsMovie>;
 
 const TemplateListMovieSingleInfo: ComponentStory<typeof ListsMovie> = (
   args

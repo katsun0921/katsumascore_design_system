@@ -1,5 +1,5 @@
 @use '../global/variable/colors' as color;
-@import '../global/mixin/screens';
+@use '../global/mixin/screens' as *;
 
 .l-header {
   background-color: color.$header;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Search } from './Search';
 
@@ -9,10 +9,10 @@ export default {
   component: Search,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Search>;
+} satisfies Meta<typeof Search>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Search> = (args) => <Search {...args} />;
+const meta: Meta<typeof Search> = (args) => <Search {...args} />;
 
 export const ComponentSearch = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

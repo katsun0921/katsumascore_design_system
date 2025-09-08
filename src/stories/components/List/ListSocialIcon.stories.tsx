@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { ListSocialIcon } from './ListSocialIcon';
 
@@ -10,7 +10,7 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof ListSocialIcon>;
+} satisfies Meta<typeof ListSocialIcon>;
 
 const TemplateListSocialIcon: ComponentStory<typeof ListSocialIcon> = (
   args

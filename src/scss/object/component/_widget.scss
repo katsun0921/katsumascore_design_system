@@ -1,6 +1,6 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
-@import '../../global/mixin/fontSize';
+@use '../../global/mixin/fontSize';
 
 .c-widget {
   &:not(:last-child) {
@@ -12,7 +12,7 @@
     font-style: italic;
     font-weight: fontWeight.$fontNormal;
     color: color.$gray900;
-    @include text-xl;
+  @include fontSize.text-xl;
   }
   &.widget_block {
     h2 {
