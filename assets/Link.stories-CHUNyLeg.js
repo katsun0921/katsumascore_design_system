@@ -1,0 +1,5 @@
+import{j as o}from"./jsx-runtime-CuLFjRcc.js";import{L as a,a as n,b as t}from"./Link-BLdTjDGo.js";import"./iframe-68OXGTmA.js";import"./preload-helper-D9Z9MdNV.js";/* empty css                   *//* empty css                    *//* empty css              *//* empty css              */const g={title:"Component/Link",component:t,subcomponents:{LinkFacebook:n,LinkTwitter:a},parameters:{layout:"fullscreen",backgrounds:{default:"header",values:[]}}},i=s=>o.jsx(t,{...s,children:o.jsx(n,{})}),c=s=>o.jsx(t,{...s,children:o.jsx(a,{})}),r=i.bind({});r.args={};const e=c.bind({});e.args={};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`args => <Link {...args}>
+    <LinkFacebook />
+  </Link>`,...r.parameters?.docs?.source}}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`args => <Link {...args}>
+    <LinkTwitter />
+  </Link>`,...e.parameters?.docs?.source}}};const x=["Facebook","Twitter"];export{r as Facebook,e as Twitter,x as __namedExportsOrder,g as default};

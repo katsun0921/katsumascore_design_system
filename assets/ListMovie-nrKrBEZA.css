@@ -1,0 +1,1 @@
+.c-listMovie__multiple{display:flex}.c-listMovie__multiple li:not(:last-child){margin-right:.5em}.c-listMovie__multiple li:not(:last-child):after{content:","}

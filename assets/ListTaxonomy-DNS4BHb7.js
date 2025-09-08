@@ -1,0 +1,5 @@
+import{j as e}from"./jsx-runtime-CuLFjRcc.js";/* empty css              *//* empty css              */const i=({label:s,lists:n})=>e.jsxs("dl",{className:"c-list__taxonomy",children:[e.jsx("dt",{className:"c-list__term u-mb-4",children:s}),e.jsx("dd",{className:"c-list__content",children:e.jsx("ul",{className:"u-flex",children:n.map((r,t)=>e.jsx("li",{className:"c-list__termList",children:e.jsxs("a",{href:r.link,children:[r.name,e.jsx("span",{className:"c-list__termCount",children:r.count})]})},t))})})]});i.__docgenInfo={description:"",methods:[],displayName:"ListTaxonomy",props:{label:{required:!0,tsType:{name:"string"},description:""},lists:{required:!0,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{
+  name: string;
+  link: string;
+  count: number;
+}`,signature:{properties:[{key:"name",value:{name:"string",required:!0}},{key:"link",value:{name:"string",required:!0}},{key:"count",value:{name:"number",required:!0}}]}}],raw:"TListProps[]"},description:""}}};export{i as L};
