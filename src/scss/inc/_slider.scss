@@ -1,5 +1,5 @@
-@use '../global/mixin/screens';
-@use '../global/mixin/transition';
+@use '../global/mixin/screens' as *;
+@use '../global/mixin/transition' as *;
 
 // SLIDER STYLES
 .slider-background-overlay-color {
