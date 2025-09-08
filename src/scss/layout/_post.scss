@@ -1,6 +1,6 @@
 @use '../global/variable/className' as className;
 @use '../global/variable/colors' as color;
-@import '../global/mixin/screens';
+@use '../global/mixin/screens';
 
 .l-post {
   &__vertical {

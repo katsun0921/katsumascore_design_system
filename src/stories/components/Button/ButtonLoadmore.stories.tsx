@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { ButtonLoadmore } from './ButtonLoadmore';
 
@@ -9,10 +9,10 @@ export default {
   component: ButtonLoadmore,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof ButtonLoadmore>;
+} satisfies Meta<typeof ButtonLoadmore>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof ButtonLoadmore> = () => (
+const meta: Meta<typeof ButtonLoadmore> = () => (
   <ButtonLoadmore />
 );
 

@@ -1,5 +1,5 @@
 @use '../global/variable/className' as className;
-@import '../global/mixin/screens';
+@use '../global/mixin/screens' as *;
 
 .l-container {
   width: 90%;

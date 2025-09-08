@@ -1,6 +1,6 @@
 @use '../../global/variable/className' as className;
 @use '../../global/variable/colors' as color;
-@import '../../global/mixin/screens';
+@use '../../global/mixin/screens';
 
 .p-postImageOverlay {
   // 黄金比1:1.6 でセット
@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  @include mq('sm') {
+  @include screens.mq('sm') {
     width: 100%;
   }
   .c-category {

@@ -1,8 +1,8 @@
-@import '../global/mixin/screens';
+@use '../global/mixin/screens';
 
 .l-content {
   width: 100%;
-  @include mq('md') {
+  @include screens.mq('md') {
     width: 72%;
   }
 }

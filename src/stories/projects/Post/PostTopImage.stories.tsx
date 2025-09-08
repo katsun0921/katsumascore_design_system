@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { PostTopImage } from './PostTopImage';
 
@@ -10,9 +10,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof PostTopImage>;
+} satisfies Meta<typeof PostTopImage>;
 
-const Template: ComponentStory<typeof PostTopImage> = (args) => (
+const meta: Meta<typeof PostTopImage> = (args) => (
   <PostTopImage {...args} />
 );
 

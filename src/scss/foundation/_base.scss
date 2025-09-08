@@ -1,7 +1,7 @@
 @use '../global/variable/colors' as color;
 @use '../global/variable/fontWeight' as fontWeight;
-@import '../global/mixin/fontSize';
-@import '../global/mixin/transition';
+@use '../global/mixin/fontSize';
+@use '../global/mixin/transition';
 
 html {
   font-size: 16px;
@@ -12,7 +12,7 @@ body {
   font-weight: normal;
   font-family: 'Noto Sans', sans-serif;
   box-sizing: border-box;
-  @include text-base;
+  @include fontSize.text-base;
 }
 
 ::selection {
@@ -32,13 +32,13 @@ h6 {
 }
 
 h1 {
-  @include text-3xl;
+  @include fontSize.text-3xl;
 }
 h2 {
-  @include text-2xl;
+  @include fontSize.text-2xl;
 }
 h3 {
-  @include text-xl;
+  @include fontSize.text-xl;
 }
 
 p {
@@ -49,7 +49,7 @@ a {
   color: color.$elementLink;
   outline: none !important;
   text-decoration: none;
-  @include link-transition;
+  @include transition.link-transition;
   blockquote & {
     color: color.$gray500;
   }
@@ -191,7 +191,7 @@ input {
   line-height: normal;
   cursor: pointer;
   -webkit-appearance: button;
-  @include link-transition;
+  @include transition.link-transition;
   &[disabled] {
     cursor: default;
   }
@@ -214,7 +214,7 @@ textarea {
   vertical-align: top;
   resize: vertical;
   background-color: color.$gray100;
-  @include link-transition;
+  @include transition.link-transition;
 }
 table {
   width: 100%;

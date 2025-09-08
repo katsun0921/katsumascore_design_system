@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Base } from './Base';
 
@@ -10,9 +10,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Base>;
+} satisfies Meta<typeof Base>;
 
-const Template: ComponentStory<typeof Base> = () => <Base />;
+const meta: Meta<typeof Base> = () => <Base />;
 
 export const BaseStyle = Template.bind({});
 BaseStyle.args = {};

@@ -1,6 +1,6 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
-@import '../../global/mixin/fontSize';
+@use '../../global/mixin/fontSize';
 
 .c-tags {
   $iconHeight: 30px;

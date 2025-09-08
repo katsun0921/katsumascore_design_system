@@ -20,7 +20,6 @@ Follow the ITCSS (Inverted Triangle CSS) methodology for organized, scalable sty
 ## SCSS Best Practices
 
 ### Import Statements
-- Use `@use` instead of `@import` for modern SCSS
 - Import variables and mixins at the top
 - Use path aliases: `@use '../../global/variable/colors' as color;`
 
@@ -28,7 +27,7 @@ Follow the ITCSS (Inverted Triangle CSS) methodology for organized, scalable sty
 ```scss
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
-@import '../../global/mixin/transition';
+@use '../../global/mixin/transition';
 
 .c-component {
   // Base styles
@@ -97,7 +96,7 @@ Reference: [src/scss/global/variable/_fontWeight.scss](mdc:src/scss/global/varia
 Reference: [src/scss/global/mixin/_transition.scss](mdc:src/scss/global/mixin/_transition.scss)
 
 ```scss
-@import '../../global/mixin/transition';
+@use '../../global/mixin/transition';
 
 .element {
   @include all-transition;
@@ -148,7 +147,6 @@ Reference: [src/scss/global/mixin/_fontSize.scss](mdc:src/scss/global/mixin/_fon
 ## Performance Considerations
 
 ### Optimization
-- Use `@use` instead of `@import` to avoid duplicate imports
 - Minimize nesting depth (max 3-4 levels)
 - Use mixins for repeated patterns
 - Group related styles with comments
@@ -157,7 +155,7 @@ Reference: [src/scss/global/mixin/_fontSize.scss](mdc:src/scss/global/mixin/_fon
 ```scss
 // Component: Button
 @use '../../global/variable/colors' as color;
-@import '../../global/mixin/transition';
+@use '../../global/mixin/transition';
 
 .c-button {
   // Base styles

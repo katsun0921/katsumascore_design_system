@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { HamburgerMenu } from './HamburgerMenu';
 
@@ -11,7 +11,7 @@ export default {
     layout: 'fullscreen',
   },
   argTypes: {},
-} as ComponentMeta<typeof HamburgerMenu>;
+} satisfies Meta<typeof HamburgerMenu>;
 
 const TemplateHamburgerMenu: ComponentStory<typeof HamburgerMenu> = (args) => (
   <HamburgerMenu {...args} />

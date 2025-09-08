@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Icon, IconImage, IconStyle } from './Icon';
 
@@ -12,7 +12,7 @@ export default {
     layout: 'fullscreen',
   },
   argTypes: {},
-} as ComponentMeta<typeof Icon>;
+} satisfies Meta<typeof Icon>;
 
 const TemplateImage: ComponentStory<typeof Icon> = (args) => (
   <Icon {...args}>

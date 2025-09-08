@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Summary } from './Summary';
 
@@ -10,9 +10,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Summary>;
+} satisfies Meta<typeof Summary>;
 
-const Template: ComponentStory<typeof Summary> = (args) => (
+const meta: Meta<typeof Summary> = (args) => (
   <Summary {...args} />
 );
 

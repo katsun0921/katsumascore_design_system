@@ -1,6 +1,6 @@
 @use '../../global/variable/colors' as color;
-@import '../../global/mixin/fontSize';
-@import '../../global/mixin/transition';
+@use '../../global/mixin/fontSize' as *;
+@use '../../global/mixin/transition' as *;
 
 $searchBlockSize: 28px;
 .c-search {

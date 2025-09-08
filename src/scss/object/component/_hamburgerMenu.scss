@@ -1,4 +1,4 @@
-@import '../../global/mixin/fontSize';
+@use '../../global/mixin/fontSize';
 $hamburgerMenuHeight: 24px;
 $hamburgerMenuLineHeight: calc(#{$hamburgerMenuHeight} / 3 - 4px);
 .c-hamburgerMenu {
@@ -8,7 +8,7 @@ $hamburgerMenuLineHeight: calc(#{$hamburgerMenuHeight} / 3 - 4px);
   border: none;
   padding: 0;
   background-color: transparent;
-  @include text-xl;
+  @include fontSize.text-xl();
   &__lineContainer {
     position: relative;
     width: 30px;

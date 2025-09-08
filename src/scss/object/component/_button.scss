@@ -1,7 +1,7 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
-@import '../../global/mixin/fontSize';
-@import '../../global/mixin/transition';
+@use '../../global/mixin/fontSize' as *;
+@use '../../global/mixin/transition' as *;
 
 .c-button {
   &__loadmore {

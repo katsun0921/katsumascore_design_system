@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Navigation } from './Navigation';
 
 export default {
@@ -9,9 +9,9 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof Navigation>;
+} satisfies Meta<typeof Navigation>;
 
-const Template: ComponentStory<typeof Navigation> = (args) => (
+const meta: Meta<typeof Navigation> = (args) => (
   <Navigation {...args} />
 );
 
