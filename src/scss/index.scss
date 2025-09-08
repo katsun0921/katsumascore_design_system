@@ -1,7 +1,8 @@
-@use './foundation/index';
-@use './layout/index';
-@use './object/component/index';
-@use './object/project/index';
-@use './object/utility/index';
-@use './inc/index';
-@use './plugins/index';
+@use './global/index' as *;
+@use './foundation/index' as foundation;
+@use './layout/index' as layout;
+@use './object/component/index' as component;
+@use './object/project/index' as project;
+@use './object/utility/index' as utility;
+@use './inc/index' as inc;
+@use './plugins/index' as plugins;

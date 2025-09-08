@@ -1,5 +1,5 @@
 @use '../global/variable/colors' as color;
-@use '../global/mixin/transition';
+@use '../global/mixin/transition' as *;
 
 /* RESETS */
 .flex-container a:hover,
@@ -156,7 +156,7 @@
 .flex-control-nav li {
   margin: 0px;
   zoom: 1;
-  *display: inline;
+  display: inline;
   position: relative;
 }
 .flex-control-paging li {
