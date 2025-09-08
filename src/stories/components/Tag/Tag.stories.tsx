@@ -1,4 +1,4 @@
-import React from 'react';
+// ...existing code...
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Tags } from './Tag';
@@ -12,17 +12,17 @@ export default {
 } satisfies Meta<typeof Tags>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const meta: Meta<typeof Tags> = (args) => <Tags {...args} />;
 
-export const PrimaryTags = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-PrimaryTags.args = {
-  tags: [
-    {
-      label: 'Wordpress Tag',
-    },
-    {
-      label: 'Wordpress Tag2',
-    },
-  ],
+type Story = StoryObj<typeof Tags>;
+
+const Template: Story['render'] = (args) => <Tags {...args} />;
+
+export const PrimaryTags: Story = {
+  render: Template,
+  args: {
+    tags: [
+      { label: 'Wordpress Tag' },
+      { label: 'Wordpress Tag2' },
+    ],
+  },
 };
