@@ -1,20 +1,19 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Colors, TColorList } from './Color';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
+const meta: Meta<typeof Colors> = {
   title: 'Styles/Color',
   component: Colors,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof Colors>;
+};
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const meta: Meta<typeof Colors> = (args) => <Colors {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 const colorList: TColorList = [
   {
@@ -88,8 +87,8 @@ const colorList: TColorList = [
   },
 ];
 
-export const ColorsList = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-ColorsList.args = {
-  colorList,
+export const ColorsList: Story = {
+  args: {
+    colorList,
+  },
 };

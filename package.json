@@ -2,6 +2,7 @@
   "name": "katsumascore-design-system",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "engines": {
     "node": "24.7.0",
     "npm": "11.5.1"
@@ -15,15 +16,22 @@
     "dev": "vite",
     "build": "rm -rf dist && vite build",
     "preview": "vite preview",
-    "cp_build": "npm run build && sh copy_style.sh"
+    "build:copy": "npm run build && sh copy_style.sh",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "stylelint": "stylelint \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "stylelint \"src/**/*.{css,scss,sass}\" --fix",
+    "check": "npm run lint && npm run stylelint",
+    "check:fix": "npm run lint:fix && npm run stylelint:fix",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@types/node": "18.11.18",
-    "eslint": "8.30.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
     "@storybook/addon-docs": "^9.1.5",
     "@storybook/addon-links": "^9.1.5",
     "@storybook/builder-vite": "^9.1.5",
@@ -31,9 +39,15 @@
     "@storybook/react-vite": "^9.1.5",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
+    "eslint": "^9.35.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-storybook": "^9.1.5",
     "husky": "8.0.2",
+    "lint-staged": "^15.2.10",
     "prettier": "^2.8.1",
     "sass": "^1.92.1",
     "storybook": "^9.1.5",
@@ -43,6 +57,24 @@
     "typescript": "^4.9.5",
     "vite": "^7.1.4",
     "vite-plugin-eslint": "^1.8.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,sass}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "src/**/*": [
+      "npm run fix",
+      "npm run lint",
+      "npm run build:copy"
+    ]
   },
   "browserslist": [
     "> 3% in JP",

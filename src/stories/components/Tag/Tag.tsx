@@ -11,9 +11,9 @@ export type TTagsProps = {
 export const Tags = ({ tags }: TTagsProps) => {
   return (
     <div className='c-tags'>
-      {tags.map((tag, i) => {
+      {tags.map((tag, _i) => {
         const { label } = tag;
-        return <a href='#'>{label}</a>;
+        return <a key={_i} href='#'>{label}</a>;
       })}
     </div>
   );

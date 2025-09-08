@@ -6,65 +6,35 @@ Storybookを使用し、各コンポーネントをまとめています。
 
 [github page](https://katsun0921.github.io/katsumascore_design_system/)
 
-## CSS 設計
+## ドキュメント
 
-cssクラス名は[FLOCSS](https://github.com/hiloki/flocss)を採用
+詳細なドキュメントは [`doc/`](./doc/) ディレクトリをご覧ください。
 
-[[CSS設計] 私のためのFLOCSSまとめ](https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0)
+### 📚 主要ドキュメント
 
-### クラス名
+- [📋 プロジェクト概要](./doc/01-overview.md) - プロジェクトの目的と技術スタック
+- [🏗️ アーキテクチャ](./doc/02-architecture.md) - プロジェクト構造とITCSSアーキテクチャ
+- [🧩 コンポーネント開発ガイド](./doc/03-components.md) - Reactコンポーネントの開発方法
+- [🎨 スタイリングガイド](./doc/04-styling.md) - SCSSとFLOCSS設計手法
+- [⚙️ 開発環境セットアップ](./doc/05-setup.md) - 環境構築とツール設定
+- [🚀 ビルドとデプロイ](./doc/06-deployment.md) - ビルドプロセスとデプロイメント
+- [📝 コーディング規約](./doc/07-coding-standards.md) - TypeScriptとSCSSの書き方
+- [🔧 ツール設定](./doc/08-tools.md) - ESLint、Prettier、Stylelint設定
+- [🌐 WordPress統合](./doc/09-wordpress-integration.md) - WordPressテーマへの統合方法
 
-FLOCCSに準拠する
+### 🤖 Cursor AI ルール
 
-BEM記法を取るが、Modifierは使用しない。
+開発効率を向上させるためのCursor AI用ルールファイル：
 
-Modifier代わりにutilityを使用する
+- [📋 プロジェクト構造ルール](./.cursor/rules/project-structure.mdc)
+- [⚛️ Reactコンポーネントルール](./.cursor/rules/react-components.mdc)
+- [🎨 SCSSスタイリングルール](./.cursor/rules/scss-styling.mdc)
+- [📚 Storybookルール](./.cursor/rules/storybook.mdc)
+- [🔧 TypeScriptルール](./.cursor/rules/typescript.mdc)
+- [🚀 パフォーマンスルール](./.cursor/rules/performance.mdc)
+- [🌐 WordPress統合ルール](./.cursor/rules/wordpress-integration.mdc)
 
-***OK***
-
-```sass
-.block {
-    //
-    &__element {
-    }
-}
-```
-
-```html
-<div class="block__element u-block"></div>
-```
-
-***NG***
-
-```sass
-.block {
-    //
-    &__element {
-    //
-      &--modifier {
-        display: block;
-      }
-    }
-}
-```
-
-```html
-<div class="block__element block__element--modifier"></div>
-```
-
-### 変数名
-
-tailwindcssの名前を参照する
-
-https://tailwindcss.com/docs/installation
-
-pageのclass名はp-wordpressのファイル名とする
-
-### Background url
-
-background-image: url()はhttps://katsumascore.blog/images/filename で指定する
-
-## tag ルール
+## バージョン管理
 
 ```bash
 

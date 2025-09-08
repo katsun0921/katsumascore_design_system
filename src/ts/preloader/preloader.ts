@@ -5,16 +5,16 @@ export const preloader = () => {
       didDone = true;
       const pageLoaderPro = document.querySelector('#page-loader-pro');
       const preloader = document.querySelector('#js-preloader');
-      if (!!pageLoaderPro)
+      if (pageLoaderPro)
         return pageLoaderPro.classList.add('finished-loading');
-      if (!!preloader)
+      if (preloader)
         return preloader.classList.add('progression-preloader-completed');
     }
   }
   let loaded = false;
   let minDone = false;
   //The minimum timeout.
-  setTimeout(function () {
+  setTimeout(() => {
     minDone = true;
     //If loaded, fire the done callback.
     if (loaded) {
@@ -22,11 +22,11 @@ export const preloader = () => {
     }
   }, 400);
   //The maximum timeout.
-  setTimeout(function () {
+  setTimeout(() => {
     done();
   }, 2000);
   //Bind the load listener.
-  window.addEventListener('load', function () {
+  window.addEventListener('load', () => {
     loaded = true;
     if (minDone) {
       done();

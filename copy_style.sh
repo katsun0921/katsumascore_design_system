@@ -2,7 +2,7 @@
 
 echo "ビルドしたファイルのコピーを開始"
 
-PATH_KATSUMASCORE="/c/Users/katsu/Local Sites/katsumascore/app/public/wp-content/themes/katsumascore"
+PATH_KATSUMASCORE="../"
 
 echo "古いbuild.cssとbundle.jsを削除"
 
