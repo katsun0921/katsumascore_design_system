@@ -1,0 +1,228 @@
+---
+description: Performance optimization guidelines for the design system
+---
+
+# Performance Optimization Guidelines
+
+## Build Performance
+
+### Webpack Configuration
+Reference: [webpack.config.js](mdc:webpack.config.js)
+
+### Current Optimizations
+- TypeScript compilation with `ts-loader`
+- SCSS processing with PostCSS and Autoprefixer
+- CSS extraction with MiniCssExtractPlugin
+- Asset optimization with file-loader
+
+### Recommended Performance Improvements
+
+#### 1. Production Mode Optimization
+```javascript
+// Enable production mode optimizations
+mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+
+// Add content hashing for cache busting
+filename: process.env.NODE_ENV === 'production'
+  ? '[name].[contenthash:8].js'
+  : 'bundle.js',
+```
+
+#### 2. Code Splitting
+```javascript
+// Split vendor code
+optimization: {
+  splitChunks: {
+    chunks: 'all',
+    cacheGroups: {
+      vendor: {
+        test: /[\\/]node_modules[\\/]/,
+        name: 'vendors',
+        chunks: 'all',
+      },
+    },
+  },
+},
+```
+
+#### 3. Tree Shaking
+```javascript
+// Enable tree shaking
+optimization: {
+  usedExports: true,
+  sideEffects: false,
+},
+```
+
+## SCSS Performance
+
+### Import Optimization
+- Use `@use` instead of `@import` to avoid duplicate imports
+- Import only needed variables and mixins
+- Use partial imports for better tree shaking
+
+### Example Optimized Imports
+```scss
+// Good: Specific imports
+@use '../../global/variable/colors' as color;
+@use '../../global/variable/fontWeight' as fontWeight;
+
+// Avoid: Wildcard imports
+@import '../../global/variable/*';
+```
+
+### CSS Optimization
+- Minimize nesting depth (max 3-4 levels)
+- Use efficient selectors
+- Group related styles
+- Remove unused CSS
+
+## Asset Optimization
+
+### Image Optimization
+- Use modern formats (WebP, AVIF)
+- Implement responsive images
+- Use appropriate compression
+- Consider lazy loading for below-the-fold images
+
+### Font Optimization
+- Use font-display: swap
+- Preload critical fonts
+- Subset fonts when possible
+- Use system fonts as fallbacks
+
+## Bundle Size Optimization
+
+### JavaScript Optimization
+- Use dynamic imports for code splitting
+- Implement lazy loading for components
+- Remove unused dependencies
+- Use tree shaking for libraries
+
+### CSS Optimization
+- Remove unused styles
+- Use CSS purging
+- Minimize CSS bundle size
+- Use critical CSS extraction
+
+## Runtime Performance
+
+### React Performance
+- Use React.memo for expensive components
+- Implement useMemo and useCallback for expensive calculations
+- Avoid unnecessary re-renders
+- Use proper key props for lists
+
+### Example Optimized Component
+```tsx
+import React, { memo, useMemo, useCallback } from 'react';
+
+interface OptimizedButtonProps {
+  label: string;
+  onClick: () => void;
+  items: Array<{ id: string; name: string }>;
+}
+
+export const OptimizedButton = memo<OptimizedButtonProps>(({
+  label,
+  onClick,
+  items
+}) => {
+  // Memoize expensive calculations
+  const processedItems = useMemo(() => {
+    return items.map(item => ({
+      ...item,
+      processed: true
+    }));
+  }, [items]);
+
+  // Memoize event handlers
+  const handleClick = useCallback(() => {
+    onClick();
+  }, [onClick]);
+
+  return (
+    <button onClick={handleClick}>
+      {label}
+      {processedItems.map(item => (
+        <span key={item.id}>{item.name}</span>
+      ))}
+    </button>
+  );
+});
+```
+
+## WordPress Integration Performance
+
+### Theme Integration
+- Minimize HTTP requests
+- Use WordPress caching
+- Optimize database queries
+- Implement proper asset enqueuing
+
+### Asset Loading
+- Load critical CSS inline
+- Defer non-critical JavaScript
+- Use WordPress asset optimization plugins
+- Implement proper caching headers
+
+## Monitoring and Metrics
+
+### Bundle Analysis
+- Use webpack-bundle-analyzer
+- Monitor bundle size over time
+- Identify large dependencies
+- Track performance budgets
+
+### Performance Metrics
+- First Contentful Paint (FCP)
+- Largest Contentful Paint (LCP)
+- Cumulative Layout Shift (CLS)
+- Time to Interactive (TTI)
+
+## Best Practices
+
+### Development
+- Use development mode for faster builds
+- Enable source maps for debugging
+- Use hot module replacement
+- Monitor build times
+
+### Production
+- Enable all optimizations
+- Use production mode
+- Implement proper caching
+- Monitor performance metrics
+
+### Code Quality
+- Write efficient code
+- Use proper TypeScript types
+- Follow performance patterns
+- Regular performance audits
+
+## Performance Checklist
+
+### Build Optimization
+- [ ] Enable production mode
+- [ ] Implement code splitting
+- [ ] Use tree shaking
+- [ ] Optimize assets
+- [ ] Minimize bundle size
+
+### SCSS Optimization
+- [ ] Use @use instead of @import
+- [ ] Minimize nesting
+- [ ] Remove unused styles
+- [ ] Optimize selectors
+
+### Runtime Optimization
+- [ ] Use React.memo
+- [ ] Implement lazy loading
+- [ ] Optimize re-renders
+- [ ] Use proper keys
+
+### WordPress Integration
+- [ ] Optimize asset loading
+- [ ] Use caching
+- [ ] Minimize HTTP requests
+- [ ] Monitor performance

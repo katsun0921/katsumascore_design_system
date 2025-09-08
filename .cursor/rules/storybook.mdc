@@ -1,0 +1,226 @@
+---
+globs: *.stories.tsx,*.stories.ts,*.stories.mdx
+description: Storybook story development guidelines and patterns
+---
+
+# Storybook Development Guidelines
+
+## Story File Structure
+
+### Story Naming
+- Files: `ComponentName.stories.tsx`
+- Location: Same directory as component
+- Example: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
+
+### Story Template Structure
+```tsx
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentName } from './ComponentName';
+
+export default {
+  title: 'Component/ComponentName',
+  component: ComponentName,
+  argTypes: {
+    // Define controls for interactive testing
+    backgroundColor: { control: 'color' },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large']
+    },
+  },
+} as ComponentMeta<typeof ComponentName>;
+
+const Template: ComponentStory<typeof ComponentName> = (args) => <ComponentName {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  // Default props
+};
+
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
+  label: 'Primary Button',
+};
+```
+
+## Story Categories
+
+### Component Stories
+- Location: [src/stories/components/](mdc:src/stories/components/)
+- Pattern: `Component/ComponentName`
+- Examples: Button, Heading, Category, etc.
+
+### Layout Stories
+- Location: [src/stories/layouts/](mdc:src/stories/layouts/)
+- Pattern: `Layout/LayoutName`
+- Examples: Header, Footer, Navigation, etc.
+
+### Project Stories
+- Location: [src/stories/projects/](mdc:src/stories/projects/)
+- Pattern: `Project/ProjectName`
+- Examples: Content, Info, Post, Summary, etc.
+
+### Style Stories
+- Location: [src/stories/styles/](mdc:src/stories/styles/)
+- Pattern: `Style/StyleName`
+- Examples: Foundation, Global, etc.
+
+## ArgTypes Configuration
+
+### Common Controls
+```tsx
+argTypes: {
+  // Color picker
+  backgroundColor: { control: 'color' },
+  color: { control: 'color' },
+
+  // Select dropdown
+  size: {
+    control: { type: 'select' },
+    options: ['small', 'medium', 'large']
+  },
+
+  // Boolean toggle
+  primary: { control: 'boolean' },
+  disabled: { control: 'boolean' },
+
+  // Text input
+  label: { control: 'text' },
+
+  // Number input
+  width: { control: 'number' },
+  height: { control: 'number' },
+
+  // Range slider
+  opacity: {
+    control: { type: 'range', min: 0, max: 1, step: 0.1 }
+  },
+}
+```
+
+## Story Variants
+
+### Standard Variants
+```tsx
+// Default state
+export const Default = Template.bind({});
+Default.args = {
+  label: 'Button',
+};
+
+// Primary variant
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
+  label: 'Primary Button',
+};
+
+// Secondary variant
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Secondary Button',
+};
+
+// Size variants
+export const Large = Template.bind({});
+Large.args = {
+  size: 'large',
+  label: 'Large Button',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  label: 'Small Button',
+};
+```
+
+### Interactive Stories
+```tsx
+// With click action
+export const WithClick = Template.bind({});
+WithClick.args = {
+  label: 'Click Me',
+  onClick: () => alert('Button clicked!'),
+};
+
+// With custom styling
+export const CustomStyle = Template.bind({});
+CustomStyle.args = {
+  label: 'Custom Button',
+  style: {
+    backgroundColor: '#ff6b6b',
+    color: 'white',
+    borderRadius: '20px'
+  },
+};
+```
+
+## Documentation Stories
+
+### Introduction Story
+- File: [src/stories/Introduction.stories.mdx](mdc:src/stories/Introduction.stories.mdx)
+- Purpose: Project overview and getting started guide
+
+### Page Story
+- File: [src/stories/Page.stories.tsx](mdc:src/stories/Page.stories.tsx)
+- Purpose: Full page layout examples
+
+## Story Organization
+
+### Grouping Stories
+```tsx
+export default {
+  title: 'Design System/Components/Button',
+  component: Button,
+  // ... other config
+};
+```
+
+### Story Parameters
+```tsx
+export const WithParameters = Template.bind({});
+WithParameters.args = {
+  label: 'Button with Parameters',
+};
+WithParameters.parameters = {
+  docs: {
+    description: {
+      story: 'This button demonstrates custom parameters.',
+    },
+  },
+};
+```
+
+## Best Practices
+
+### Story Naming
+- Use descriptive names: `Primary`, `Secondary`, `Large`, `Small`
+- Use action-based names for interactive stories: `WithClick`, `WithHover`
+- Use state-based names: `Loading`, `Disabled`, `Error`
+
+### Documentation
+- Add JSDoc comments to component props
+- Use story parameters for additional documentation
+- Include usage examples in story descriptions
+
+### Performance
+- Keep stories focused and lightweight
+- Use minimal props for each story variant
+- Avoid complex data structures in story args
+
+## Reference Examples
+
+### Component Stories
+- Button: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
+- Heading: [src/stories/components/Heading/Heading.stories.tsx](mdc:src/stories/components/Heading/Heading.stories.tsx)
+
+### Layout Stories
+- Header: [src/stories/layouts/Header/](mdc:src/stories/layouts/Header/)
+- Footer: [src/stories/layouts/Footer/](mdc:src/stories/layouts/Footer/)
+
+### Project Stories
+- Post: [src/stories/projects/Post/](mdc:src/stories/projects/Post/)
+- Content: [src/stories/projects/Content/](mdc:src/stories/projects/Content/)

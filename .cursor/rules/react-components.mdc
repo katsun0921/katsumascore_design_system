@@ -1,0 +1,107 @@
+---
+globs: *.tsx,*.ts
+description: React component development guidelines and patterns
+---
+
+# React Component Development Guidelines
+
+## Component Structure Pattern
+
+Follow this standard structure for all React components:
+
+```tsx
+import React from 'react';
+import '@/scss/object/component/_component-name.scss';
+
+interface ComponentProps {
+  /**
+   * Description of the prop
+   */
+  propName?: type;
+  /**
+   * Required prop description
+   */
+  requiredProp: type;
+}
+
+export const Component = ({
+  propName = defaultValue,
+  requiredProp,
+  ...props
+}: ComponentProps) => {
+  // Component logic here
+
+  return (
+    <div className="c-component">
+      {/* JSX content */}
+    </div>
+  );
+};
+```
+
+## Naming Conventions
+
+### Files
+- Components: PascalCase - `Button.tsx`, `Heading.tsx`
+- Stories: kebab-case - `Button.stories.tsx`
+- SCSS: kebab-case with underscore - `_button.scss`
+
+### CSS Classes
+- Use BEM methodology: `.c-button`, `.c-button__element`, `.c-button--modifier`
+- Component prefix: `c-` for components, `l-` for layouts, `u-` for utilities
+
+## TypeScript Guidelines
+
+### Props Interface
+- Use `interface` for complex props, `type` for simple ones
+- Always include JSDoc comments for props
+- Use optional props with default values
+- Use proper TypeScript generics for Storybook
+
+### Example Props Interface
+```tsx
+interface ButtonProps {
+  /**
+   * Is this the principal call to action on the page?
+   */
+  primary?: boolean;
+  /**
+   * How large should the button be?
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * Button contents
+   */
+  label: string;
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
+}
+```
+
+## Import Patterns
+
+### Import Order
+1. React imports
+2. Local component imports
+3. SCSS imports (with `@/` alias)
+4. Type imports
+
+### Example Imports
+```tsx
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Button } from './Button';
+import '@/scss/object/component/_button.scss';
+```
+
+## Component Examples
+
+### Reference Components
+- Button: [src/stories/components/Button/Button.tsx](mdc:src/stories/components/Button/Button.tsx)
+- Heading: [src/stories/components/Heading/Heading.tsx](mdc:src/stories/components/Heading/Heading.tsx)
+
+### Storybook Stories
+- Button Stories: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
+- Heading Stories: [src/stories/components/Heading/Heading.stories.tsx](mdc:src/stories/components/Heading/Heading.stories.tsx)
