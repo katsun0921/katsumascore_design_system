@@ -46,7 +46,7 @@ export const ListMovieSingleInfo = ({
   return (
     <>
       <dt className='u-font-bold u-text-lg'>{label}</dt>
-      <dd className='u-pl-4'>{!!link ? <a href={link}>{text}</a> : text}</dd>
+      <dd className='u-pl-4'>{link ? <a href={link}>{text}</a> : text}</dd>
     </>
   );
 };

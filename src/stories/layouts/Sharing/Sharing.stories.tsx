@@ -1,20 +1,19 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Sharing } from './Sharing';
 
-export default {
+const meta: Meta<typeof Sharing> = {
   title: 'Layout/Sharing',
   component: Sharing,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof Sharing>;
+};
 
-const meta: Meta<typeof Sharing> = (args) => (
-  <Sharing {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const PageSharing = Template.bind({});
-PageSharing.args = {};
+export const PageSharing: Story = {
+  args: {},
+};
