@@ -1,4 +1,5 @@
 // https://tailwindcss.com/docs/screens
+@use 'sass:map';
 $breakpoint: (
   sm: 'screen and (640px <= width)',
   md: 'screen and (768px <= width)',
@@ -8,7 +9,7 @@ $breakpoint: (
 );
 
 @mixin mq($bp) {
-  @media #{map-get($breakpoint, $bp)} {
+  @media #{map.get($breakpoint, $bp)} {
     @content;
   }
 }
