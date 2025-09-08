@@ -1,0 +1,274 @@
+---
+globs: *.ts,*.tsx
+description: TypeScript development guidelines and patterns
+---
+
+# TypeScript Development Guidelines
+
+## TypeScript Configuration
+
+### Configuration File
+Reference: [tsconfig.json](mdc:tsconfig.json)
+
+### Key Settings
+- Target: ES5 with DOM libraries
+- Strict mode enabled
+- Path mapping for `@/` alias
+- JSX preserve mode for Storybook
+
+## Type Definitions
+
+### Interface vs Type
+- Use `interface` for object shapes and component props
+- Use `type` for unions, primitives, and computed types
+
+### Component Props Interface
+```tsx
+interface ComponentProps {
+  /**
+   * Description of the prop
+   */
+  propName?: type;
+  /**
+   * Required prop description
+   */
+  requiredProp: type;
+  /**
+   * Event handler
+   */
+  onClick?: () => void;
+  /**
+   * Children content
+   */
+  children: React.ReactNode;
+}
+```
+
+### Union Types
+```tsx
+type Size = 'small' | 'medium' | 'large';
+type Variant = 'primary' | 'secondary' | 'tertiary';
+type Theme = 'light' | 'dark';
+```
+
+## Import/Export Patterns
+
+### Import Order
+1. React and React-related imports
+2. Third-party library imports
+3. Local component imports
+4. Type imports
+5. SCSS imports
+
+### Example Import Structure
+```tsx
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Button } from './Button';
+import type { ButtonProps } from './Button.types';
+import '@/scss/object/component/_button.scss';
+```
+
+### Export Patterns
+```tsx
+// Named exports for components
+export const Button = ({ ... }: ButtonProps) => { ... };
+
+// Default export for main component
+export default Button;
+
+// Type exports
+export type { ButtonProps };
+```
+
+## Type Safety
+
+### Strict Typing
+- Always define types for function parameters
+- Use proper return types for functions
+- Avoid `any` type - use `unknown` or specific types
+- Use type assertions sparingly
+
+### Example Type Safety
+```tsx
+// Good: Explicit typing
+const handleClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
+  event.preventDefault();
+  // Handle click
+};
+
+// Good: Generic typing
+const processData = <T>(data: T[]): T[] => {
+  return data.filter(item => item !== null);
+};
+
+// Avoid: Any type
+const badFunction = (data: any) => { ... };
+```
+
+## Generic Types
+
+### Component Generics
+```tsx
+interface GenericProps<T> {
+  data: T[];
+  renderItem: (item: T) => React.ReactNode;
+  keyExtractor: (item: T) => string;
+}
+
+const GenericComponent = <T>({
+  data,
+  renderItem,
+  keyExtractor
+}: GenericProps<T>) => {
+  return (
+    <div>
+      {data.map(item => (
+        <div key={keyExtractor(item)}>
+          {renderItem(item)}
+        </div>
+      ))}
+    </div>
+  );
+};
+```
+
+### Storybook Generics
+```tsx
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+export default {
+  title: 'Component/Button',
+  component: Button,
+} as ComponentMeta<typeof Button>;
+
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+```
+
+## Utility Types
+
+### Common Utility Types
+```tsx
+// Partial for optional props
+type PartialButtonProps = Partial<ButtonProps>;
+
+// Pick for selecting specific props
+type ButtonSize = Pick<ButtonProps, 'size'>;
+
+// Omit for excluding props
+type ButtonWithoutSize = Omit<ButtonProps, 'size'>;
+
+// Record for key-value pairs
+type ColorMap = Record<string, string>;
+```
+
+## Event Handling
+
+### Event Types
+```tsx
+// Mouse events
+const handleMouseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  // Handle click
+};
+
+// Form events
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  // Handle form submission
+};
+
+// Change events
+const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const value = event.target.value;
+  // Handle change
+};
+```
+
+## Module Declarations
+
+### Global Type Declarations
+Reference: [index.d.ts](mdc:index.d.ts)
+
+```tsx
+// Global type declarations
+declare global {
+  interface Window {
+    customProperty: string;
+  }
+}
+
+// Module declarations
+declare module '*.scss' {
+  const content: { [className: string]: string };
+  export default content;
+}
+```
+
+## Path Mapping
+
+### Alias Configuration
+- `@/*` maps to `src/*`
+- `@/scss/*` maps to `src/scss/*`
+- `@/assets/*` maps to `src/assets/*`
+
+### Usage Examples
+```tsx
+import { Button } from '@/stories/components/Button/Button';
+import '@/scss/object/component/_button.scss';
+import logo from '@/assets/images/logo.png';
+```
+
+## Error Handling
+
+### Type Guards
+```tsx
+const isString = (value: unknown): value is string => {
+  return typeof value === 'string';
+};
+
+const processValue = (value: unknown) => {
+  if (isString(value)) {
+    // TypeScript knows value is string here
+    return value.toUpperCase();
+  }
+  return '';
+};
+```
+
+### Optional Chaining
+```tsx
+const user = {
+  profile?: {
+    name?: string;
+    email?: string;
+  };
+};
+
+// Safe access with optional chaining
+const userName = user.profile?.name ?? 'Unknown';
+const userEmail = user.profile?.email ?? 'No email';
+```
+
+## Performance Considerations
+
+### Type-Only Imports
+```tsx
+import type { ComponentProps } from 'react';
+import type { ButtonProps } from './Button.types';
+```
+
+### Lazy Loading Types
+```tsx
+// For large type definitions
+type LargeType = Awaited<ReturnType<typeof import('./large-module').getLargeData>>;
+```
+
+## Reference Examples
+
+### Component Examples
+- Button: [src/stories/components/Button/Button.tsx](mdc:src/stories/components/Button/Button.tsx)
+- Heading: [src/stories/components/Heading/Heading.tsx](mdc:src/stories/components/Heading/Heading.tsx)
+
+### TypeScript Modules
+- Hamburger Menu: [src/ts/hamburgerMenu/hamburgerMenu.ts](mdc:src/ts/hamburgerMenu/hamburgerMenu.ts)
+- Navigation: [src/ts/navigation/index.ts](mdc:src/ts/navigation/index.ts)

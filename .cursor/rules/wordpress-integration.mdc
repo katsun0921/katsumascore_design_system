@@ -1,0 +1,236 @@
+---
+description: WordPress theme integration guidelines and patterns
+---
+
+# WordPress Theme Integration Guidelines
+
+## WordPress Context
+
+This design system is built for WordPress theme integration, not as a standalone React application. Components are designed to work within WordPress themes and provide styling and functionality for WordPress sites.
+
+## Theme Integration Patterns
+
+### Asset Enqueuing
+The design system compiles to WordPress-compatible assets:
+- JavaScript: `dist/bundle.js` → WordPress theme enqueuing
+- CSS: `dist/build.css` → WordPress theme enqueuing
+- Images: `dist/img/` → WordPress theme asset directory
+
+### File Structure Integration
+```
+wordpress-theme/
+├── packages/
+│   └── katsumascore_design_system/  # This package
+├── style.css                        # WordPress theme stylesheet
+├── functions.php                    # Theme functions
+└── assets/                          # Compiled assets
+    ├── css/
+    ├── js/
+    └── img/
+```
+
+## Component Usage in WordPress
+
+### PHP Integration
+Components are designed to be used in WordPress templates:
+
+```php
+// In WordPress template files
+<div class="c-button c-button--primary">
+    <a href="<?php echo get_permalink(); ?>">
+        <?php echo get_the_title(); ?>
+    </a>
+</div>
+```
+
+### SCSS Integration
+SCSS files are compiled and integrated into WordPress theme:
+
+```php
+// In functions.php
+function enqueue_theme_styles() {
+    wp_enqueue_style(
+        'katsumascore-design-system',
+        get_template_directory_uri() . '/packages/katsumascore_design_system/dist/build.css',
+        array(),
+        '1.0.0'
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
+```
+
+## WordPress-Specific Components
+
+### Admin Styles
+Location: [src/admin/admin-common.css](mdc:src/admin/admin-common.css)
+- WordPress admin interface styling
+- Customizer styles
+- Theme options styling
+
+### WordPress Hooks Integration
+The TypeScript modules are designed to work with WordPress:
+
+```typescript
+// Example: WordPress-specific functionality
+window.addEventListener('load', function () {
+  // WordPress-specific initialization
+  if (typeof wp !== 'undefined') {
+    // WordPress is available
+  }
+});
+```
+
+## Asset Management
+
+### Build Process
+1. SCSS compilation with PostCSS
+2. TypeScript compilation
+3. Asset optimization
+4. WordPress-compatible output
+
+### Copy Script
+Reference: [copy_style.sh](mdc:copy_style.sh)
+- Copies compiled assets to WordPress theme
+- Maintains proper file structure
+- Ensures WordPress compatibility
+
+## WordPress Theme Requirements
+
+### Theme Structure
+- Follows WordPress theme standards
+- Compatible with WordPress coding standards
+- Responsive design for WordPress
+- Accessibility compliance
+
+### Browser Support
+Reference: [package.json](mdc:package.json) browserslist
+- Targets Japanese market (> 3% in JP)
+- Excludes IE 11
+- Supports last 1 versions of modern browsers
+
+## Performance Considerations
+
+### WordPress Optimization
+- Minimize HTTP requests
+- Use WordPress caching
+- Optimize for WordPress performance
+- Follow WordPress best practices
+
+### Asset Loading
+- Load critical CSS inline
+- Defer non-critical JavaScript
+- Use WordPress asset optimization
+- Implement proper caching
+
+## Development Workflow
+
+### Local Development
+1. Develop components in Storybook
+2. Test WordPress integration
+3. Build and copy assets
+4. Test in WordPress environment
+
+### Production Deployment
+1. Build optimized assets
+2. Copy to WordPress theme
+3. Test WordPress functionality
+4. Deploy to production
+
+## WordPress-Specific Patterns
+
+### Template Integration
+```php
+// WordPress template with design system classes
+<article class="c-post">
+    <header class="c-post__header">
+        <h1 class="c-heading c-heading--post">
+            <?php the_title(); ?>
+        </h1>
+    </header>
+    <div class="c-post__content">
+        <?php the_content(); ?>
+    </div>
+</article>
+```
+
+### Customizer Integration
+```php
+// WordPress Customizer with design system
+function customize_register($wp_customize) {
+    $wp_customize->add_setting('primary_color', array(
+        'default' => '#5c39f2',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+        $wp_customize,
+        'primary_color',
+        array(
+            'label' => __('Primary Color', 'katsumascore'),
+            'section' => 'colors',
+        )
+    ));
+}
+```
+
+## Accessibility and WordPress
+
+### WordPress Accessibility Standards
+- Follow WordPress accessibility guidelines
+- Use semantic HTML
+- Implement proper ARIA attributes
+- Ensure keyboard navigation
+
+### Design System Accessibility
+- Components are built with accessibility in mind
+- SCSS includes focus states
+- TypeScript handles keyboard events
+- Storybook includes accessibility testing
+
+## Testing WordPress Integration
+
+### Local Testing
+- Test in WordPress development environment
+- Verify asset loading
+- Check responsive design
+- Test WordPress functionality
+
+### Production Testing
+- Test in staging environment
+- Verify performance
+- Check browser compatibility
+- Validate WordPress standards
+
+## Maintenance and Updates
+
+### Version Control
+- Track design system changes
+- Maintain WordPress compatibility
+- Document breaking changes
+- Provide migration guides
+
+### WordPress Updates
+- Test with WordPress updates
+- Maintain theme compatibility
+- Update dependencies
+- Follow WordPress standards
+
+## Best Practices
+
+### Code Quality
+- Follow WordPress coding standards
+- Use proper PHP documentation
+- Implement proper error handling
+- Follow security best practices
+
+### Performance
+- Optimize for WordPress
+- Use WordPress caching
+- Minimize database queries
+- Follow WordPress performance guidelines
+
+### User Experience
+- Maintain WordPress user experience
+- Follow WordPress design patterns
+- Ensure responsive design
+- Test across devices and browsers
