@@ -120,7 +120,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ComponentName from './ComponentName';
 
 const meta: Meta<typeof ComponentName> = {
-  title: 'Components/ComponentName',
+  title: 'Componentss/ComponentName',
   component: ComponentName,
   parameters: {
     layout: 'centered',

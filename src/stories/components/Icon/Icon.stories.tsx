@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Icon, IconImage, IconStyle } from './Icon';
 
 export default {
-  title: 'Component/Icon',
+  title: 'Components/Icon',
   component: Icon,
   subcomponents: { IconImage },
   parameters: {

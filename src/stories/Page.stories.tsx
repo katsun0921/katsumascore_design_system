@@ -3,7 +3,7 @@ import { within, userEvent } from 'storybook/test';
 import { Page } from './Page';
 
 const meta: Meta<typeof Page> = {
-  title: 'Component/Page',
+  title: 'Pages/Login',
   component: Page,
   parameters: {
     layout: 'fullscreen',

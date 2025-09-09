@@ -9,7 +9,7 @@ import {
 } from './LinkSocialIcon';
 
 export default {
-  title: 'Component/Link',
+  title: 'Components/Link',
   component: LinkSocialIcon,
   subcomponents: { LinkFacebookIcon, LinkTwitterIcon, LinkRssIcon },
   parameters: {

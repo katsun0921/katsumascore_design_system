@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Category } from './Category';
 
 const meta: Meta<typeof Category> = {
-  title: 'Component/Category',
+  title: 'Components/Category',
   component: Category,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout

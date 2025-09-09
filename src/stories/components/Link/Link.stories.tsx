@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Link, LinkFacebook, LinkTwitter } from './Link';
 
 export default {
-  title: 'Component/Link',
+  title: 'Components/Link',
   component: Link,
   subcomponents: { LinkFacebook, LinkTwitter },
   parameters: {
