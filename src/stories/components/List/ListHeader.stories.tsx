@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ListHeader } from './ListHeader';
 
 export default {
-  title: 'Component/List',
+  title: 'Components/List',
   component: ListHeader,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout

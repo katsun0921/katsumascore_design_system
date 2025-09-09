@@ -4,7 +4,7 @@ import { Score } from './Score';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta: Meta<typeof Score> = {
-  title: 'Component/Score',
+  title: 'Components/Score',
   component: Score,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

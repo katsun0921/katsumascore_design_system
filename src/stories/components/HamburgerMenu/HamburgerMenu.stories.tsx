@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { HamburgerMenu } from './HamburgerMenu';
 
 export default {
-  title: 'Component/HamburgerMenu',
+  title: 'Components/HamburgerMenu',
   component: HamburgerMenu,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout

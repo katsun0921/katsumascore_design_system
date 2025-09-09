@@ -1,4 +1,3 @@
-import React from 'react';
 import { ListTaxonomy } from '../../components/List/ListTaxonomy';
 import { ListSocialIcon } from '../../components/List/ListSocialIcon';
 import type { TListTaxonomyProps } from '../../components/List/ListTaxonomy';

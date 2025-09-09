@@ -138,7 +138,7 @@ const GenericComponent = <T>({
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
-  title: 'Component/Button',
+  title: 'Components/Button',
   component: Button,
 } as ComponentMeta<typeof Button>;
 

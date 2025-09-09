@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Widgets, WidgetCategories, WidgetHeading, WidgetText } from './Widget';
 
 export default {
-  title: 'Component/Widget',
+  title: 'Components/Widget',
   component: Widgets,
   subcomponents: { WidgetCategories, WidgetHeading, WidgetText },
   parameters: {
