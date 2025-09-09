@@ -1,0 +1,3 @@
+import{N as a}from"./Navigation-2PtgrxS3.js";import"./jsx-runtime-B6AsTFoj.js";import"./iframe-D89UwS5i.js";import"./ListHeader-C1AH6e7u.js";/* empty css                   *//* empty css                    *//* empty css              *//* empty css              */import"./HamburgerMenu-CkkH-zT4.js";const u={title:"Layout/Navigation",component:a,parameters:{layout:"fullscreen"}},r={args:{}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...r.parameters?.docs?.source}}};const d=["HeaderNavigationMenu"];export{r as HeaderNavigationMenu,d as __namedExportsOrder,u as default};

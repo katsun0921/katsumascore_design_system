@@ -1,0 +1,3 @@
+import{F as r}from"./Footer-Dxpgc4x-.js";import"./jsx-runtime-B6AsTFoj.js";import"./iframe-D89UwS5i.js";import"./ListTaxonomy-VcWjc-vA.js";/* empty css              *//* empty css              */import"./ListSocialIcon-B6o4nzw1.js";import"./LinkSocialIcon-BNnXUM7d.js";/* empty css                   *//* empty css                    *//* empty css              */const l={title:"Layout/Footer",component:r,parameters:{layout:"fullscreen"}},o={args:{}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...o.parameters?.docs?.source}}};const F=["LayoutFooter"];export{o as LayoutFooter,F as __namedExportsOrder,l as default};

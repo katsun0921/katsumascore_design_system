@@ -1,0 +1,3 @@
+import{j as s}from"./jsx-runtime-B6AsTFoj.js";import{L as t}from"./ListTaxonomy-VcWjc-vA.js";import"./iframe-D89UwS5i.js";/* empty css              *//* empty css              */const c={title:"Components/List",component:t,parameters:{layout:"fullscreen"}},e=r=>s.jsx(t,{...r}),o=e.bind({});o.args={label:"CATEGORIES",lists:[{name:"アニメ",count:8,link:"#"},{name:"ドラマ",count:1,link:"#"},{name:"映画",count:12,link:"#"}]};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`args => {
+  return <ListTaxonomy {...args} />;
+}`,...o.parameters?.docs?.source}}};const l=["Taxonomy"];export{o as Taxonomy,l as __namedExportsOrder,c as default};

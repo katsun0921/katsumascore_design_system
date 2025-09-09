@@ -1,0 +1,3 @@
+import{j as s}from"./jsx-runtime-B6AsTFoj.js";import{L as r}from"./ListSocialIcon-B6o4nzw1.js";import"./iframe-D89UwS5i.js";import"./LinkSocialIcon-BNnXUM7d.js";/* empty css                   *//* empty css                    *//* empty css              *//* empty css              *//* empty css              */const S={title:"Components/List",component:r,parameters:{layout:"fullscreen"}},e=t=>s.jsx(r,{...t}),o=e.bind({});o.args={};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`args => {
+  return <ListSocialIcon {...args} />;
+}`,...o.parameters?.docs?.source}}};const I=["SocialIcon"];export{o as SocialIcon,I as __namedExportsOrder,S as default};

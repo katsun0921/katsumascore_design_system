@@ -1,0 +1,3 @@
+import{j as e}from"./jsx-runtime-B6AsTFoj.js";import{b as o,a as i,W as d}from"./Widget-D2IuoEcZ.js";/* empty css                   *//* empty css              */import"./iframe-D89UwS5i.js";const s=({})=>{const a={props:{label:"Title",headingLevel:"2"}},t={props:{label:"お問い合わせ",isLink:!0}};return e.jsxs("div",{className:"l-sidebar",children:[e.jsx(o,{}),e.jsx(i,{...a}),e.jsx(d,{...t})]})};s.__docgenInfo={description:"",methods:[],displayName:"Sidebar"};const g={title:"Layout/Sidebar",component:s,parameters:{layout:"fullscreen"}},r={args:{}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...r.parameters?.docs?.source}}};const u=["PageSidebar"];export{r as PageSidebar,u as __namedExportsOrder,g as default};

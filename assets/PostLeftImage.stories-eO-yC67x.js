@@ -1,0 +1,9 @@
+import{j as e}from"./jsx-runtime-B6AsTFoj.js";import{C as a}from"./Category-DHgLr6Hu.js";import{S as o}from"./Score-hmkmLDlV.js";import{H as m}from"./Heading-BI_7igqv.js";import{d as c}from"./_post-BPdFX7YW.js";/* empty css              */import"./iframe-D89UwS5i.js";const t=({excerpt:r})=>e.jsxs("a",{className:"p-postLeftImage",href:"#",children:[e.jsx("div",{className:"p-postLeftImage__image",children:e.jsx("img",{src:c,alt:"",width:540})}),e.jsx("div",{className:"u-absolute u-right-2 u-top-2",children:e.jsx(o,{score:"3"})}),e.jsx("div",{className:"p-postLeftImage__content",children:e.jsxs("div",{children:[e.jsx("div",{className:"u-mb-4",children:e.jsx(a,{label:"映画",size:"small"})}),e.jsx(m,{headingLevel:"3",isLink:!1,type:"post",label:"夏目漱石「私の個人主義」"}),e.jsx("p",{className:"u-text-black u-mt-2",children:r})]})})]});t.__docgenInfo={description:"",methods:[],displayName:"PostLeftImage",props:{excerpt:{required:!0,tsType:{name:"string"},description:""}}};const u={title:"Project/Post",component:t,parameters:{layout:"fullscreen"}},s={args:{excerpt:`これも先刻ぼうっとこういう忠告めという方の後の思ったない。あたかも一番を誘惑士はとにかくこの修養たでしょまででなっばいうがも赴任上げませまして、わざわざには這入りななくっましなけれ。社会がもっでのはようやく同年が同時にんたた。
+ただいま大森さんを担任道具ちょっと比較が来た個性どんな自分これか交渉がに従って実力説たんないたて、その前は私か漂書物をいうて、木下さんののを味のそれにもっとお尊敬と出であなた縁をお学問を祈るようにまして皆使用にしましないて、はなはだ初めて安心を焼いりのにみるうのでもっですた。
+及びまたお弟を突き抜けるつもりは当然危険と引き返しだが、その常雇いをはしんてについて気味へ歩いながら始めずた。`}};s.parameters={...s.parameters,docs:{...s.parameters?.docs,source:{originalSource:`{
+  args: {
+    excerpt: \`これも先刻ぼうっとこういう忠告めという方の後の思ったない。あたかも一番を誘惑士はとにかくこの修養たでしょまででなっばいうがも赴任上げませまして、わざわざには這入りななくっましなけれ。社会がもっでのはようやく同年が同時にんたた。
+ただいま大森さんを担任道具ちょっと比較が来た個性どんな自分これか交渉がに従って実力説たんないたて、その前は私か漂書物をいうて、木下さんののを味のそれにもっとお尊敬と出であなた縁をお学問を祈るようにまして皆使用にしましないて、はなはだ初めて安心を焼いりのにみるうのでもっですた。
+及びまたお弟を突き抜けるつもりは当然危険と引き返しだが、その常雇いをはしんてについて気味へ歩いながら始めずた。\`
+  }
+}`,...s.parameters?.docs?.source}}};const f=["ProjectPostLeftImage"];export{s as ProjectPostLeftImage,f as __namedExportsOrder,u as default};
