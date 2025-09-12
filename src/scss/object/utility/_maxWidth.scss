@@ -1,0 +1,13 @@
+// https://tailwindcss.com/docs/width#fixed-widths
+$width-values: (
+  'max-w-min': min-content,
+  'max-w-max': max-content,
+  'max-w-fit': fit-content,
+  'max-w-custom-property': var(--custom-max-width),
+);
+
+@each $name, $properties in $width-values {
+  .u-#{$name} {
+    max-width: $properties;
+  }
+}
