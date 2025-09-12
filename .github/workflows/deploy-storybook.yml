@@ -1,4 +1,4 @@
-name: Release Storybook to GitHubPages
+name: Deploy Storybook to GitHub Pages
 
 on:
   push:
@@ -9,8 +9,8 @@ env:
   cache-version: v1
 
 jobs:
-  release:
-    name: Project Build
+  build:
+    name: Storybook Build
     runs-on: ubuntu-latest
 
     steps:

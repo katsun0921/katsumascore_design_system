@@ -1,0 +1,20 @@
+/**
+ * Grid Template Columns
+ *
+ * @see https://tailwindcss.com/docs/grid-template-columns
+ */
+$grid-template-columns-values: (
+  'grid-cols-1': repeat(1, minmax(0, 1fr)),
+  'grid-cols-2': repeat(2, minmax(0, 1fr)),
+  'grid-cols-3': repeat(3, minmax(0, 1fr)),
+  'grid-cols-4': repeat(4, minmax(0, 1fr)),
+  'grid-cols-5': repeat(5, minmax(0, 1fr)),
+  'grid-cols-none': none,
+  'grid-cols-subgrid': subgrid,
+);
+
+@each $name, $property in $grid-template-columns-values {
+  .u-#{$name} {
+    grid-template-columns: $property;
+  }
+}

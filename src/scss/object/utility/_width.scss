@@ -81,6 +81,7 @@ $width-values: (
   'w-min': min-content,
   'w-max': max-content,
   'w-fit': fit-content,
+  'w-custom-property': var(--custom-width),
 );
 
 @each $name, $properties in $width-values {
