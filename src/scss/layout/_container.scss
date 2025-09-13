@@ -1,5 +1,4 @@
-@use '../global/variable/className' as className;
-@use '../global/mixin/screens' as *;
+@use '../global/mixin/screens' as screen;
 
 .l-container {
   width: 90%;
@@ -9,7 +8,7 @@
   padding: 0px;
 
   &__showSidebar {
-    @include mq('md') {
+    @include screen.mq('md') {
       display: flex;
       justify-content: space-between;
     }

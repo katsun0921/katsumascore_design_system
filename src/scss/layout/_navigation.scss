@@ -1,7 +1,6 @@
 @use '../global/variable/colors' as color;
-@use '../global/mixin/screens' as *;
-@use '../global/mixin/fontSize' as *;
-@use '../global/mixin/transition' as *;
+@use '../global/mixin/transition' as transition;
+
 .l-navigation {
   $AnchorPaddingY: 28px;
   $linkListHeight: calc(#{$AnchorPaddingY} * 2 + 1.5rem);
@@ -25,7 +24,7 @@
       max-height: 0;
       display: block;
       background-color: color.$header;
-      @include select-props-transition('max-height');
+      @include transition.select-props-transition('max-height');
     }
   }
 
