@@ -1,0 +1,13 @@
+$flex-shrink-values: (
+  'shrink-1': 1,
+  'shrink-2': 2,
+  'shrink-3': 3,
+  'shrink-4': 4,
+  'shrink-5': 5,
+);
+
+@each $name, $property in $flex-shrink-values {
+  .u-#{$name} {
+    flex-shrink: #{$property};
+  }
+}

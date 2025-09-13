@@ -1,0 +1,11 @@
+$flex-basis-values: (
+  'basis-custom-property': var(--custom-basis),
+  'basis-full': 100%,
+  'basis-auto': auto,
+);
+
+@each $name, $property in $flex-basis-values {
+  .u-#{$name} {
+    flex-basis: #{$property};
+  }
+}
