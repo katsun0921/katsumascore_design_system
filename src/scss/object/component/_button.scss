@@ -14,12 +14,11 @@
       padding: 18px 26px;
       text-transform: uppercase;
       font-style: italic;
-      background-color: color.$gray300;
-      color: color.$gray700;
+      background-color: color.$category;
+      color: color.$white;
       @include all-transition;
       &:hover {
-        background-color: color.$category;
-        color: color.$white;
+        opacity: 0.8;
       }
     }
   }

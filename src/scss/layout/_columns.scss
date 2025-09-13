@@ -1,0 +1,10 @@
+@use '../global/mixin/screens';
+
+.l-columns {
+  display: flex;
+  flex-direction: column;
+
+  @include screens.mq('lg') {
+    display: grid;
+  }
+}

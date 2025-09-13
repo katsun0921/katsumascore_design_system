@@ -1,0 +1,13 @@
+$flex-grow-values: (
+  'grow-1': 1,
+  'grow-2': 2,
+  'grow-3': 3,
+  'grow-4': 4,
+  'grow-5': 5,
+);
+
+@each $name, $property in $flex-grow-values {
+  .u-#{$name} {
+    flex-grow: #{$property};
+  }
+}

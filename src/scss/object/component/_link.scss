@@ -1,7 +1,7 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
 @use '../../global/mixin/fontSize';
-@use '../../global/mixin/transition';
+@use '../../global/mixin/transition' as *;
 
 .c-link {
   $socialFontSize: 14px;
@@ -46,6 +46,22 @@
     background: color.$facebook;
     .c-link__socialText::before {
       background-image: url('https://katsumascore.blog/images/logo-facebook.png');
+    }
+  }
+  &__primary {
+    width: auto;
+    max-width: 1200px;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    padding: 18px 26px;
+    text-transform: uppercase;
+    font-style: italic;
+    background-color: color.$category;
+    color: color.$white;
+    @include all-transition;
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

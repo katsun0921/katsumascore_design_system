@@ -1,0 +1,18 @@
+$text-overflow-hidden-values: (
+  'line-1': 1,
+  'line-2': 2,
+  'line-3': 3,
+  'line-4': 4,
+  'line-5': 5,
+);
+
+@each $name, $property in $text-overflow-hidden-values {
+  .c-textOverflowHidden__#{$name} {
+    display: -webkit-box;
+    -webkit-line-clamp: #{$property};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: calc(1.4em * #{$property});
+  }
+}
