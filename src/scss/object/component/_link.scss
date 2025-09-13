@@ -61,6 +61,7 @@
     color: color.$white;
     @include all-transition;
     &:hover {
+      color: color.$white;
       opacity: 0.8;
     }
   }
