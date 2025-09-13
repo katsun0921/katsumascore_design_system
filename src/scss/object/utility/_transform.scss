@@ -1,0 +1,9 @@
+$transform-values: (
+  'transform-custom-property': var(--custom-transform),
+);
+
+@each $name, $property in $transform-values {
+  .u-#{$name} {
+    transform: #{$property};
+  }
+}

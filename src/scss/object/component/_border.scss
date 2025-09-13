@@ -1,0 +1,7 @@
+@use '../../global/variable/colors' as color;
+
+.c-border {
+  &__primary {
+    border: 1px solid color.$header;
+  }
+}

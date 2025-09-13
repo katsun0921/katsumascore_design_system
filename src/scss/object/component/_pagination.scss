@@ -2,32 +2,31 @@
 @use '../../global/variable/fontWeight' as fontWeight;
 
 .c-pagination {
-  margin: 20px 0 25px 0;
   list-style: none;
   text-align: center;
-  span,
-  a {
-    display: inline-block;
+  .nav-links {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .page-numbers {
+    display: block;
     line-height: 1;
     text-align: center;
-    margin: 0px 2px 5px 2px;
-    padding: 14px 15px;
+    padding: 16px;
     min-width: 16px;
     border-radius: 0px;
-    font-weight: 400;
     text-transform: uppercase;
-    background: #f4f2f6;
+    background: color.$gray300;
     color: #1e023d;
-  }
-  a {
-    padding: 0px;
-    background: none;
-    min-width: none;
-    margin: 0px;
-    border: none;
-    color: #070707;
     &:hover {
+      background: color.$category;
       color: color.$white;
-    }
+  }
+  }
+  .current {
+    background: color.$category;
+    color: color.$white;
   }
 }

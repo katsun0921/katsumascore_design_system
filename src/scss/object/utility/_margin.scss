@@ -35,8 +35,6 @@ $margin-values: (
   '11': 2.75rem,
   // 48px
   '12': 3rem,
-  '50px': 50px,
-  '60px': 60px,
 );
 
 @each $name, $value in $margin-values {

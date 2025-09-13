@@ -1,0 +1,89 @@
+// https://tailwindcss.com/docs/height
+$width-values: (
+  'min-h-px': 1px,
+  // 2px
+  'min-h-0_5': 0.125rem,
+  // 4px
+  'min-h-1': 0.25rem,
+  // 6px
+  'min-h-1_5': 0.375rem,
+  //8px
+  'min-h-2': 0.5rem,
+  //10px
+  'min-h-2_5': 0.625rem,
+  //12px
+  'min-h-3': 0.75rem,
+  // 14px
+  'min-h-3_5': 0.875rem,
+  // 16px
+  'min-h-4': 1rem,
+  // 18px
+  'min-h-5': 1.25rem,
+  // 20px
+  'min-h-6': 1.5rem,
+  // 24px
+  'min-h-7': 1.75rem,
+  // 32px
+  'min-h-8': 2rem,
+  // 36px
+  'min-h-9': 2.25rem,
+  // 40px
+  'min-h-10': 2.5rem,
+  // 44px
+  'min-h-11': 2.75rem,
+  // 48px
+  'min-h-12': 3rem,
+  // 56px
+  'min-h-14': 3.5rem,
+  // 64px
+  'min-h-16': 4rem,
+  // 80px
+  'min-h-20': 5rem,
+  // 96px
+  'min-h-24': 6rem,
+  // 112px
+  'min-h-28': 7rem,
+  // 128px
+  'min-h-32': 8rem,
+  // 144px
+  'min-h-36': 9rem,
+  // 160px
+  'min-h-40': 10rem,
+  // 176px
+  'min-h-44': 11rem,
+  // 192px
+  'min-h-48': 12rem,
+  // 208px
+  'min-h-52': 13rem,
+  // 224px
+  'min-h-56': 14rem,
+  // 240px
+  'min-h-60': 15rem,
+  // 256px
+  'min-h-64': 16rem,
+  // 288px
+  'min-h-72': 18rem,
+  // 320px
+  'min-h-80': 20rem,
+  // 384px
+  'min-h-96': 24rem,
+  'min-h-auto': auto,
+  'min-h-50per': 50%,
+  'min-h-25per': 25%,
+  'min-h-75per': 75%,
+  'min-h-20per': 20%,
+  'min-h-40per': 40%,
+  'min-h-60per': 60%,
+  'min-h-80per': 80%,
+  'min-h-full': 100%,
+  'min-h-screen': 100vw,
+  'min-h-min': min-content,
+  'min-h-max': max-content,
+  'min-h-fit': fit-content,
+);
+
+@each $name, $properties in $width-values {
+  .u-#{$name} {
+    min-height: $properties;
+  }
+}
