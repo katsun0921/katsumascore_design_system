@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../../../scss/object/utility/_bg.scss';
+import '@/scss/object/utility/_bg.scss';
 
 export type TColorList = {
   label: string;

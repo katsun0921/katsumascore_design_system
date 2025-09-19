@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../scss/foundation/_base.scss';
+import '@/scss/foundation/_base.scss';
 import './Foundation.scss';
 
 const block = {
