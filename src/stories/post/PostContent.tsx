@@ -19,7 +19,7 @@ export const PostContent = ({
 }: PostContentProps) => {
   return (
     <div
-      className={`p-post-content ${className}`.trim()}
+      className={`p-post ${className}`.trim()}
       dangerouslySetInnerHTML={{ __html: content }}
       {...props}
     />
