@@ -1,36 +1,36 @@
 ---
-description: Performance optimization guidelines for the design system
+description: デザインシステムのパフォーマンス最適化ガイドライン
 ---
 
-# Performance Optimization Guidelines
+# パフォーマンス最適化ガイドライン
 
-## Build Performance
+## ビルドパフォーマンス
 
-### Webpack Configuration
-Reference: [webpack.config.js](mdc:webpack.config.js)
+### Webpack設定
+参考: [webpack.config.js](mdc:webpack.config.js)
 
-### Current Optimizations
-- TypeScript compilation with `ts-loader`
-- SCSS processing with PostCSS and Autoprefixer
-- CSS extraction with MiniCssExtractPlugin
-- Asset optimization with file-loader
+### 現在の最適化
+- `ts-loader`によるTypeScriptコンパイル
+- PostCSSとAutoprefixerによるSCSS処理
+- MiniCssExtractPluginによるCSS抽出
+- file-loaderによるアセット最適化
 
-### Recommended Performance Improvements
+### 推奨パフォーマンス改善
 
-#### 1. Production Mode Optimization
+#### 1. 本番モード最適化
 ```javascript
-// Enable production mode optimizations
+// 本番モード最適化を有効化
 mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
-// Add content hashing for cache busting
+// キャッシュバスティング用のコンテンツハッシュを追加
 filename: process.env.NODE_ENV === 'production'
   ? '[name].[contenthash:8].js'
   : 'bundle.js',
 ```
 
-#### 2. Code Splitting
+#### 2. コード分割
 ```javascript
-// Split vendor code
+// ベンダーコードを分割
 optimization: {
   splitChunks: {
     chunks: 'all',
@@ -47,72 +47,72 @@ optimization: {
 
 #### 3. Tree Shaking
 ```javascript
-// Enable tree shaking
+// Tree shakingを有効化
 optimization: {
   usedExports: true,
   sideEffects: false,
 },
 ```
 
-## SCSS Performance
+## SCSSパフォーマンス
 
-### Import Optimization
-- Import only needed variables and mixins
-- Use partial imports for better tree shaking
+### インポート最適化
+- 必要な変数とミックスインのみをインポート
+- より良いTree Shakingのために部分インポートを使用
 
-### Example Optimized Imports
+### 最適化されたインポートの例
 ```scss
-// Good: Specific imports
+// 良い例: 特定のインポート
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
 
-// Avoid: Wildcard imports
+// 避けるべき例: ワイルドカードインポート
 @use '../../global/variable/*';
 ```
 
-### CSS Optimization
-- Minimize nesting depth (max 3-4 levels)
-- Use efficient selectors
-- Group related styles
-- Remove unused CSS
+### CSS最適化
+- ネストの深さを最小化（最大3-4レベル）
+- 効率的なセレクターを使用
+- 関連するスタイルをグループ化
+- 未使用のCSSを削除
 
-## Asset Optimization
+## アセット最適化
 
-### Image Optimization
-- Use modern formats (WebP, AVIF)
-- Implement responsive images
-- Use appropriate compression
-- Consider lazy loading for below-the-fold images
+### 画像最適化
+- モダンなフォーマットを使用（WebP、AVIF）
+- レスポンシブ画像を実装
+- 適切な圧縮を使用
+- フォールド下の画像には遅延読み込みを検討
 
-### Font Optimization
-- Use font-display: swap
-- Preload critical fonts
-- Subset fonts when possible
-- Use system fonts as fallbacks
+### フォント最適化
+- font-display: swapを使用
+- 重要なフォントをプリロード
+- 可能な限りフォントをサブセット化
+- フォールバックとしてシステムフォントを使用
 
-## Bundle Size Optimization
+## バンドルサイズ最適化
 
-### JavaScript Optimization
-- Use dynamic imports for code splitting
-- Implement lazy loading for components
-- Remove unused dependencies
-- Use tree shaking for libraries
+### JavaScript最適化
+- コード分割に動的インポートを使用
+- コンポーネントの遅延読み込みを実装
+- 未使用の依存関係を削除
+- ライブラリにTree Shakingを使用
 
-### CSS Optimization
-- Remove unused styles
-- Use CSS purging
-- Minimize CSS bundle size
-- Use critical CSS extraction
+### CSS最適化
+- 未使用のスタイルを削除
+- CSSパージングを使用
+- CSSバンドルサイズを最小化
+- クリティカルCSS抽出を使用
 
-## Runtime Performance
+## ランタイムパフォーマンス
 
-### React Performance
-- Use React.memo for expensive components
-- Implement useMemo and useCallback for expensive calculations
-- Avoid unnecessary re-renders
-- Use proper key props for lists
+### Reactパフォーマンス
+- 高コストなコンポーネントにReact.memoを使用
+- 高コストな計算にuseMemoとuseCallbackを実装
+- 不要な再レンダリングを避ける
+- リストに適切なkeyプロパティを使用
 
-### Example Optimized Component
+### 最適化されたコンポーネントの例
 ```tsx
 import React, { memo, useMemo, useCallback } from 'react';
 
@@ -127,7 +127,7 @@ export const OptimizedButton = memo<OptimizedButtonProps>(({
   onClick,
   items
 }) => {
-  // Memoize expensive calculations
+  // 高コストな計算をメモ化
   const processedItems = useMemo(() => {
     return items.map(item => ({
       ...item,
@@ -135,7 +135,7 @@ export const OptimizedButton = memo<OptimizedButtonProps>(({
     }));
   }, [items]);
 
-  // Memoize event handlers
+  // イベントハンドラーをメモ化
   const handleClick = useCallback(() => {
     onClick();
   }, [onClick]);
@@ -151,77 +151,77 @@ export const OptimizedButton = memo<OptimizedButtonProps>(({
 });
 ```
 
-## WordPress Integration Performance
+## WordPress統合パフォーマンス
 
-### Theme Integration
-- Minimize HTTP requests
-- Use WordPress caching
-- Optimize database queries
-- Implement proper asset enqueuing
+### テーマ統合
+- HTTPリクエストを最小化
+- WordPressキャッシュを使用
+- データベースクエリを最適化
+- 適切なアセットエンキューを実装
 
-### Asset Loading
-- Load critical CSS inline
-- Defer non-critical JavaScript
-- Use WordPress asset optimization plugins
-- Implement proper caching headers
+### アセット読み込み
+- クリティカルCSSをインラインで読み込み
+- 非クリティカルJavaScriptを遅延読み込み
+- WordPressアセット最適化プラグインを使用
+- 適切なキャッシュヘッダーを実装
 
-## Monitoring and Metrics
+## 監視とメトリクス
 
-### Bundle Analysis
-- Use webpack-bundle-analyzer
-- Monitor bundle size over time
-- Identify large dependencies
-- Track performance budgets
+### バンドル分析
+- webpack-bundle-analyzerを使用
+- バンドルサイズを時間経過で監視
+- 大きな依存関係を特定
+- パフォーマンス予算を追跡
 
-### Performance Metrics
+### パフォーマンスメトリクス
 - First Contentful Paint (FCP)
 - Largest Contentful Paint (LCP)
 - Cumulative Layout Shift (CLS)
 - Time to Interactive (TTI)
 
-## Best Practices
+## ベストプラクティス
 
-### Development
-- Use development mode for faster builds
-- Enable source maps for debugging
-- Use hot module replacement
-- Monitor build times
+### 開発
+- より高速なビルドのために開発モードを使用
+- デバッグ用にソースマップを有効化
+- ホットモジュール置換を使用
+- ビルド時間を監視
 
-### Production
-- Enable all optimizations
-- Use production mode
-- Implement proper caching
-- Monitor performance metrics
+### 本番
+- すべての最適化を有効化
+- 本番モードを使用
+- 適切なキャッシュを実装
+- パフォーマンスメトリクスを監視
 
-### Code Quality
-- Write efficient code
-- Use proper TypeScript types
-- Follow performance patterns
-- Regular performance audits
+### コード品質
+- 効率的なコードを記述
+- 適切なTypeScript型を使用
+- パフォーマンスパターンに従う
+- 定期的なパフォーマンス監査
 
-## Performance Checklist
+## パフォーマンスチェックリスト
 
-### Build Optimization
-- [ ] Enable production mode
-- [ ] Implement code splitting
-- [ ] Use tree shaking
-- [ ] Optimize assets
-- [ ] Minimize bundle size
+### ビルド最適化
+- [ ] 本番モードを有効化
+- [ ] コード分割を実装
+- [ ] Tree Shakingを使用
+- [ ] アセットを最適化
+- [ ] バンドルサイズを最小化
 
-### SCSS Optimization
-- [ ] Use @use instead
-- [ ] Minimize nesting
-- [ ] Remove unused styles
-- [ ] Optimize selectors
+### SCSS最適化
+- [ ] @useを使用
+- [ ] ネストを最小化
+- [ ] 未使用スタイルを削除
+- [ ] セレクターを最適化
 
-### Runtime Optimization
-- [ ] Use React.memo
-- [ ] Implement lazy loading
-- [ ] Optimize re-renders
-- [ ] Use proper keys
+### ランタイム最適化
+- [ ] React.memoを使用
+- [ ] 遅延読み込みを実装
+- [ ] 再レンダリングを最適化
+- [ ] 適切なkeyを使用
 
-### WordPress Integration
-- [ ] Optimize asset loading
-- [ ] Use caching
-- [ ] Minimize HTTP requests
-- [ ] Monitor performance
+### WordPress統合
+- [ ] アセット読み込みを最適化
+- [ ] キャッシュを使用
+- [ ] HTTPリクエストを最小化
+- [ ] パフォーマンスを監視

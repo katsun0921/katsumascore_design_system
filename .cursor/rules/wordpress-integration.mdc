@@ -1,41 +1,41 @@
 ---
-description: WordPress theme integration guidelines and patterns
+description: WordPressテーマ統合ガイドラインとパターン
 ---
 
-# WordPress Theme Integration Guidelines
+# WordPressテーマ統合ガイドライン
 
-## WordPress Context
+## WordPressコンテキスト
 
-This design system is built for WordPress theme integration, not as a standalone React application. Components are designed to work within WordPress themes and provide styling and functionality for WordPress sites.
+このデザインシステムは、スタンドアロンのReactアプリケーションではなく、WordPressテーマ統合のために構築されています。コンポーネントはWordPressテーマ内で動作し、WordPressサイトのスタイリングと機能を提供するように設計されています。
 
-## Theme Integration Patterns
+## テーマ統合パターン
 
-### Asset Enqueuing
-The design system compiles to WordPress-compatible assets:
-- JavaScript: `dist/bundle.js` → WordPress theme enqueuing
-- CSS: `dist/build.css` → WordPress theme enqueuing
-- Images: `dist/img/` → WordPress theme asset directory
+### アセットエンキュー
+デザインシステムはWordPress互換のアセットにコンパイルされます：
+- JavaScript: `dist/bundle.js` → WordPressテーマエンキュー
+- CSS: `dist/build.css` → WordPressテーマエンキュー
+- 画像: `dist/img/` → WordPressテーマアセットディレクトリ
 
-### File Structure Integration
+### ファイル構造統合
 ```
 wordpress-theme/
 ├── packages/
-│   └── katsumascore_design_system/  # This package
-├── style.css                        # WordPress theme stylesheet
-├── functions.php                    # Theme functions
-└── assets/                          # Compiled assets
+│   └── katsumascore_design_system/  # このパッケージ
+├── style.css                        # WordPressテーマスタイルシート
+├── functions.php                    # テーマ関数
+└── assets/                          # コンパイルされたアセット
     ├── css/
     ├── js/
     └── img/
 ```
 
-## Component Usage in WordPress
+## WordPressでのコンポーネント使用
 
-### PHP Integration
-Components are designed to be used in WordPress templates:
+### PHP統合
+コンポーネントはWordPressテンプレートで使用するように設計されています：
 
 ```php
-// In WordPress template files
+// WordPressテンプレートファイル内
 <div class="c-button c-button--primary">
     <a href="<?php echo get_permalink(); ?>">
         <?php echo get_the_title(); ?>
@@ -43,11 +43,11 @@ Components are designed to be used in WordPress templates:
 </div>
 ```
 
-### SCSS Integration
-SCSS files are compiled and integrated into WordPress theme:
+### SCSS統合
+SCSSファイルはコンパイルされ、WordPressテーマに統合されます：
 
 ```php
-// In functions.php
+// functions.php内
 function enqueue_theme_styles() {
     wp_enqueue_style(
         'katsumascore-design-system',
@@ -59,88 +59,88 @@ function enqueue_theme_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
 ```
 
-## WordPress-Specific Components
+## WordPress固有のコンポーネント
 
-### Admin Styles
-Location: [src/admin/admin-common.css](mdc:src/admin/admin-common.css)
-- WordPress admin interface styling
-- Customizer styles
-- Theme options styling
+### 管理画面スタイル
+場所: [src/admin/admin-common.css](mdc:src/admin/admin-common.css)
+- WordPress管理画面インターフェーススタイリング
+- カスタマイザースタイル
+- テーマオプションスタイリング
 
-### WordPress Hooks Integration
-The TypeScript modules are designed to work with WordPress:
+### WordPressフック統合
+TypeScriptモジュールはWordPressで動作するように設計されています：
 
 ```typescript
-// Example: WordPress-specific functionality
+// 例: WordPress固有の機能
 window.addEventListener('load', function () {
-  // WordPress-specific initialization
+  // WordPress固有の初期化
   if (typeof wp !== 'undefined') {
-    // WordPress is available
+    // WordPressが利用可能
   }
 });
 ```
 
-## Asset Management
+## アセット管理
 
-### Build Process
-1. SCSS compilation with PostCSS
-2. TypeScript compilation
-3. Asset optimization
-4. WordPress-compatible output
+### ビルドプロセス
+1. PostCSSによるSCSSコンパイル
+2. TypeScriptコンパイル
+3. アセット最適化
+4. WordPress互換出力
 
-### Copy Script
-Reference: [copy_style.sh](mdc:copy_style.sh)
-- Copies compiled assets to WordPress theme
-- Maintains proper file structure
-- Ensures WordPress compatibility
+### コピースクリプト
+参考: [copy_style.sh](mdc:copy_style.sh)
+- コンパイルされたアセットをWordPressテーマにコピー
+- 適切なファイル構造を維持
+- WordPress互換性を確保
 
-## WordPress Theme Requirements
+## WordPressテーマ要件
 
-### Theme Structure
-- Follows WordPress theme standards
-- Compatible with WordPress coding standards
-- Responsive design for WordPress
-- Accessibility compliance
+### テーマ構造
+- WordPressテーマ標準に従う
+- WordPressコーディング標準と互換
+- WordPress用レスポンシブデザイン
+- アクセシビリティ準拠
 
-### Browser Support
-Reference: [package.json](mdc:package.json) browserslist
-- Targets Japanese market (> 3% in JP)
-- Excludes IE 11
-- Supports last 1 versions of modern browsers
+### ブラウザサポート
+参考: [package.json](mdc:package.json) browserslist
+- 日本市場をターゲット（日本で3%以上）
+- IE 11を除外
+- 最新1バージョンのモダンブラウザをサポート
 
-## Performance Considerations
+## パフォーマンス考慮事項
 
-### WordPress Optimization
-- Minimize HTTP requests
-- Use WordPress caching
-- Optimize for WordPress performance
-- Follow WordPress best practices
+### WordPress最適化
+- HTTPリクエストを最小化
+- WordPressキャッシュを使用
+- WordPressパフォーマンスに最適化
+- WordPressベストプラクティスに従う
 
-### Asset Loading
-- Load critical CSS inline
-- Defer non-critical JavaScript
-- Use WordPress asset optimization
-- Implement proper caching
+### アセット読み込み
+- クリティカルCSSをインラインで読み込み
+- 非クリティカルJavaScriptを遅延読み込み
+- WordPressアセット最適化を使用
+- 適切なキャッシュを実装
 
-## Development Workflow
+## 開発ワークフロー
 
-### Local Development
-1. Develop components in Storybook
-2. Test WordPress integration
-3. Build and copy assets
-4. Test in WordPress environment
+### ローカル開発
+1. Storybookでコンポーネントを開発
+2. WordPress統合をテスト
+3. アセットをビルドしてコピー
+4. WordPress環境でテスト
 
-### Production Deployment
-1. Build optimized assets
-2. Copy to WordPress theme
-3. Test WordPress functionality
-4. Deploy to production
+### 本番デプロイ
+1. 最適化されたアセットをビルド
+2. WordPressテーマにコピー
+3. WordPress機能をテスト
+4. 本番にデプロイ
 
-## WordPress-Specific Patterns
+## WordPress固有のパターン
 
-### Template Integration
+### テンプレート統合
 ```php
-// WordPress template with design system classes
+// デザインシステムクラス付きWordPressテンプレート
 <article class="c-post">
     <header class="c-post__header">
         <h1 class="c-heading c-heading--post">
@@ -153,9 +153,9 @@ Reference: [package.json](mdc:package.json) browserslist
 </article>
 ```
 
-### Customizer Integration
+### カスタマイザー統合
 ```php
-// WordPress Customizer with design system
+// デザインシステム付きWordPressカスタマイザー
 function customize_register($wp_customize) {
     $wp_customize->add_setting('primary_color', array(
         'default' => '#5c39f2',
@@ -173,64 +173,64 @@ function customize_register($wp_customize) {
 }
 ```
 
-## Accessibility and WordPress
+## アクセシビリティとWordPress
 
-### WordPress Accessibility Standards
-- Follow WordPress accessibility guidelines
-- Use semantic HTML
-- Implement proper ARIA attributes
-- Ensure keyboard navigation
+### WordPressアクセシビリティ標準
+- WordPressアクセシビリティガイドラインに従う
+- セマンティックHTMLを使用
+- 適切なARIA属性を実装
+- キーボードナビゲーションを確保
 
-### Design System Accessibility
-- Components are built with accessibility in mind
-- SCSS includes focus states
-- TypeScript handles keyboard events
-- Storybook includes accessibility testing
+### デザインシステムアクセシビリティ
+- コンポーネントはアクセシビリティを考慮して構築
+- SCSSにはフォーカス状態を含む
+- TypeScriptはキーボードイベントを処理
+- Storybookにはアクセシビリティテストを含む
 
-## Testing WordPress Integration
+## WordPress統合のテスト
 
-### Local Testing
-- Test in WordPress development environment
-- Verify asset loading
-- Check responsive design
-- Test WordPress functionality
+### ローカルテスト
+- WordPress開発環境でテスト
+- アセット読み込みを検証
+- レスポンシブデザインをチェック
+- WordPress機能をテスト
 
-### Production Testing
-- Test in staging environment
-- Verify performance
-- Check browser compatibility
-- Validate WordPress standards
+### 本番テスト
+- ステージング環境でテスト
+- パフォーマンスを検証
+- ブラウザ互換性をチェック
+- WordPress標準を検証
 
-## Maintenance and Updates
+## メンテナンスとアップデート
 
-### Version Control
-- Track design system changes
-- Maintain WordPress compatibility
-- Document breaking changes
-- Provide migration guides
+### バージョン管理
+- デザインシステムの変更を追跡
+- WordPress互換性を維持
+- 破壊的変更を文書化
+- 移行ガイドを提供
 
-### WordPress Updates
-- Test with WordPress updates
-- Maintain theme compatibility
-- Update dependencies
-- Follow WordPress standards
+### WordPressアップデート
+- WordPressアップデートでテスト
+- テーマ互換性を維持
+- 依存関係を更新
+- WordPress標準に従う
 
-## Best Practices
+## ベストプラクティス
 
-### Code Quality
-- Follow WordPress coding standards
-- Use proper PHP documentation
-- Implement proper error handling
-- Follow security best practices
+### コード品質
+- WordPressコーディング標準に従う
+- 適切なPHPドキュメントを使用
+- 適切なエラーハンドリングを実装
+- セキュリティベストプラクティスに従う
 
-### Performance
-- Optimize for WordPress
-- Use WordPress caching
-- Minimize database queries
-- Follow WordPress performance guidelines
+### パフォーマンス
+- WordPressに最適化
+- WordPressキャッシュを使用
+- データベースクエリを最小化
+- WordPressパフォーマンスガイドラインに従う
 
-### User Experience
-- Maintain WordPress user experience
-- Follow WordPress design patterns
-- Ensure responsive design
-- Test across devices and browsers
+### ユーザーエクスペリエンス
+- WordPressユーザーエクスペリエンスを維持
+- WordPressデザインパターンに従う
+- レスポンシブデザインを確保
+- デバイスとブラウザでテスト

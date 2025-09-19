@@ -1,18 +1,18 @@
 ---
 globs: *.stories.tsx,*.stories.ts,*.stories.mdx
-description: Storybook story development guidelines and patterns
+description: Storybookストーリー開発ガイドラインとパターン
 ---
 
-# Storybook Development Guidelines
+# Storybook開発ガイドライン
 
-## Story File Structure
+## ストーリーファイル構造
 
-### Story Naming
-- Files: `ComponentName.stories.tsx`
-- Location: Same directory as component
-- Example: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
+### ストーリー命名
+- ファイル: `ComponentName.stories.tsx`
+- 場所: コンポーネントと同じディレクトリ
+- 例: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
 
-### Story Template Structure
+### ストリーテンプレート構造
 ```tsx
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -22,7 +22,7 @@ export default {
   title: 'Components/ComponentName',
   component: ComponentName,
   argTypes: {
-    // Define controls for interactive testing
+    // インタラクティブテスト用のコントロールを定義
     backgroundColor: { control: 'color' },
     size: {
       control: { type: 'select' },
@@ -35,7 +35,7 @@ const Template: ComponentStory<typeof ComponentName> = (args) => <ComponentName 
 
 export const Default = Template.bind({});
 Default.args = {
-  // Default props
+  // デフォルトプロパティ
 };
 
 export const Primary = Template.bind({});
@@ -45,85 +45,85 @@ Primary.args = {
 };
 ```
 
-## Story Categories
+## ストーリーカテゴリー
 
-### Component Stories
-- Location: [src/stories/components/](mdc:src/stories/components/)
-- Pattern: `Component/ComponentName`
-- Examples: Button, Heading, Category, etc.
+### コンポーネントストーリー
+- 場所: [src/stories/components/](mdc:src/stories/components/)
+- パターン: `Component/ComponentName`
+- 例: Button, Heading, Category, など
 
-### Layout Stories
-- Location: [src/stories/layouts/](mdc:src/stories/layouts/)
-- Pattern: `Layout/LayoutName`
-- Examples: Header, Footer, Navigation, etc.
+### レイアウトストーリー
+- 場所: [src/stories/layouts/](mdc:src/stories/layouts/)
+- パターン: `Layout/LayoutName`
+- 例: Header, Footer, Navigation, など
 
-### Project Stories
-- Location: [src/stories/projects/](mdc:src/stories/projects/)
-- Pattern: `Project/ProjectName`
-- Examples: Content, Info, Post, Summary, etc.
+### プロジェクトストーリー
+- 場所: [src/stories/projects/](mdc:src/stories/projects/)
+- パターン: `Project/ProjectName`
+- 例: Content, Info, Post, Summary, など
 
-### Style Stories
-- Location: [src/stories/styles/](mdc:src/stories/styles/)
-- Pattern: `Style/StyleName`
-- Examples: Foundation, Global, etc.
+### スタイルストーリー
+- 場所: [src/stories/styles/](mdc:src/stories/styles/)
+- パターン: `Style/StyleName`
+- 例: Foundation, Global, など
 
-## ArgTypes Configuration
+## ArgTypes設定
 
-### Common Controls
+### 一般的なコントロール
 ```tsx
 argTypes: {
-  // Color picker
+  // カラーピッカー
   backgroundColor: { control: 'color' },
   color: { control: 'color' },
 
-  // Select dropdown
+  // セレクトドロップダウン
   size: {
     control: { type: 'select' },
     options: ['small', 'medium', 'large']
   },
 
-  // Boolean toggle
+  // ブール値トグル
   primary: { control: 'boolean' },
   disabled: { control: 'boolean' },
 
-  // Text input
+  // テキスト入力
   label: { control: 'text' },
 
-  // Number input
+  // 数値入力
   width: { control: 'number' },
   height: { control: 'number' },
 
-  // Range slider
+  // レンジスライダー
   opacity: {
     control: { type: 'range', min: 0, max: 1, step: 0.1 }
   },
 }
 ```
 
-## Story Variants
+## ストーリーバリエーション
 
-### Standard Variants
+### 標準バリエーション
 ```tsx
-// Default state
+// デフォルト状態
 export const Default = Template.bind({});
 Default.args = {
   label: 'Button',
 };
 
-// Primary variant
+// プライマリバリエーション
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Primary Button',
 };
 
-// Secondary variant
+// セカンダリバリエーション
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Secondary Button',
 };
 
-// Size variants
+// サイズバリエーション
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
@@ -137,16 +137,16 @@ Small.args = {
 };
 ```
 
-### Interactive Stories
+### インタラクティブストーリー
 ```tsx
-// With click action
+// クリックアクション付き
 export const WithClick = Template.bind({});
 WithClick.args = {
   label: 'Click Me',
   onClick: () => alert('Button clicked!'),
 };
 
-// With custom styling
+// カスタムスタイリング付き
 export const CustomStyle = Template.bind({});
 CustomStyle.args = {
   label: 'Custom Button',
@@ -158,28 +158,28 @@ CustomStyle.args = {
 };
 ```
 
-## Documentation Stories
+## ドキュメントストーリー
 
-### Introduction Story
-- File: [src/stories/Introduction.stories.mdx](mdc:src/stories/Introduction.stories.mdx)
-- Purpose: Project overview and getting started guide
+### イントロダクションストーリー
+- ファイル: [src/stories/Introduction.stories.mdx](mdc:src/stories/Introduction.stories.mdx)
+- 目的: プロジェクト概要とスタートガイド
 
-### Page Story
-- File: [src/stories/Page.stories.tsx](mdc:src/stories/Page.stories.tsx)
-- Purpose: Full page layout examples
+### ページストーリー
+- ファイル: [src/stories/Page.stories.tsx](mdc:src/stories/Page.stories.tsx)
+- 目的: フルページレイアウト例
 
-## Story Organization
+## ストーリー組織
 
-### Grouping Stories
+### ストーリーグループ化
 ```tsx
 export default {
   title: 'Design System/Components/Button',
   component: Button,
-  // ... other config
+  // ... その他の設定
 };
 ```
 
-### Story Parameters
+### ストーリーパラメータ
 ```tsx
 export const WithParameters = Template.bind({});
 WithParameters.args = {
@@ -188,39 +188,39 @@ WithParameters.args = {
 WithParameters.parameters = {
   docs: {
     description: {
-      story: 'This button demonstrates custom parameters.',
+      story: 'このボタンはカスタムパラメータを示しています。',
     },
   },
 };
 ```
 
-## Best Practices
+## ベストプラクティス
 
-### Story Naming
-- Use descriptive names: `Primary`, `Secondary`, `Large`, `Small`
-- Use action-based names for interactive stories: `WithClick`, `WithHover`
-- Use state-based names: `Loading`, `Disabled`, `Error`
+### ストーリー命名
+- 説明的な名前を使用: `Primary`, `Secondary`, `Large`, `Small`
+- インタラクティブストーリーにはアクションベースの名前: `WithClick`, `WithHover`
+- 状態ベースの名前: `Loading`, `Disabled`, `Error`
 
-### Documentation
-- Add JSDoc comments to component props
-- Use story parameters for additional documentation
-- Include usage examples in story descriptions
+### ドキュメント
+- コンポーネントプロパティにJSDocコメントを追加
+- 追加ドキュメントにストーリーパラメータを使用
+- ストーリー説明に使用例を含める
 
-### Performance
-- Keep stories focused and lightweight
-- Use minimal props for each story variant
-- Avoid complex data structures in story args
+### パフォーマンス
+- ストーリーを集中して軽量に保つ
+- 各ストーリーバリエーションに最小限のプロパティを使用
+- ストーリー引数で複雑なデータ構造を避ける
 
-## Reference Examples
+## 参考例
 
-### Component Stories
+### コンポーネントストーリー
 - Button: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
 - Heading: [src/stories/components/Heading/Heading.stories.tsx](mdc:src/stories/components/Heading/Heading.stories.tsx)
 
-### Layout Stories
+### レイアウトストーリー
 - Header: [src/stories/layouts/Header/](mdc:src/stories/layouts/Header/)
 - Footer: [src/stories/layouts/Footer/](mdc:src/stories/layouts/Footer/)
 
-### Project Stories
+### プロジェクトストーリー
 - Post: [src/stories/projects/Post/](mdc:src/stories/projects/Post/)
 - Content: [src/stories/projects/Content/](mdc:src/stories/projects/Content/)

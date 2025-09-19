@@ -1,15 +1,15 @@
 ---
 globs: *.scss,*.sass
-description: SCSS styling guidelines and ITCSS architecture patterns
+description: SCSSスタイリングガイドラインとITCSSアーキテクチャパターン
 ---
 
-# SCSS Styling Guidelines
+# SCSSスタイリングガイドライン
 
-## ITCSS Architecture
+## ITCSSアーキテクチャ
 
-Follow the ITCSS (Inverted Triangle CSS) methodology for organized, scalable stylesheets.
+整理された、スケーラブルなスタイルシートのためにITCSS（Inverted Triangle CSS）手法に従ってください。
 
-### Layer Order (Import Order)
+### レイヤー順序（インポート順序）
 1. **Foundation** - [src/scss/foundation/](mdc:src/scss/foundation/)
 2. **Global** - [src/scss/global/](mdc:src/scss/global/)
 3. **Layout** - [src/scss/layout/](mdc:src/scss/layout/)
@@ -17,65 +17,65 @@ Follow the ITCSS (Inverted Triangle CSS) methodology for organized, scalable sty
 5. **Inc** - [src/scss/inc/](mdc:src/scss/inc/)
 6. **Plugins** - [src/scss/plugins/](mdc:src/scss/plugins/)
 
-## SCSS Best Practices
+## SCSSベストプラクティス
 
-### Import Statements
-- Import variables and mixins at the top
-- Use path aliases: `@use '../../global/variable/colors' as color;`
+### インポート文
+- 変数とミックスインを上部でインポート
+- パスエイリアスを使用: `@use '../../global/variable/colors' as color;`
 
-### Example SCSS Structure
+### SCSS構造の例
 ```scss
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
 @use '../../global/mixin/transition';
 
 .c-component {
-  // Base styles
+  // ベーススタイル
 
   &__element {
-    // Element styles
+    // エレメントスタイル
   }
 
   &--modifier {
-    // Modifier styles
+    // モディファイアスタイル
   }
 
   &:hover {
-    // Pseudo-class styles
+    // 疑似クラススタイル
   }
 }
 ```
 
-## BEM Naming Convention
+## BEM命名規則
 
-### Class Naming
-- **Block**: `.c-button` (component)
-- **Element**: `.c-button__label` (part of component)
-- **Modifier**: `.c-button--primary` (variant of component)
+### クラス命名
+- **Block**: `.c-button`（コンポーネント）
+- **Element**: `.c-button__label`（コンポーネントの一部）
+- **Modifier**: `.c-button--primary`（コンポーネントのバリエーション）
 
-### Examples
+### 例
 ```scss
 .c-button {
-  // Base button styles
+  // ベースボタンスタイル
 
   &__label {
-    // Button label styles
+    // ボタンラベルスタイル
   }
 
   &--primary {
-    // Primary button variant
+    // プライマリボタンバリエーション
   }
 
   &--large {
-    // Large button variant
+    // ラージボタンバリエーション
   }
 }
 ```
 
-## Variable Usage
+## 変数使用
 
-### Color Variables
-Reference: [src/scss/global/variable/_colors.scss](mdc:src/scss/global/variable/_colors.scss)
+### カラー変数
+参考: [src/scss/global/variable/_colors.scss](mdc:src/scss/global/variable/_colors.scss)
 
 ```scss
 @use '../../global/variable/colors' as color;
@@ -87,78 +87,78 @@ Reference: [src/scss/global/variable/_colors.scss](mdc:src/scss/global/variable/
 }
 ```
 
-### Font Weight Variables
-Reference: [src/scss/global/variable/_fontWeight.scss](mdc:src/scss/global/variable/_fontWeight.scss)
+### フォントウェイト変数
+参考: [src/scss/global/variable/_fontWeight.scss](mdc:src/scss/global/variable/_fontWeight.scss)
 
-## Mixin Usage
+## ミックスイン使用
 
-### Transition Mixins
-Reference: [src/scss/global/mixin/_transition.scss](mdc:src/scss/global/mixin/_transition.scss)
+### トランジションミックスイン
+参考: [src/scss/global/mixin/_transition.scss](mdc:src/scss/global/mixin/_transition.scss)
 
 ```scss
 @use '../../global/mixin/transition';
 
 .element {
   @include all-transition;
-  // or specific transitions
+  // または特定のトランジション
   @include transition(background-color, 0.3s, ease);
 }
 ```
 
-### Font Size Mixins
-Reference: [src/scss/global/mixin/_fontSize.scss](mdc:src/scss/global/mixin/_fontSize.scss)
+### フォントサイズミックスイン
+参考: [src/scss/global/mixin/_fontSize.scss](mdc:src/scss/global/mixin/_fontSize.scss)
 
-## Responsive Design
+## レスポンシブデザイン
 
-### Mobile-First Approach
-- Write mobile styles first
-- Use min-width media queries for larger screens
-- Reference: [src/scss/global/mixin/_screens.scss](mdc:src/scss/global/mixin/_screens.scss)
+### モバイルファーストアプローチ
+- 最初にモバイルスタイルを記述
+- 大きな画面にはmin-widthメディアクエリを使用
+- 参考: [src/scss/global/mixin/_screens.scss](mdc:src/scss/global/mixin/_screens.scss)
 
 ```scss
 .element {
-  // Mobile styles (default)
+  // モバイルスタイル（デフォルト）
   font-size: 14px;
 
   @media (min-width: 768px) {
-    // Tablet styles
+    // タブレットスタイル
     font-size: 16px;
   }
 
   @media (min-width: 1024px) {
-    // Desktop styles
+    // デスクトップスタイル
     font-size: 18px;
   }
 }
 ```
 
-## File Organization
+## ファイル組織
 
-### Component SCSS Files
-- Location: [src/scss/object/component/](mdc:src/scss/object/component/)
-- Naming: `_component-name.scss`
-- Import in component index: [src/scss/object/component/index.scss](mdc:src/scss/object/component/index.scss)
+### コンポーネントSCSSファイル
+- 場所: [src/scss/object/component/](mdc:src/scss/object/component/)
+- 命名: `_component-name.scss`
+- コンポーネントインデックスでインポート: [src/scss/object/component/index.scss](mdc:src/scss/object/component/index.scss)
 
-### Utility SCSS Files
-- Location: [src/scss/object/utility/](mdc:src/scss/object/utility/)
-- Naming: `_utility-name.scss`
-- Import in utility index: [src/scss/object/utility/index.scss](mdc:src/scss/object/utility/index.scss)
+### ユーティリティSCSSファイル
+- 場所: [src/scss/object/utility/](mdc:src/scss/object/utility/)
+- 命名: `_utility-name.scss`
+- ユーティリティインデックスでインポート: [src/scss/object/utility/index.scss](mdc:src/scss/object/utility/index.scss)
 
-## Performance Considerations
+## パフォーマンス考慮事項
 
-### Optimization
-- Minimize nesting depth (max 3-4 levels)
-- Use mixins for repeated patterns
-- Group related styles with comments
+### 最適化
+- ネストの深さを最小化（最大3-4レベル）
+- 繰り返しパターンにミックスインを使用
+- コメントで関連スタイルをグループ化
 
-### Example Optimized SCSS
+### 最適化されたSCSSの例
 ```scss
-// Component: Button
+// コンポーネント: Button
 @use '../../global/variable/colors' as color;
 @use '../../global/mixin/transition';
 
 .c-button {
-  // Base styles
+  // ベーススタイル
   display: inline-block;
   padding: 12px 24px;
   border: none;
@@ -166,7 +166,7 @@ Reference: [src/scss/global/mixin/_fontSize.scss](mdc:src/scss/global/mixin/_fon
   cursor: pointer;
   @include all-transition;
 
-  // Variants
+  // バリエーション
   &--primary {
     background-color: color.$primary;
     color: color.$white;

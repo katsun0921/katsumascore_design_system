@@ -1,13 +1,13 @@
 ---
 globs: *.tsx,*.ts
-description: React component development guidelines and patterns
+description: Reactコンポーネント開発ガイドラインとパターン
 ---
 
-# React Component Development Guidelines
+# Reactコンポーネント開発ガイドライン
 
-## Component Structure Pattern
+## コンポーネント構造パターン
 
-Follow this standard structure for all React components:
+すべてのReactコンポーネントでこの標準構造に従ってください：
 
 ```tsx
 import React from 'react';
@@ -15,11 +15,11 @@ import '@/scss/object/component/_component-name.scss';
 
 interface ComponentProps {
   /**
-   * Description of the prop
+   * プロパティの説明
    */
   propName?: type;
   /**
-   * Required prop description
+   * 必須プロパティの説明
    */
   requiredProp: type;
 }
@@ -29,66 +29,66 @@ export const Component = ({
   requiredProp,
   ...props
 }: ComponentProps) => {
-  // Component logic here
+  // コンポーネントロジック
 
   return (
     <div className="c-component">
-      {/* JSX content */}
+      {/* JSXコンテンツ */}
     </div>
   );
 };
 ```
 
-## Naming Conventions
+## 命名規則
 
-### Files
-- Components: PascalCase - `Button.tsx`, `Heading.tsx`
-- Stories: kebab-case - `Button.stories.tsx`
-- SCSS: kebab-case with underscore - `_button.scss`
+### ファイル
+- コンポーネント: PascalCase - `Button.tsx`, `Heading.tsx`
+- ストーリー: kebab-case - `Button.stories.tsx`
+- SCSS: アンダースコア付きkebab-case - `_button.scss`
 
-### CSS Classes
-- Use BEM methodology: `.c-button`, `.c-button__element`, `.c-button--modifier`
-- Component prefix: `c-` for components, `l-` for layouts, `u-` for utilities
+### CSSクラス
+- BEM手法を使用: `.c-button`, `.c-button__element`, `.c-button--modifier`
+- コンポーネントプレフィックス: コンポーネント用 `c-`、レイアウト用 `l-`、ユーティリティ用 `u-`
 
-## TypeScript Guidelines
+## TypeScriptガイドライン
 
-### Props Interface
-- Use `interface` for complex props, `type` for simple ones
-- Always include JSDoc comments for props
-- Use optional props with default values
-- Use proper TypeScript generics for Storybook
+### プロパティインターフェース
+- 複雑なプロパティには `interface`、シンプルなものには `type` を使用
+- プロパティには常にJSDocコメントを含める
+- デフォルト値を持つオプショナルプロパティを使用
+- Storybook用に適切なTypeScriptジェネリクスを使用
 
-### Example Props Interface
+### プロパティインターフェースの例
 ```tsx
 interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
+   * これはページの主要なアクションボタンですか？
    */
   primary?: boolean;
   /**
-   * How large should the button be?
+   * ボタンのサイズはどのくらいにしますか？
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * Button contents
+   * ボタンの内容
    */
   label: string;
   /**
-   * Optional click handler
+   * オプションのクリックハンドラー
    */
   onClick?: () => void;
 }
 ```
 
-## Import Patterns
+## インポートパターン
 
-### Import Order
-1. React imports
-2. Local component imports
-3. SCSS imports (with `@/` alias)
-4. Type imports
+### インポート順序
+1. Reactインポート
+2. ローカルコンポーネントインポート
+3. SCSSインポート（`@/` エイリアス使用）
+4. 型インポート
 
-### Example Imports
+### インポートの例
 ```tsx
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -96,12 +96,12 @@ import { Button } from './Button';
 import '@/scss/object/component/_button.scss';
 ```
 
-## Component Examples
+## コンポーネント例
 
-### Reference Components
+### 参考コンポーネント
 - Button: [src/stories/components/Button/Button.tsx](mdc:src/stories/components/Button/Button.tsx)
 - Heading: [src/stories/components/Heading/Heading.tsx](mdc:src/stories/components/Heading/Heading.tsx)
 
-### Storybook Stories
+### Storybookストーリー
 - Button Stories: [src/stories/components/Button/Button.stories.tsx](mdc:src/stories/components/Button/Button.stories.tsx)
 - Heading Stories: [src/stories/components/Heading/Heading.stories.tsx](mdc:src/stories/components/Heading/Heading.stories.tsx)

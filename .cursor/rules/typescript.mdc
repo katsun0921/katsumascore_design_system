@@ -1,66 +1,66 @@
 ---
 globs: *.ts,*.tsx
-description: TypeScript development guidelines and patterns
+description: TypeScript開発ガイドラインとパターン
 ---
 
-# TypeScript Development Guidelines
+# TypeScript開発ガイドライン
 
-## TypeScript Configuration
+## TypeScript設定
 
-### Configuration File
-Reference: [tsconfig.json](mdc:tsconfig.json)
+### 設定ファイル
+参考: [tsconfig.json](mdc:tsconfig.json)
 
-### Key Settings
-- Target: ES5 with DOM libraries
-- Strict mode enabled
-- Path mapping for `@/` alias
-- JSX preserve mode for Storybook
+### 主要設定
+- ターゲット: DOMライブラリ付きES5
+- 厳密モード有効
+- `@/` エイリアス用のパスマッピング
+- Storybook用のJSX preserveモード
 
-## Type Definitions
+## 型定義
 
 ### Interface vs Type
-- Use `interface` for object shapes and component props
-- Use `type` for unions, primitives, and computed types
+- オブジェクト形状とコンポーネントプロパティには `interface` を使用
+- ユニオン、プリミティブ、計算型には `type` を使用
 
-### Component Props Interface
+### コンポーネントプロパティインターフェース
 ```tsx
 interface ComponentProps {
   /**
-   * Description of the prop
+   * プロパティの説明
    */
   propName?: type;
   /**
-   * Required prop description
+   * 必須プロパティの説明
    */
   requiredProp: type;
   /**
-   * Event handler
+   * イベントハンドラー
    */
   onClick?: () => void;
   /**
-   * Children content
+   * 子コンテンツ
    */
   children: React.ReactNode;
 }
 ```
 
-### Union Types
+### ユニオン型
 ```tsx
 type Size = 'small' | 'medium' | 'large';
 type Variant = 'primary' | 'secondary' | 'tertiary';
 type Theme = 'light' | 'dark';
 ```
 
-## Import/Export Patterns
+## インポート/エクスポートパターン
 
-### Import Order
-1. React and React-related imports
-2. Third-party library imports
-3. Local component imports
-4. Type imports
-5. SCSS imports
+### インポート順序
+1. ReactとReact関連のインポート
+2. サードパーティライブラリのインポート
+3. ローカルコンポーネントのインポート
+4. 型のインポート
+5. SCSSのインポート
 
-### Example Import Structure
+### インポート構造の例
 ```tsx
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -69,46 +69,46 @@ import type { ButtonProps } from './Button.types';
 import '@/scss/object/component/_button.scss';
 ```
 
-### Export Patterns
+### エクスポートパターン
 ```tsx
-// Named exports for components
+// コンポーネント用の名前付きエクスポート
 export const Button = ({ ... }: ButtonProps) => { ... };
 
-// Default export for main component
+// メインコンポーネント用のデフォルトエクスポート
 export default Button;
 
-// Type exports
+// 型のエクスポート
 export type { ButtonProps };
 ```
 
-## Type Safety
+## 型安全性
 
-### Strict Typing
-- Always define types for function parameters
-- Use proper return types for functions
-- Avoid `any` type - use `unknown` or specific types
-- Use type assertions sparingly
+### 厳密な型付け
+- 関数パラメータの型を常に定義
+- 関数の適切な戻り値型を使用
+- `any` 型を避ける - `unknown` または特定の型を使用
+- 型アサーションは控えめに使用
 
-### Example Type Safety
+### 型安全性の例
 ```tsx
-// Good: Explicit typing
+// 良い例: 明示的な型付け
 const handleClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
   event.preventDefault();
-  // Handle click
+  // クリック処理
 };
 
-// Good: Generic typing
+// 良い例: ジェネリック型付け
 const processData = <T>(data: T[]): T[] => {
   return data.filter(item => item !== null);
 };
 
-// Avoid: Any type
+// 避けるべき例: Any型
 const badFunction = (data: any) => { ... };
 ```
 
-## Generic Types
+## ジェネリック型
 
-### Component Generics
+### コンポーネントジェネリクス
 ```tsx
 interface GenericProps<T> {
   data: T[];
@@ -133,7 +133,7 @@ const GenericComponent = <T>({
 };
 ```
 
-### Storybook Generics
+### Storybookジェネリクス
 ```tsx
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
@@ -145,82 +145,82 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 ```
 
-## Utility Types
+## ユーティリティ型
 
-### Common Utility Types
+### 一般的なユーティリティ型
 ```tsx
-// Partial for optional props
+// オプショナルプロパティ用のPartial
 type PartialButtonProps = Partial<ButtonProps>;
 
-// Pick for selecting specific props
+// 特定のプロパティを選択するPick
 type ButtonSize = Pick<ButtonProps, 'size'>;
 
-// Omit for excluding props
+// プロパティを除外するOmit
 type ButtonWithoutSize = Omit<ButtonProps, 'size'>;
 
-// Record for key-value pairs
+// キー値ペア用のRecord
 type ColorMap = Record<string, string>;
 ```
 
-## Event Handling
+## イベント処理
 
-### Event Types
+### イベント型
 ```tsx
-// Mouse events
+// マウスイベント
 const handleMouseClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-  // Handle click
+  // クリック処理
 };
 
-// Form events
+// フォームイベント
 const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
-  // Handle form submission
+  // フォーム送信処理
 };
 
-// Change events
+// 変更イベント
 const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   const value = event.target.value;
-  // Handle change
+  // 変更処理
 };
 ```
 
-## Module Declarations
+## モジュール宣言
 
-### Global Type Declarations
-Reference: [index.d.ts](mdc:index.d.ts)
+### グローバル型宣言
+参考: [index.d.ts](mdc:index.d.ts)
 
 ```tsx
-// Global type declarations
+// グローバル型宣言
 declare global {
   interface Window {
     customProperty: string;
   }
 }
 
-// Module declarations
+// モジュール宣言
 declare module '*.scss' {
   const content: { [className: string]: string };
   export default content;
 }
 ```
 
-## Path Mapping
+## パスマッピング
 
-### Alias Configuration
-- `@/*` maps to `src/*`
-- `@/scss/*` maps to `src/scss/*`
-- `@/assets/*` maps to `src/assets/*`
+### エイリアス設定
+- `@/*` は `src/*` にマッピング
+- `@/scss/*` は `src/scss/*` にマッピング
+- `@/assets/*` は `src/assets/*` にマッピング
 
-### Usage Examples
+### 使用例
 ```tsx
 import { Button } from '@/stories/components/Button/Button';
 import '@/scss/object/component/_button.scss';
 import logo from '@/assets/images/logo.png';
 ```
 
-## Error Handling
+## エラーハンドリング
 
-### Type Guards
+### 型ガード
 ```tsx
 const isString = (value: unknown): value is string => {
   return typeof value === 'string';
@@ -228,14 +228,14 @@ const isString = (value: unknown): value is string => {
 
 const processValue = (value: unknown) => {
   if (isString(value)) {
-    // TypeScript knows value is string here
+    // TypeScriptはここでvalueがstringであることを認識
     return value.toUpperCase();
   }
   return '';
 };
 ```
 
-### Optional Chaining
+### オプショナルチェーニング
 ```tsx
 const user = {
   profile?: {
@@ -244,31 +244,31 @@ const user = {
   };
 };
 
-// Safe access with optional chaining
+// オプショナルチェーニングで安全にアクセス
 const userName = user.profile?.name ?? 'Unknown';
 const userEmail = user.profile?.email ?? 'No email';
 ```
 
-## Performance Considerations
+## パフォーマンス考慮事項
 
-### Type-Only Imports
+### 型のみのインポート
 ```tsx
 import type { ComponentProps } from 'react';
 import type { ButtonProps } from './Button.types';
 ```
 
-### Lazy Loading Types
+### 遅延読み込み型
 ```tsx
-// For large type definitions
+// 大きな型定義用
 type LargeType = Awaited<ReturnType<typeof import('./large-module').getLargeData>>;
 ```
 
-## Reference Examples
+## 参考例
 
-### Component Examples
+### コンポーネント例
 - Button: [src/stories/components/Button/Button.tsx](mdc:src/stories/components/Button/Button.tsx)
 - Heading: [src/stories/components/Heading/Heading.tsx](mdc:src/stories/components/Heading/Heading.tsx)
 
-### TypeScript Modules
+### TypeScriptモジュール
 - Hamburger Menu: [src/ts/hamburgerMenu/hamburgerMenu.ts](mdc:src/ts/hamburgerMenu/hamburgerMenu.ts)
 - Navigation: [src/ts/navigation/index.ts](mdc:src/ts/navigation/index.ts)

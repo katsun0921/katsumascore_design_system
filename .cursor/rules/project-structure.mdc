@@ -1,53 +1,53 @@
 ---
 alwaysApply: true
-description: Project structure and architecture guidelines for Katsumascore Design System
+description: カツマスコアデザインシステムのプロジェクト構造とアーキテクチャガイドライン
 ---
 
-# Katsumascore Design System - Project Structure
+# カツマスコアデザインシステム - プロジェクト構造
 
-This is a WordPress theme design system built with React, TypeScript, SCSS, and Storybook following ITCSS methodology.
+これは、ITCSS手法に従ってReact、TypeScript、SCSS、Storybookで構築されたWordPressテーマデザインシステムです。
 
-## Core Architecture
+## コアアーキテクチャ
 
-### Entry Points
-- Main TypeScript entry: [src/ts/index.ts](mdc:src/ts/index.ts)
-- Main SCSS entry: [src/scss/index.scss](mdc:src/scss/index.scss)
-- Webpack config: [webpack.config.js](mdc:webpack.config.js)
+### エントリーポイント
+- メインTypeScriptエントリー: [src/ts/index.ts](mdc:src/ts/index.ts)
+- メインSCSSエントリー: [src/scss/index.scss](mdc:src/scss/index.scss)
+- Webpack設定: [webpack.config.js](mdc:webpack.config.js)
 
-### Directory Structure
+### ディレクトリ構造
 ```
 src/
-├── stories/           # Storybook stories and components
-│   ├── components/    # Reusable UI components
-│   ├── layouts/       # Layout components
-│   ├── projects/      # Project-specific components
-│   └── styles/        # Style documentation
-├── scss/              # SCSS stylesheets (ITCSS)
-│   ├── foundation/    # Reset, base styles
-│   ├── global/        # Variables, mixins
-│   ├── layout/        # Layout components
-│   ├── object/        # UI components, utilities
-│   ├── inc/           # Third-party styles
-│   └── plugins/       # Plugin-specific styles
-├── ts/                # TypeScript modules
-├── assets/            # Static assets (images, icons)
-└── admin/             # WordPress admin styles
+├── stories/           # Storybookストーリーとコンポーネント
+│   ├── components/    # 再利用可能なUIコンポーネント
+│   ├── layouts/       # レイアウトコンポーネント
+│   ├── projects/      # プロジェクト固有のコンポーネント
+│   └── styles/        # スタイルドキュメント
+├── scss/              # SCSSスタイルシート（ITCSS）
+│   ├── foundation/    # リセット、ベーススタイル
+│   ├── global/        # 変数、ミックスイン
+│   ├── layout/        # レイアウトコンポーネント
+│   ├── object/        # UIコンポーネント、ユーティリティ
+│   ├── inc/           # サードパーティスタイル
+│   └── plugins/       # プラグイン固有のスタイル
+├── ts/                # TypeScriptモジュール
+├── assets/            # 静的アセット（画像、アイコン）
+└── admin/             # WordPress管理画面スタイル
 ```
 
-### ITCSS SCSS Architecture
-1. **Foundation**: [src/scss/foundation/](mdc:src/scss/foundation/) - Reset, base styles
-2. **Global**: [src/scss/global/](mdc:src/scss/global/) - Variables, mixins, functions
-3. **Layout**: [src/scss/layout/](mdc:src/scss/layout/) - Layout components
-4. **Object**: [src/scss/object/](mdc:src/scss/object/) - UI components and utilities
-5. **Inc**: [src/scss/inc/](mdc:src/scss/inc/) - Third-party styles
-6. **Plugins**: [src/scss/plugins/](mdc:src/scss/plugins/) - Plugin-specific styles
+### ITCSS SCSSアーキテクチャ
+1. **Foundation**: [src/scss/foundation/](mdc:src/scss/foundation/) - リセット、ベーススタイル
+2. **Global**: [src/scss/global/](mdc:src/scss/global/) - 変数、ミックスイン、関数
+3. **Layout**: [src/scss/layout/](mdc:src/scss/layout/) - レイアウトコンポーネント
+4. **Object**: [src/scss/object/](mdc:src/scss/object/) - UIコンポーネントとユーティリティ
+5. **Inc**: [src/scss/inc/](mdc:src/scss/inc/) - サードパーティスタイル
+6. **Plugins**: [src/scss/plugins/](mdc:src/scss/plugins/) - プラグイン固有のスタイル
 
-### Build Output
-- JavaScript: `dist/bundle.js` (development) or `dist/[name].[contenthash:8].js` (production)
-- CSS: `dist/build.css` (development) or `dist/[name].[contenthash:8].css` (production)
-- Assets: `dist/img/` directory for images
+### ビルド出力
+- JavaScript: `dist/bundle.js`（開発）または `dist/[name].[contenthash:8].js`（本番）
+- CSS: `dist/build.css`（開発）または `dist/[name].[contenthash:8].css`（本番）
+- アセット: 画像用の `dist/img/` ディレクトリ
 
-### Key Configuration Files
-- [package.json](mdc:package.json) - Dependencies and scripts
-- [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration
-- [prettier.config.js](mdc:prettier.config.js) - Code formatting rules
+### 主要設定ファイル
+- [package.json](mdc:package.json) - 依存関係とスクリプト
+- [tsconfig.json](mdc:tsconfig.json) - TypeScript設定
+- [prettier.config.js](mdc:prettier.config.js) - コードフォーマットルール
