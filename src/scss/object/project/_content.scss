@@ -19,6 +19,9 @@
     &:last-child {
       margin-bottom: 0;
     }
+    &:has(+h1, +h2, +h3, +h4, +h5, +h6) {
+      margin-bottom: 0;
+    }
   }
 
   // Headings
@@ -456,45 +459,9 @@
     text-align: center;
     margin: 0.5em 0 0 0;
     font-style: italic;
-
   }
   }
 
-
-  @include screens.mq('md') {
-    font-size: 14px;
-    padding: 0 1em;
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-    }
-
-    blockquote {
-      padding: 1em;
-      margin: 1.5em 0;
-
-      &:before {
-        font-size: 3rem;
-        top: -5px;
-      }
-    }
-
-    .alignleft,
-    .alignright {
-      float: none;
-      margin: 1em auto;
-      display: block;
-    }
-  }
-  // Print styles
   @media print {
     a {
       color: color.$black;
