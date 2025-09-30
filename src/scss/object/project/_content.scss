@@ -74,8 +74,9 @@
   h2 {
     font-size: 1.8rem;
     color: color.$white;
-    padding: 0.5em;
-    background: var(--blue-gradient);
+    padding: .5em;
+    margin: 2em 0 1.2em;
+    background: linear-gradient(135deg, color.$blue600 0%, color.$blue800 100%);
     box-shadow: 0 2px 4px var(--blue-shadow);
     border-left: solid 5px color.$yellow500;
   }
