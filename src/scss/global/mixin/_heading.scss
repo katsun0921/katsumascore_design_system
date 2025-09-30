@@ -1,0 +1,155 @@
+@use '../variable/colors' as color;
+@use '../variable/fontWeight' as fontWeight;
+
+// Base heading mixin
+@mixin heading-base {
+  font-weight: bold;
+  line-height: 1.4;
+  color: color.$black;
+}
+
+// Heading with margin mixin
+@mixin heading-with-margin {
+  @include heading-base;
+  margin: 2.5em 0 1.2em 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Gradient background heading mixin
+@mixin heading-gradient-bg($gradient: linear-gradient(135deg, color.$blue600 0%, color.$blue800 100%)) {
+  background: $gradient;
+  color: color.$white;
+  padding: 0.5em;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
+
+// Underline heading mixin
+@mixin heading-underline($color: #000, $thickness: 3px, $style: solid) {
+  border-bottom: $thickness $style $color;
+  padding-bottom: 10px;
+}
+
+// Animated underline heading mixin
+@mixin heading-animated-underline {
+  position: relative;
+  border-bottom: 2px solid color.$gray300;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+      color.$blue600 0%,
+      color.$blue600 30%,
+      rgba(37, 99, 235, 0.5) 60%,
+      transparent 100%);
+    animation: fadeOutLine 2s ease-in-out infinite alternate;
+  }
+}
+
+// First letter gradient mixin
+@mixin heading-first-letter-gradient {
+  &:first-letter {
+    color: color.$blue600;
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(135deg, color.$blue600 0%, color.$blue800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+    margin-right: 0.1em;
+  }
+}
+
+// Layered background heading mixin
+@mixin heading-layered-bg {
+  position: relative;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 0.6em;
+    background: linear-gradient(90deg,
+      rgba(37, 99, 235, 0.3) 0%,
+      rgba(37, 99, 235, 0.2) 50%,
+      rgba(37, 99, 235, 0.3) 100%);
+    transform: translateY(-50%);
+    z-index: -1;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.2);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    right: -2px;
+    height: 0.6em;
+    background: linear-gradient(90deg,
+      rgba(37, 99, 235, 0.1) 0%,
+      rgba(37, 99, 235, 0.05) 50%,
+      rgba(37, 99, 235, 0.1) 100%);
+    transform: translateY(-50%);
+    z-index: -2;
+    border-radius: 3px;
+  }
+}
+
+// Border heading mixin
+@mixin heading-border($color: #333, $thickness: 2px, $radius: 5px) {
+  border: $thickness solid $color;
+  padding: 15px 20px;
+  border-radius: $radius;
+}
+
+// Shadow heading mixin
+@mixin heading-shadow($color: rgba(0, 0, 0, 0.3)) {
+  text-shadow: 2px 2px 4px $color;
+}
+
+// Tag-like heading mixin
+@mixin heading-tag($bg-color: color.$category, $text-color: color.$white, $radius: 20px) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 8px 16px;
+  border-radius: $radius;
+  display: inline-block;
+}
+
+// Text outline heading mixin
+@mixin heading-outline($color: #333, $thickness: 2px) {
+  color: transparent;
+  -webkit-text-stroke: $thickness $color;
+}
+
+// 3D text effect heading mixin
+@mixin heading-3d {
+  text-shadow:
+    1px 1px 0 #ccc,
+    2px 2px 0 #c9c9c9,
+    3px 3px 0 #bbb,
+    4px 4px 0 #b9b9b9,
+    5px 5px 0 #aaa,
+    6px 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    1px 1px 3px rgba(0,0,0,.3),
+    3px 3px 5px rgba(0,0,0,.2),
+    5px 5px 10px rgba(0,0,0,.25);
+}
