@@ -1,6 +1,7 @@
 @use '../../global/variable/colors' as color;
 @use '../../global/variable/fontWeight' as fontWeight;
 @use '../../global/mixin/fontSize' as *;
+@use '../../global/mixin/heading' as *;
 
 .c-heading {
   &__title {
@@ -43,5 +44,148 @@
       width: 35px;
       height: 3px;
     }
+  }
+
+
+  // Background styles
+
+  &__bg-accent {
+    @include heading-gradient-bg(linear-gradient(135deg, color.$category 0%, color.$category 100%));
+    @include text-2xl;
+    border-radius: 5px;
+  }
+
+  &__bg-gradient {
+    @include heading-gradient-bg(linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+    @include text-2xl;
+    border-radius: 8px;
+  }
+
+  // Ribbon-like styles
+  &__ribbon {
+    background-color: color.$category;
+    color: color.$white;
+    padding: 15px 30px;
+    @include text-2xl;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid color.$category;
+    }
+  }
+
+  // Background with wrapping image style
+  &__bg-wrap {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: color.$white;
+    padding: 20px 40px 20px 20px;
+    @include text-2xl;
+    position: relative;
+    border-radius: 8px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+    }
+  }
+
+  // Quotation marks style
+  &__quote {
+    position: relative;
+    padding: 20px 40px;
+    @include text-2xl;
+    color: #333;
+    &::before,
+    &::after {
+      content: '"';
+      font-size: 3em;
+      color: color.$category;
+      position: absolute;
+      font-weight: bold;
+    }
+    &::before {
+      top: -10px;
+      left: 10px;
+    }
+    &::after {
+      bottom: -20px;
+      right: 10px;
+    }
+  }
+
+  // Gold text gradient style
+  &__gold-text {
+    background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    @include text-2xl;
+    font-weight: bold;
+    animation: goldShine 3s ease-in-out infinite;
+  }
+
+
+
+
+  // Content styles (moved from _content.scss)
+  &__content-h2 {
+    @include heading-gradient-bg;
+    font-size: 1.8rem;
+    border-left: solid 5px color.$yellow500;
+  }
+
+  &__content-h3 {
+    @include heading-base;
+    @include heading-animated-underline;
+    @include heading-first-letter-gradient;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.3em 0;
+  }
+
+  &__content-h4 {
+    @include heading-base;
+    @include heading-layered-bg;
+    font-size: 1.3rem;
+    padding: 0.2em 0.5em;
+  }
+}
+
+// 消えていく下線のアニメーション
+@keyframes fadeOutLine {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scaleX(0.7);
+  }
+}
+
+// ゴールドテキストの光るアニメーション
+@keyframes goldShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

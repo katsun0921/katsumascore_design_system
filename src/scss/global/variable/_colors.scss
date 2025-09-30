@@ -32,6 +32,7 @@ $stone200: rgb(231 229 228);
 // yellow
 $yellow50: rgb(254 252 232);
 $yellow200: rgb(254 240 138);
+$yellow500: rgb(245 158 11);
 
 // Element Color
 // link
@@ -64,4 +65,5 @@ $colors: (
   'stone-200': $stone200,
   'yellow-50': $yellow50,
   'yellow-200': $yellow200,
+  'yellow-500': $yellow500,
 );
